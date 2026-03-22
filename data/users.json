@@ -1,0 +1,124 @@
+[
+  {
+    "id": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "username": "Iwouldtipfate",
+    "passwordHash": "$2a$10$6VJg8TfmBLgIbcY1kVsZMevAFIu2J57.ok5lRphZ.SQYH1xCYGPe2",
+    "role": "admin",
+    "accountType": "listener",
+    "bio": "Ya sosal menya ebali feat. ubuntu ",
+    "avatarFile": "a4c71379-036e-4f88-82dc-a8ebc00a8b4a.png",
+    "followers": [],
+    "following": [
+      "e3456161-a70d-4e44-84d0-0dd937d7649a",
+      "6b3bfa8a-3be1-4644-b45f-fc1676db7df5"
+    ],
+    "genreHistory": {
+      "Rap": 1013,
+      "Rock": 10,
+      "Unknown": 15
+    },
+    "createdAt": "2026-03-17T19:51:51.644Z",
+    "backgroundFile": "59e27ed6-fe98-4834-a87c-d84914350867.png"
+  },
+  {
+    "id": "e3456161-a70d-4e44-84d0-0dd937d7649a",
+    "username": "testartist",
+    "passwordHash": "$2a$10$DGmiOMS7oc8eczB2/XQMpesdhJi5qrCvnN9PlEpebcMEom/0jA3fG",
+    "role": "user",
+    "accountType": "artist",
+    "bio": "",
+    "avatarFile": null,
+    "followers": [
+      "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a"
+    ],
+    "following": [],
+    "genreHistory": {},
+    "createdAt": "2026-03-17T19:53:24.976Z"
+  },
+  {
+    "id": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "username": "dzhongarik",
+    "passwordHash": "$2a$10$ai/G5okZ51AU6InL5lj2X.ss3MVNj29ZmcXrjIx2WDsf8A6I3.Qsi",
+    "role": "user",
+    "accountType": "artist_pro",
+    "bio": "",
+    "avatarFile": "9fb91434-abb6-43a3-8b37-f679a878efaf.png",
+    "followers": [
+      "6b3bfa8a-3be1-4644-b45f-fc1676db7df5"
+    ],
+    "following": [
+      "6b3bfa8a-3be1-4644-b45f-fc1676db7df5"
+    ],
+    "genreHistory": {
+      "Rap": 19
+    },
+    "createdAt": "2026-03-17T19:58:25.674Z"
+  },
+  {
+    "id": "5894f950-1da5-4ba3-a65f-fb33ee4f64cf",
+    "username": "admin",
+    "passwordHash": "$2a$10$0ezZQjBcW47FH.lEvpulFeG0V1X.n307lS.3ROlimdIpavklpFN4y",
+    "role": "user",
+    "accountType": "listener",
+    "bio": "",
+    "avatarFile": null,
+    "followers": [],
+    "following": [],
+    "genreHistory": {
+      "Rap": 1,
+      "Rock": 1
+    },
+    "createdAt": "2026-03-18T13:52:24.875Z"
+  },
+  {
+    "id": "ad218750-fd99-415a-a6a1-68d69418338b",
+    "username": "123",
+    "passwordHash": "$2a$10$bWTXu1R0QGiOIivrjoKSsOwZJ3oMwGDYVYpqXohjAlsmjLWdhf85q",
+    "role": "user",
+    "accountType": "artist",
+    "bio": "",
+    "avatarFile": null,
+    "followers": [],
+    "following": [],
+    "genreHistory": {
+      "Unknown": 1
+    },
+    "createdAt": "2026-03-18T15:57:12.557Z"
+  },
+  {
+    "id": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "username": "Heroinwater",
+    "passwordHash": "$2a$10$RlNRZqNzC6rBjbzmZaniO.PMWS.V63vKyVf8esTlIfJEnptguE966",
+    "role": "user",
+    "accountType": "artist_pro",
+    "bio": "Постоянно считаю купюры, как гифка",
+    "avatarFile": "7b97c0b9-c633-448b-9d0c-f41c22196324.png",
+    "followers": [
+      "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+      "f06bb489-9c08-4554-952c-fe1a6948b84e"
+    ],
+    "following": [
+      "f06bb489-9c08-4554-952c-fe1a6948b84e"
+    ],
+    "genreHistory": {
+      "Rap": 69
+    },
+    "createdAt": "2026-03-18T17:23:36.593Z"
+  },
+  {
+    "id": "21bf727a-77b7-49df-8fd5-b0d16952d8a2",
+    "username": "luiza",
+    "passwordHash": "$2a$10$Cm7WkjcbtDkC1wPBSIdsOOmd2S3YG6Y66P/qXPotE5DnjlwwctmlO",
+    "role": "user",
+    "accountType": "listener",
+    "bio": "",
+    "avatarFile": null,
+    "backgroundFile": null,
+    "followers": [],
+    "following": [],
+    "genreHistory": {
+      "Rap": 2
+    },
+    "createdAt": "2026-03-18T21:42:27.484Z"
+  }
+]

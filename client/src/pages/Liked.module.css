@@ -1,0 +1,14 @@
+.heroRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.heroActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 4px;
+}

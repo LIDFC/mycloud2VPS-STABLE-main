@@ -1,0 +1,510 @@
+.page {
+  padding: 80px 32px 100px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 36px 0 24px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.pageTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 32px; font-weight: 800; color: #fff;
+  letter-spacing: -0.8px;
+}
+.pageSub { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+/* Tabs */
+.tabs {
+  display: flex; gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.tab {
+  background: none; border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  padding: 10px 18px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab:hover { color: #fff; }
+.tabActive { color: #fff; border-bottom-color: var(--accent); }
+
+.content { display: flex; flex-direction: column; gap: 0; }
+
+/* Upload form */
+.uploadForm {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 16px; font-weight: 700; color: #fff;
+  margin-bottom: 20px;
+}
+
+.uploadLayout { display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start; }
+
+.coverPicker {
+  width: 120px; height: 120px;
+  border-radius: var(--radius);
+  border: 1.5px dashed rgba(255,255,255,0.15);
+  cursor: pointer; overflow: hidden;
+  transition: border-color 0.15s;
+  display: flex; align-items: center; justify-content: center;
+}
+.coverPicker:hover { border-color: var(--accent); }
+.coverPreview { width: 100%; height: 100%; object-fit: cover; display: block; }
+.coverPlaceholder {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: var(--text-muted);
+  font-size: 11px; text-align: center; padding: 8px;
+}
+
+.uploadFields { display: flex; flex-direction: column; }
+
+.fileInputWrapper {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 13px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.fileInputWrapper:hover { border-color: var(--border-accent); background: rgba(255,255,255,0.08); color: #fff; }
+
+/* Divider */
+.divider { height: 1px; background: var(--border); margin: 28px 0; }
+
+/* Track list */
+.trackList { display: flex; flex-direction: column; gap: 2px; }
+
+.trackRow {
+  display: grid;
+  grid-template-columns: 44px 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+.trackRow:hover { background: rgba(255,255,255,0.04); border-color: var(--border); }
+
+.rowCover {
+  width: 44px; height: 44px;
+  border-radius: 6px; object-fit: cover;
+  flex-shrink: 0;
+}
+.rowMeta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.rowTitle { font-size: 14px; font-weight: 600; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rowArtist { font-size: 12px; color: var(--text-secondary); }
+
+.rowEditFields { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.rowEditFields .input { padding: 7px 10px; font-size: 13px; }
+
+.rowStats .likes { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+
+.rowActions { display: flex; gap: 6px; flex-shrink: 0; }
+
+/* Empty */
+.emptyMsg { font-size: 14px; color: var(--text-muted); padding: 16px 0; }
+
+/* Loading */
+.loading { display: flex; align-items: center; justify-content: center; padding: 48px; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--border); border-top-color: var(--accent);
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Users tab */
+.usersTab {}
+.usersTable { display: flex; flex-direction: column; gap: 2px; margin-top: 0; }
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 90px 100px 160px;
+  gap: 12px;
+  padding: 6px 14px 10px;
+  font-size: 11px; font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+.userRow {
+  display: grid;
+  grid-template-columns: 1fr 90px 100px 160px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background 0.15s;
+}
+.userRow:hover { background: rgba(255,255,255,0.03); border-color: var(--border); }
+
+.userName { font-size: 14px; font-weight: 500; color: #fff; display: flex; align-items: center; gap: 7px; }
+.youBadge {
+  font-size: 10px; font-weight: 600;
+  background: var(--accent-dim); color: var(--accent);
+  padding: 1px 6px; border-radius: 10px;
+}
+.roleBadge {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 10px;
+  text-transform: capitalize; width: fit-content;
+}
+.roleAdmin { background: rgba(232,168,56,0.15); color: #e8a838; }
+.roleUser { background: rgba(255,255,255,0.07); color: var(--text-secondary); }
+
+.userDate { font-size: 12px; color: var(--text-muted); }
+.userActions { display: flex; gap: 6px; }
+
+@media (max-width: 640px) {
+  .page { padding: 70px 16px 100px; }
+  .uploadLayout { grid-template-columns: 80px 1fr; }
+  .coverPicker { width: 80px; height: 80px; }
+  .tableHeader, .userRow { grid-template-columns: 1fr auto; }
+  .tableHeader span:nth-child(2),
+  .tableHeader span:nth-child(3),
+  .userRow > span:nth-child(2),
+  .userRow > span:nth-child(3) { display: none; }
+}
+
+/* ── Genre select ──────────────────────────────────────────────────────────── */
+.genreRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.genreSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(255,255,255,0.05) !important;
+  color: #fff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+.genreSelect:focus {
+  border-color: rgba(255,85,0,0.5);
+  outline: none;
+}
+.genreSelect option {
+  background: #1c1c1c;
+  color: #fff;
+}
+
+/* ── Track row genre badge ────────────────────────────────────────────────── */
+.rowGenre {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-top: 3px;
+  width: fit-content;
+}
+
+/* Editing state highlight */
+.trackRowEditing {
+  background: rgba(255,85,0,0.04) !important;
+  border-color: var(--border-accent) !important;
+}
+
+/* ── Stats tab ─────────────────────────────────────────────────────────────── */
+.statsTab {}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statNum {
+  font-family: "Syne", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statsColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.statsSection {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.statsSubtitle {
+  font-family: "Syne", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* Genre bar chart */
+.genreBar { margin-bottom: 12px; }
+.genreBarLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+.genreBarCount { color: var(--text-muted); }
+.genreBarTrack {
+  height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.genreBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #ff8c42);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Top liked tracks */
+.topTrackRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.topTrackRow:last-child { border-bottom: none; }
+.topTrackRank {
+  font-family: "Syne", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 24px;
+}
+.topTrackMeta { flex: 1; min-width: 0; }
+.topTrackTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topTrackArtist {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.topTrackLikes {
+  font-size: 12px;
+  color: #e05;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .statsColumns { grid-template-columns: 1fr; }
+}
+
+/* ── Pending tab ──────────────────────────────────────────────────────────── */
+.tabPending { color: #e8a838 !important; }
+.tabPending.tabActive { border-bottom-color: #e8a838 !important; }
+
+.pendingHeader {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.pendingBadge {
+  font-size: 11px; font-weight: 600;
+  background: rgba(232,168,56,0.15); color: #e8a838;
+  border: 1px solid rgba(232,168,56,0.25);
+  padding: 3px 9px; border-radius: 10px;
+}
+.pendingList { display: flex; flex-direction: column; gap: 10px; }
+.emptyPending {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 48px 24px; gap: 12px; color: #444;
+}
+.emptyPending p { font-size: 14px; }
+
+/* ── Track row status + plays ─────────────────────────────────────────────── */
+.rowStatus {
+  font-size: 10px; font-weight: 600;
+  text-transform: capitalize; letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+.plays { font-size: 11px; color: #666; }
+
+/* ── Users tab additions ──────────────────────────────────────────────────── */
+.tableHeader { grid-template-columns: 1fr 100px 80px 90px 160px; }
+.userRow     { grid-template-columns: 1fr 100px 80px 90px 160px; }
+
+.userLink { color: inherit; text-decoration: none; }
+.userLink:hover { color: #ff5500; text-decoration: underline; }
+
+.accountTypeBadge {
+  font-size: 11px; font-weight: 500;
+  color: #888; white-space: nowrap;
+}
+[data-type="artist"].accountTypeBadge { color: #ff5500; }
+
+/* ── Stats grid 4-col ─────────────────────────────────────────────────────── */
+.statsGrid { grid-template-columns: repeat(4, 1fr); }
+.statsColumns { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 800px) {
+  .statsGrid    { grid-template-columns: repeat(2, 1fr); }
+  .statsColumns { grid-template-columns: 1fr; }
+  .tableHeader  { grid-template-columns: 1fr auto; }
+  .userRow      { grid-template-columns: 1fr auto; }
+  .tableHeader span:not(:first-child):not(:last-child),
+  .userRow > span:not(:first-child):not(:last-child) { display: none; }
+}
+
+/* Artist Pro button */
+.btnPro {
+  background: linear-gradient(135deg, rgba(255,140,0,0.15), rgba(255,85,0,0.15)) !important;
+  color: #ff8c00 !important;
+  border: 1px solid rgba(255,140,0,0.35) !important;
+}
+.btnPro:hover {
+  background: linear-gradient(135deg, #ff8c00, #ff5500) !important;
+  color: #fff !important;
+}
+
+
+.albumList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.albumRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+
+.albumMeta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.albumMeta strong {
+  color: #fff;
+  font-size: 15px;
+}
+
+.albumMeta span,
+.albumStats span {
+  color: #909090;
+  font-size: 12px;
+}
+
+.albumStats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.albumStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.albumStatus[data-status="pending"] {
+  color: #f6c76b;
+  border-color: rgba(246, 199, 107, 0.28);
+  background: rgba(246, 199, 107, 0.12);
+}
+
+.albumStatus[data-status="published"] {
+  color: #8de5a3;
+  border-color: rgba(141, 229, 163, 0.24);
+  background: rgba(141, 229, 163, 0.12);
+}
+
+.albumStatus[data-status="rejected"] {
+  color: #ff9c9c;
+  border-color: rgba(255, 156, 156, 0.24);
+  background: rgba(255, 156, 156, 0.12);
+}
+
+.albumActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .albumRow {
+    grid-template-columns: 1fr;
+  }
+
+  .albumActions {
+    justify-content: flex-start;
+  }
+}

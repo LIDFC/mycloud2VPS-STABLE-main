@@ -1,0 +1,118 @@
+.header {
+  position: relative;
+  margin-bottom: 32px;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 230px;
+}
+.backdrop { position: absolute; inset: 0; }
+.backdropImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.backdropShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8,8,8,0.16), rgba(8,8,8,0.72)),
+    linear-gradient(135deg, rgba(255,85,0,0.24), rgba(255,85,0,0.06) 42%, rgba(0,0,0,0.15));
+  border: 1px solid rgba(255,85,0,0.1);
+}
+.inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 28px;
+  min-height: 230px;
+}
+.avatarWrap { position: relative; flex-shrink: 0; }
+.avatar {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+}
+.artistBadge {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff5500;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.info { flex: 1; min-width: 0; overflow: hidden; }
+.nameRow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; max-width: 100%; overflow: hidden; }
+.name {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(20px, 4vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.8px;
+  margin: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.adminBadge {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(232,168,56,0.15);
+  color: #e8a838;
+  border: 1px solid rgba(232,168,56,0.25);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.bio { font-size: 13.5px; color: rgba(255,255,255,0.78); margin: 0 0 16px; line-height: 1.6; max-width: 620px; }
+.statsRow { display: flex; gap: 22px; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.statNum { font-family: "Syne", sans-serif; font-size: 18px; font-weight: 700; color: #fff; }
+.statLabel { font-size: 11px; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; }
+.actions { flex-shrink: 0; }
+.artistProBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ff8c00, #ff5500);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255, 85, 0, 0.4);
+}
+.avatarPro {
+  border: 3px solid #ff8c00 !important;
+  box-shadow: 0 0 0 1px rgba(255,140,0,0.3), 0 8px 32px rgba(0,0,0,0.45) !important;
+}
+@media (max-width: 680px) {
+  .header, .inner { min-height: 0; }
+  .inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 18px;
+  }
+  .avatar { width: 88px; height: 88px; }
+  .bio { max-width: none; }
+  .actions {
+    width: 100%;
+    order: 3;
+  }
+  .info {
+    width: calc(100% - 106px);
+  }
+}

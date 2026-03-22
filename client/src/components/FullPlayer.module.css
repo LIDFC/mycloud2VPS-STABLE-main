@@ -1,0 +1,361 @@
+/* ══════════════════════════════════════════════════════
+   FULL PLAYER — modal overlay
+   ══════════════════════════════════════════════════════ */
+
+.overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--bg, #1a1a1a) 80%, #000), #0d0d0d 60%);
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  overflow-y: auto;
+  animation: slideUp 0.32s cubic-bezier(0.34, 1.3, 0.64, 1);
+  padding-bottom: 40px;
+}
+@keyframes slideUp { from { transform: translateY(60px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.bgGlow {
+  position: absolute; top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--bg, #ff5500) 40%, transparent) 0%, transparent 70%);
+  pointer-events: none; opacity: 0.6;
+}
+
+/* Header */
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px 8px;
+  position: sticky; top: 0; z-index: 10;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+}
+.headerLabel {
+  font-family: "Syne", sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.closeBtn {
+  background: rgba(255,255,255,0.08); border: none; cursor: pointer;
+  color: #fff; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+}
+.closeBtn:hover { background: rgba(255,255,255,0.15); transform: scale(1.08); }
+
+/* Body */
+.body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  padding: 8px 32px 0;
+}
+
+/* LEFT col */
+.leftCol { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+
+.coverWrap {
+  position: relative; width: 100%; max-width: 260px;
+  aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.7);
+}
+.cover { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
+
+.coverMeta { text-align: center; width: 100%; }
+.trackTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 20px; font-weight: 800; color: #fff;
+  letter-spacing: -0.5px; margin: 0 0 4px;
+}
+.trackArtistLink {
+  font-size: 14px; color: rgba(255,255,255,0.55);
+  text-decoration: none; display: inline-block; transition: color 0.15s;
+}
+.trackArtistLink:hover { color: #ff5500; text-decoration: underline; }
+.trackGenre {
+  display: inline-block; margin-top: 8px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; color: #ff5500;
+  background: rgba(255,85,0,0.12); border: 1px solid rgba(255,85,0,0.25);
+  border-radius: 4px; padding: 3px 8px;
+}
+
+.coverActions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.actionBtn {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px; padding: 7px 14px;
+  color: rgba(255,255,255,0.55); cursor: pointer;
+  font-size: 12px; font-weight: 500; transition: all 0.15s;
+}
+.actionBtn:hover { background: rgba(255,255,255,0.13); color: #fff; }
+.actionBtnOn { color: #e03 !important; border-color: rgba(220,0,50,0.3) !important; background: rgba(220,0,50,0.1) !important; }
+.actionBtnAccent { color: #ff5500 !important; border-color: rgba(255,85,0,0.28) !important; background: rgba(255,85,0,0.12) !important; }
+.actionBtnRepost { color: #4CAF50 !important; border-color: rgba(76,175,80,0.3) !important; background: rgba(76,175,80,0.1) !important; }
+
+/* RIGHT col */
+.rightCol { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
+
+/* ── Seekbar ─────────────────────────────────────────── */
+.seekSection {}
+.seekTimes {
+  display: flex; justify-content: space-between;
+  margin-bottom: 8px; font-size: 11px; font-weight: 500; color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.seekDuration { color: #555; }
+
+/* The hit zone — full height, generous padding for easy clicking */
+.seekBar {
+  position: relative;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: visible;
+  /* Extend the touch/click area without visual change */
+  padding: 8px 0;
+  margin: -8px 0;
+  box-sizing: content-box;
+}
+.seekBar:hover .seekThumb { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.seekBarActive .seekThumb { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+
+.waveCanvas {
+  position: absolute;
+  inset: 8px 0; /* cancel the padding */
+  width: 100%;
+  height: calc(100% - 16px);
+  display: block;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Ghost overlay while hovering */
+.seekHoverLine {
+  position: absolute;
+  top: 8px; bottom: 8px; left: 0;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Playhead */
+.seekThumb {
+  position: absolute;
+  top: 50%;
+  width: 14px; height: 14px;
+  background: #fff; border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+/* Controls */
+.controls { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.ctrlBtn {
+  background: rgba(255,255,255,0.06); border: none; cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.ctrlBtn:hover { background: rgba(255,255,255,0.12); color: #fff; transform: scale(1.06); }
+
+.bigPlayBtn {
+  width: 60px; height: 60px; border-radius: 50%;
+  border: none; background: #ff5500; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(255,85,0,0.4);
+  transition: background 0.15s, transform 0.15s, box-shadow 0.2s;
+}
+.bigPlayBtn:hover { background: #ff6a1a; transform: scale(1.06); box-shadow: 0 0 0 8px rgba(255,85,0,0.12), 0 8px 28px rgba(255,85,0,0.5); }
+.bigPlayBtn:active { transform: scale(0.95); }
+
+/* Volume */
+.volSection { display: flex; align-items: center; gap: 8px; }
+.volBar { flex: 1; height: 28px; display: flex; align-items: center; cursor: pointer; touch-action: none; }
+.volTrack { flex: 1; height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: visible; position: relative; }
+.volFill { height: 100%; background: rgba(255,255,255,0.55); border-radius: 4px; position: relative; transition: width 0.05s; }
+.volThumb {
+  position: absolute; right: -6px; top: 50%;
+  transform: translateY(-50%) scale(0); width: 13px; height: 13px;
+  background: #fff; border-radius: 50%;
+  opacity: 0; transition: opacity 0.15s, transform 0.15s;
+}
+.volBar:hover .volThumb { opacity: 1; transform: translateY(-50%) scale(1); }
+.volBar:hover .volFill { background: #ff5500; }
+
+/* Section titles */
+.sectionTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 12px; font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  margin: 0 0 10px;
+}
+
+/* Comments */
+.commentsSection {
+  padding-top: 4px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Queue */
+.queueSection { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 4px; }
+.queueList { display: flex; flex-direction: column; gap: 2px; }
+.queueItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 7px 10px; border-radius: 8px; cursor: pointer;
+  border: none; width: 100%; text-align: left; background: transparent;
+  transition: background 0.15s;
+}
+.queueItem:hover { background: rgba(255,255,255,0.06); }
+.queueCover { width: 36px; height: 36px; border-radius: 5px; object-fit: cover; flex-shrink: 0; }
+.queueMeta { min-width: 0; }
+.queueTrackTitle { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.8); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.queueTrackArtist { font-size: 11px; color: #555; }
+
+/* Repeat icon */
+.repeatWrap { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+.repeatOne { position: absolute; right: -4px; bottom: -4px; font-size: 9px; font-weight: 700; color: currentColor; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .body { grid-template-columns: 1fr; padding: 8px 20px 0; gap: 20px; }
+  .leftCol { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+  .coverWrap { max-width: 120px; }
+  .coverMeta { text-align: left; flex: 1; }
+  .trackTitle { font-size: 16px; }
+  .seekBar { height: 56px; }
+}
+
+/* ── Comment dots on waveform ──────────────────────────── */
+.commentDot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 0; background: none; cursor: pointer;
+  z-index: 4;
+  transition: transform 0.12s, border-color 0.12s;
+}
+.commentDot:hover, .commentDotActive {
+  transform: translate(-50%, -50%) scale(1.3);
+  border-color: #ff5500;
+  z-index: 5;
+}
+.commentDotImg {
+  width: 100%; height: 100%;
+  border-radius: 50%; object-fit: cover; display: block;
+}
+.commentBubble {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%; transform: translateX(-50%);
+  background: rgba(15,15,15,0.97);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 6px 10px;
+  white-space: nowrap; max-width: 200px;
+  display: flex; flex-direction: column; gap: 2px;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+.commentBubbleUser { font-size: 10px; font-weight: 700; color: #ff5500; }
+.commentBubbleText {
+  font-size: 11px; color: rgba(255,255,255,0.85);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 180px; display: block;
+}
+
+/* ── Comment input form (above controls) ──────────────── */
+.commentForm {
+  display: flex; align-items: center; gap: 10px;
+}
+.commentFormAvatar {
+  width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+}
+.commentInput {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px; padding: 7px 14px;
+  font-size: 12.5px; color: #fff; font-family: inherit;
+  outline: none; transition: border-color 0.15s, background 0.15s;
+}
+.commentInput:focus {
+  border-color: rgba(255,85,0,0.5);
+  background: rgba(255,255,255,0.09);
+}
+.commentInput::placeholder { color: rgba(255,255,255,0.3); }
+.commentSubmit {
+  width: 32px; height: 32px; border-radius: 50%; border: none;
+  background: #ff5500; color: #fff; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.15s, opacity 0.15s; cursor: pointer;
+}
+.commentSubmit:disabled { opacity: 0.4; cursor: default; }
+.commentSubmit:not(:disabled):hover { background: #ff6a1a; }
+.commentLoginHint { font-size: 12px; color: rgba(255,255,255,0.4); }
+.commentLoginLink { color: #ff5500; text-decoration: none; }
+.commentLoginLink:hover { text-decoration: underline; }
+
+/* ── Comment list ─────────────────────────────────────── */
+.commentList {
+  display: flex; flex-direction: column; gap: 2px;
+  max-height: 200px; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+.commentRow {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 7px 10px; border-radius: 8px; cursor: pointer;
+  transition: background 0.12s; position: relative;
+}
+.commentRow:hover { background: rgba(255,255,255,0.05); }
+.commentRowActive {
+  background: rgba(255,85,0,0.08) !important;
+  border-left: 2px solid #ff5500;
+}
+.commentRowAvatar {
+  width: 26px; height: 26px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0; margin-top: 1px;
+}
+.commentRowBody { flex: 1; min-width: 0; }
+.commentRowMeta { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+.commentRowUser {
+  font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+.commentRowUser:hover { color: #ff5500; }
+.commentTimeBtn {
+  font-size: 10px; color: #ff5500;
+  background: rgba(255,85,0,0.1); border: none; border-radius: 4px;
+  padding: 1px 6px; cursor: pointer; font-family: monospace;
+}
+.commentTimeBtn:hover { background: rgba(255,85,0,0.2); }
+.commentRowText {
+  font-size: 12px; color: rgba(255,255,255,0.65);
+  line-height: 1.4; word-break: break-word; margin: 0;
+}
+.commentDeleteBtn {
+  flex-shrink: 0; background: none; border: none;
+  color: rgba(255,255,255,0.2); cursor: pointer;
+  padding: 4px; border-radius: 4px; display: flex; align-items: center;
+  opacity: 0; transition: opacity 0.12s, color 0.12s;
+}
+.commentRow:hover .commentDeleteBtn { opacity: 1; }
+.commentDeleteBtn:hover { color: #e03; }

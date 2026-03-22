@@ -1,0 +1,32 @@
+[
+  {
+    "id": "823af52c-ab60-45a1-9a38-2b30a0f6cdf5",
+    "ownerId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "name": "Main",
+    "description": null,
+    "trackIds": [
+      "c7a649b8-8b9a-4fd5-86f7-cbecd9e96af4",
+      "7c547b8c-90bb-48c8-b379-aad1d7a3d0af",
+      "10abf7ae-76ec-4dc1-9316-3acd6b282c8d",
+      "098e7616-e8e7-4383-bb65-cb48150548ee",
+      "c6521402-cfa1-4f6f-a2ea-0e62e21d536d",
+      "73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45",
+      "0166f77f-cae2-487b-9554-6dfa8de25eeb",
+      "35b26294-dc52-4c43-be4b-5d8183d47b8b",
+      "42c37de1-1ec2-46e1-9260-af3bda872431",
+      "5c03484a-caab-46de-a1fa-d0a2ebb81576",
+      "84dca71b-10e6-42c5-9ff3-d802306c2d69",
+      "60bd61b4-da19-4662-96fd-82a350c4d2dd",
+      "84af2ac7-8a48-4264-9a48-5b713f1b3061",
+      "0eb8c6a7-6583-47b3-9493-489c5800ba70",
+      "be97b807-792a-43ca-b807-a418b6c23e9a",
+      "6b83f444-20a7-4a67-b8f1-835c6f90648c",
+      "43aa855c-d889-4352-aafe-435bfeec80db",
+      "960a199a-582b-4790-8380-b69441ba61c0",
+      "3c6070f8-452b-414e-a543-76e0af988ffc"
+    ],
+    "createdAt": "2026-03-22T15:41:38.652Z",
+    "updatedAt": "2026-03-22T15:53:51.693Z",
+    "coverFile": "7f4fb5f7-8358-4d14-bca2-0511838e982b.jpg"
+  }
+]

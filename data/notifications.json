@@ -1,0 +1,2436 @@
+[
+  {
+    "id": "c5dea249-f45a-480f-882f-33554e95b9ea",
+    "userId": "e3456161-a70d-4e44-84d0-0dd937d7649a",
+    "message": "🌟 You've been granted Artist Pro status!",
+    "read": true,
+    "createdAt": "2026-03-17T19:53:47.016Z",
+    "type": "artist_pro"
+  },
+  {
+    "id": "77422c2c-fe37-41e6-aa15-9c3dc6640038",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Лайфстайл\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:08:21.653Z",
+    "type": "pending_track",
+    "trackId": "40b6bcd0-5390-4b35-ad41-c4d180adacd9"
+  },
+  {
+    "id": "b13ac524-52ee-4567-bacf-9795314d3872",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Сиять\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:09:39.710Z",
+    "type": "pending_track",
+    "trackId": "a929215c-bf12-4bdc-8162-e4bdf62fcaa2"
+  },
+  {
+    "id": "96794838-a77b-4205-8320-e71b6eb3f177",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ГРОБ\" by dzhongarik feat. Og Buda — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:10:04.318Z",
+    "type": "pending_track",
+    "trackId": "8fb46525-a0c5-4051-8d9b-865505e2bf9e"
+  },
+  {
+    "id": "38408853-4cf7-491e-a563-c454e6cfc1f3",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Брикин Брикин\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:10:20.046Z",
+    "type": "pending_track",
+    "trackId": "c7a649b8-8b9a-4fd5-86f7-cbecd9e96af4"
+  },
+  {
+    "id": "cc643241-90da-4164-b640-e4b532435082",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Витринный покупатель\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:10:39.996Z",
+    "type": "pending_track",
+    "trackId": "7c547b8c-90bb-48c8-b379-aad1d7a3d0af"
+  },
+  {
+    "id": "cc70240b-7a15-4b2b-b8d8-ace50264dc5d",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Кинг Пин\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:02.439Z",
+    "type": "pending_track",
+    "trackId": "3d97b301-7c67-4136-b49d-f25b7da13762"
+  },
+  {
+    "id": "788217d0-8ca8-4a08-aac7-fd88681af281",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Лайфстайл\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:13.660Z",
+    "type": "approved",
+    "trackId": "40b6bcd0-5390-4b35-ad41-c4d180adacd9"
+  },
+  {
+    "id": "fbad44eb-fcbf-4934-a2b6-5fd102e70cff",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Сиять\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:14.786Z",
+    "type": "approved",
+    "trackId": "a929215c-bf12-4bdc-8162-e4bdf62fcaa2"
+  },
+  {
+    "id": "5814b603-6500-4a95-b3c5-4a4dbe9a7046",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"ГРОБ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:15.332Z",
+    "type": "approved",
+    "trackId": "8fb46525-a0c5-4051-8d9b-865505e2bf9e"
+  },
+  {
+    "id": "09d49167-a973-4ce1-8bff-5a4522c7bca3",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Брикин Брикин\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:15.820Z",
+    "type": "approved",
+    "trackId": "c7a649b8-8b9a-4fd5-86f7-cbecd9e96af4"
+  },
+  {
+    "id": "f939cc39-eb6a-4667-b44c-6e2a73211899",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Витринный покупатель\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:16.860Z",
+    "type": "approved",
+    "trackId": "7c547b8c-90bb-48c8-b379-aad1d7a3d0af"
+  },
+  {
+    "id": "2d071bb0-e1d9-4715-aad8-9ad9df80d419",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Кинг Пин\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:17.469Z",
+    "type": "approved",
+    "trackId": "3d97b301-7c67-4136-b49d-f25b7da13762"
+  },
+  {
+    "id": "18941879-44d7-4b6c-b4db-e62bed35de00",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "🌟 You've been granted Artist Pro status!",
+    "read": true,
+    "createdAt": "2026-03-17T20:11:56.037Z",
+    "type": "artist_pro"
+  },
+  {
+    "id": "c2f226e6-ed78-4efd-b692-bfdd8d7e1bbc",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"popopo\" by djon — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T15:58:48.155Z",
+    "type": "pending_track",
+    "trackId": "cd2a1118-3483-4988-8f98-841d3cd3eb27"
+  },
+  {
+    "id": "e5acca6d-8332-473c-a468-5584befcf9dd",
+    "userId": "ad218750-fd99-415a-a6a1-68d69418338b",
+    "message": "Your track \"popopo\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-18T17:25:02.015Z",
+    "type": "approved",
+    "trackId": "cd2a1118-3483-4988-8f98-841d3cd3eb27"
+  },
+  {
+    "id": "f825c25d-9cb1-415f-86ff-be1be4b45634",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "🌟 You've been granted Artist Pro status!",
+    "read": true,
+    "createdAt": "2026-03-18T17:27:00.946Z",
+    "type": "artist_pro"
+  },
+  {
+    "id": "1758fa13-7454-4343-a386-48dfb7d80f2a",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"2 DAYS NO LEAN EP\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-18T17:28:22.595Z",
+    "type": "pending_album",
+    "albumId": "36a9b87e-c974-4160-a775-9ca1ee540335"
+  },
+  {
+    "id": "3d096ca5-48de-4cc3-a08e-15d42b113842",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Гана\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:32:05.204Z",
+    "type": "pending_track",
+    "trackId": "73834834-9e5b-4c7a-a786-b45b8a31c560"
+  },
+  {
+    "id": "ca03e8b3-ba4d-4e1f-a3b6-32f28cf448ee",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Забудь\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:32:19.120Z",
+    "type": "pending_track",
+    "trackId": "b86ce1fd-98a5-45e5-a4a9-26ec583878b4"
+  },
+  {
+    "id": "f92d3655-8c34-4e58-ba07-1d9442f7e3c0",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Хайперпоп\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:32:33.129Z",
+    "type": "pending_track",
+    "trackId": "518247d9-f982-49aa-a23d-a3ead3b74e51"
+  },
+  {
+    "id": "3d2fe6a5-c33f-4ebb-9324-fdf79d7560c0",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"2к16\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:32:50.106Z",
+    "type": "pending_track",
+    "trackId": "10abf7ae-76ec-4dc1-9316-3acd6b282c8d"
+  },
+  {
+    "id": "821bc3c0-d206-4ffd-8c69-b2c4526f5d49",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Куни\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:33:07.709Z",
+    "type": "pending_track",
+    "trackId": "d717f903-1788-4e14-8b39-6cabbc46d2e4"
+  },
+  {
+    "id": "2afb54f4-c080-4c71-8dd4-1a9226b773f6",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Чёрная экономика\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:33:26.288Z",
+    "type": "pending_track",
+    "trackId": "98a7c1de-1062-4c13-afc4-aed0036940e4"
+  },
+  {
+    "id": "8ab88502-3eaa-4902-a25c-ab55e4f76bee",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Божественный план\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:33:45.279Z",
+    "type": "pending_track",
+    "trackId": "c3b2c5d5-f05e-4452-9913-b889a5145e5c"
+  },
+  {
+    "id": "a038765c-67b0-41f6-8257-e1bc7aefde17",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Эклер\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:34:55.926Z",
+    "type": "pending_track",
+    "trackId": "7dfd8cee-4101-416f-9e33-f6c41fc298a7"
+  },
+  {
+    "id": "b842ca3f-91f4-4bab-b671-7635c94cb80e",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Нагреваю\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:35:09.927Z",
+    "type": "pending_track",
+    "trackId": "779f7924-132b-440e-8ae4-22c8681df16a"
+  },
+  {
+    "id": "0162878a-94dd-4538-9c96-1abbef64e824",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"В миноре\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:37:18.202Z",
+    "type": "pending_track",
+    "trackId": "098e7616-e8e7-4383-bb65-cb48150548ee"
+  },
+  {
+    "id": "303577e5-44fe-40a0-a44a-8132cd99b118",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Наряд\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:38:04.958Z",
+    "type": "pending_track",
+    "trackId": "c6521402-cfa1-4f6f-a2ea-0e62e21d536d"
+  },
+  {
+    "id": "7c7b4f78-f2ad-4597-a564-289362f76077",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"PROJECT X\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:38:28.582Z",
+    "type": "pending_track",
+    "trackId": "7ebdfb47-1b24-413a-baef-c7876e17c931"
+  },
+  {
+    "id": "5c6c57e3-f8fc-42b9-bc8d-9e6fabba14d8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"На ужин\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:39:34.877Z",
+    "type": "pending_track",
+    "trackId": "78c3d6d9-c8e8-4c04-8225-00aa181c9986"
+  },
+  {
+    "id": "472f077d-6414-44cc-b091-14a9fbd29500",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Промо feat. DooMee\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:39:56.408Z",
+    "type": "pending_track",
+    "trackId": "73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45"
+  },
+  {
+    "id": "6186776f-6361-4a71-9f47-6036619aa002",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Симп\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:40:09.005Z",
+    "type": "pending_track",
+    "trackId": "d171264c-5bc5-4665-9831-4a56e52ef0f0"
+  },
+  {
+    "id": "f86db2f0-288c-46a7-9845-8e5ce66c725b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Одаривает\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:40:23.848Z",
+    "type": "pending_track",
+    "trackId": "0166f77f-cae2-487b-9554-6dfa8de25eeb"
+  },
+  {
+    "id": "08c29ab6-e2b5-45db-bb3c-eaffe01e5b59",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Со сцены\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:40:35.894Z",
+    "type": "pending_track",
+    "trackId": "35b26294-dc52-4c43-be4b-5d8183d47b8b"
+  },
+  {
+    "id": "0da8afd1-a6fa-496e-a3a1-ca2c377c5ee1",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Пробки\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:40:51.346Z",
+    "type": "pending_track",
+    "trackId": "20e36dce-2058-464f-8fb4-eafb75ec0443"
+  },
+  {
+    "id": "e4a864a7-425a-4e21-ac1a-bd1cb192b362",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Дай мне посмотреть feat. BUSHIDO ZHO\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:41:49.499Z",
+    "type": "pending_track",
+    "trackId": "67b93727-5524-4a67-b5ac-2e3bf78fa2a6"
+  },
+  {
+    "id": "ccbd9cab-ecbe-46f7-bb32-139fb3adc6d0",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Дэнс дэнс feat. BUSHIDO ZHO\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:42:04.518Z",
+    "type": "pending_track",
+    "trackId": "3940f83a-7507-40c6-98dc-b2760e226678"
+  },
+  {
+    "id": "9ed8684d-65fe-42f0-af09-14db513c6f14",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Не вернуть\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:43:55.777Z",
+    "type": "pending_track",
+    "trackId": "676191ef-a1a4-42c1-aec5-7c50036f3246"
+  },
+  {
+    "id": "8745806e-0992-4c3b-98e5-e1933c596713",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"2033\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:44:08.414Z",
+    "type": "pending_track",
+    "trackId": "9e861a98-510a-4335-be6b-0d6a1de6d947"
+  },
+  {
+    "id": "8e8c5f72-6e24-4987-a0ed-a50fa3110a59",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Зависим\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:44:21.571Z",
+    "type": "pending_track",
+    "trackId": "baea6c82-173e-4aaf-84f2-235ef99f7e21"
+  },
+  {
+    "id": "654ee4df-1ea6-4bfe-b3a9-ebc692a82a60",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Мяу\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:46:23.910Z",
+    "type": "pending_track",
+    "trackId": "42c37de1-1ec2-46e1-9260-af3bda872431"
+  },
+  {
+    "id": "1e447253-1edb-4235-ae37-d832205dbacc",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Любить буду\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:46:34.288Z",
+    "type": "pending_track",
+    "trackId": "43fca8eb-2121-4cfe-a171-791e12fd4417"
+  },
+  {
+    "id": "b0f09f47-6de3-4f5f-94a2-7a4ef23fd710",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"2 часа ночи\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:46:49.525Z",
+    "type": "pending_track",
+    "trackId": "df53e343-8fba-4782-a920-786cd3d9d6b6"
+  },
+  {
+    "id": "536a6b3b-e910-43e0-9ff9-03cfd8f8794d",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Соло feat. BUSHIDO ZHO\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:47:09.522Z",
+    "type": "pending_track",
+    "trackId": "9e670850-a881-4002-a8cc-0792cf17318b"
+  },
+  {
+    "id": "8ec2d77d-4176-40d1-9f12-c8d9ec584353",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Много\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:47:21.201Z",
+    "type": "pending_track",
+    "trackId": "5d1bdb89-dff3-4b85-82cf-cca2375532f9"
+  },
+  {
+    "id": "b1a998f6-d861-4422-9900-b0b91e2cd166",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Один шаг\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:47:33.420Z",
+    "type": "pending_track",
+    "trackId": "110cd0a5-d743-4b81-92ae-b7a29a5dac3b"
+  },
+  {
+    "id": "66046b76-d5d1-4c43-ac0f-985af5d3194d",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Ща нормально\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:47:44.468Z",
+    "type": "pending_track",
+    "trackId": "607d43c0-f788-4823-9002-99122559e08b"
+  },
+  {
+    "id": "c78cb950-9e18-436d-abf4-800b9ee8df09",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Сегодня\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:47:57.116Z",
+    "type": "pending_track",
+    "trackId": "436ab255-8a29-442a-9511-73013794fae4"
+  },
+  {
+    "id": "cc8173d6-898d-4c50-b7cb-e4aa5896491a",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Пугали\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:48:22.100Z",
+    "type": "pending_track",
+    "trackId": "37a0e452-b0f8-4762-8014-15020da59396"
+  },
+  {
+    "id": "a90a233f-69e6-4ccf-9a39-8b6fe953d63f",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Не везёт\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:48:39.706Z",
+    "type": "pending_track",
+    "trackId": "1ea54233-0714-4103-8eae-35998a15a257"
+  },
+  {
+    "id": "9ab69f6e-5590-4a0e-af49-f6f48320b3e1",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Рок стар\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:49:22.724Z",
+    "type": "pending_track",
+    "trackId": "5c03484a-caab-46de-a1fa-d0a2ebb81576"
+  },
+  {
+    "id": "0eaf7220-1341-4750-8d99-b664a038a54e",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Всё дизайнер\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:49:56.142Z",
+    "type": "pending_track",
+    "trackId": "84dca71b-10e6-42c5-9ff3-d802306c2d69"
+  },
+  {
+    "id": "beb710f6-29b9-4432-8426-c787e2d7bba8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Say Whats Real Freestyle\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:50:48.162Z",
+    "type": "pending_track",
+    "trackId": "ba7c74ac-87c8-4582-894c-53d39c0599c6"
+  },
+  {
+    "id": "8eee7abe-3476-4281-9259-cc6b9beefd0a",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Не нужна\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:50:58.238Z",
+    "type": "pending_track",
+    "trackId": "93e4c8cb-a8c8-482f-878a-47734a71fdab"
+  },
+  {
+    "id": "9c4b1cb3-57cc-4d6b-aaf5-2120095bcc46",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Чёрный лебедь\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:54:06.066Z",
+    "type": "pending_track",
+    "trackId": "ed810b19-186d-4a05-aba9-35472a9af44a"
+  },
+  {
+    "id": "583b8e46-b24e-421b-8e9b-57e0ed35f1e3",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Не помню\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:54:18.506Z",
+    "type": "pending_track",
+    "trackId": "fddef744-22bb-48e7-b16c-b48676a5e2e9"
+  },
+  {
+    "id": "0dd45521-bccf-4682-96b4-c23118b1ddda",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Сияешь 934 8777\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:54:33.429Z",
+    "type": "pending_track",
+    "trackId": "06b49c08-e5eb-4050-85a7-3572e6fb0267"
+  },
+  {
+    "id": "804d6a53-38d9-473b-a1e1-517c2553d7f6",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Во плоти\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:54:52.657Z",
+    "type": "pending_track",
+    "trackId": "7e0a3667-9249-4598-a151-e446a3d62d5c"
+  },
+  {
+    "id": "1203decb-d89d-4f33-bd60-4bbae608effb",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Блики\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:55:03.317Z",
+    "type": "pending_track",
+    "trackId": "0777d4d5-b3de-463e-ba90-e5b6bd8e0841"
+  },
+  {
+    "id": "95d39a07-f400-4ce2-93c1-cccb833a1882",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Против ветра\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:55:15.940Z",
+    "type": "pending_track",
+    "trackId": "788e093f-5ff2-48b3-b523-3a0760d0efc8"
+  },
+  {
+    "id": "fc4785b7-d4fa-4ffa-a720-ae99f9f32e9b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Тайны\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:55:27.304Z",
+    "type": "pending_track",
+    "trackId": "0061b036-08b1-444d-960b-307146819712"
+  },
+  {
+    "id": "a4f439a6-21b2-4713-96ec-bc2bf96e956f",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Не тот парень\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:55:44.700Z",
+    "type": "pending_track",
+    "trackId": "f65affb3-0c14-4188-adc3-c3d487223a6b"
+  },
+  {
+    "id": "8e725a66-5f71-4e52-9cbd-365e7d3eb025",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"До замка\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:55:54.556Z",
+    "type": "pending_track",
+    "trackId": "e98e7726-3b39-4bfa-922f-9b5d044dd7cd"
+  },
+  {
+    "id": "15846073-c3e9-4cbe-a239-20978c52090b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Сдержал слово\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:56:06.608Z",
+    "type": "pending_track",
+    "trackId": "a2e52158-19c4-4210-8c85-20d6dbd8f096"
+  },
+  {
+    "id": "ff0a0c73-705e-4477-8039-87a033c6113a",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Хай хилс feat. DooMee\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:56:28.423Z",
+    "type": "pending_track",
+    "trackId": "816a5a81-b8ae-4090-b50e-0b56ae06b402"
+  },
+  {
+    "id": "d235427a-0c0d-4a79-9835-aa4dd1fe4857",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Dreamin Freestyle\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:56:39.241Z",
+    "type": "pending_track",
+    "trackId": "79f3740a-c0a0-4d05-b3b4-0d61511968c7"
+  },
+  {
+    "id": "581fae55-8e53-4926-9c38-d1cbf3344079",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Сваровски\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:57:48.309Z",
+    "type": "pending_track",
+    "trackId": "eed00f45-feb3-43cb-9195-6f1f84eb568d"
+  },
+  {
+    "id": "2ed067e7-a349-4b8c-8d02-caa36a65382b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Замер\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:58:00.783Z",
+    "type": "pending_track",
+    "trackId": "70b9e2b4-5fac-4709-84a5-95a970b10d02"
+  },
+  {
+    "id": "73b2f6d7-e079-4f0a-8cb3-9596d6bbee71",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Центр\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T17:58:12.246Z",
+    "type": "pending_track",
+    "trackId": "61891163-6836-4f7f-b981-8c77fc616ce0"
+  },
+  {
+    "id": "0f10f6f7-e1ef-498a-a209-de13eb22158b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"WANT SOME MORE\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:00:55.364Z",
+    "type": "pending_track",
+    "trackId": "f5292595-ddc0-4883-bcbb-061d8463bd94"
+  },
+  {
+    "id": "67da9e71-bf50-4c92-a19d-1239168d51a9",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"I LOVE MY OPPS\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:01:15.584Z",
+    "type": "pending_track",
+    "trackId": "246245cf-172d-442b-8cbf-22258de4b801"
+  },
+  {
+    "id": "5606ecaa-7736-4f7b-8b14-e7aa0177a527",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"CASPIAN LOVE\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:01:30.958Z",
+    "type": "pending_track",
+    "trackId": "d9b8de8a-e619-4fc4-a353-536de3d53b7e"
+  },
+  {
+    "id": "63fa8d5a-c362-4f3e-b555-7d9262cd7556",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"FANTASY\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:01:44.682Z",
+    "type": "pending_track",
+    "trackId": "ad603ed3-20ea-4185-9918-a1e4b3dcdf5f"
+  },
+  {
+    "id": "60769206-e467-46e7-9f2d-7999a4d0c184",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"INTERLUDE BARS\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:02:02.034Z",
+    "type": "pending_track",
+    "trackId": "ed5cae6d-6d37-443e-9a18-b53077d1164c"
+  },
+  {
+    "id": "b37a9f01-6f5e-4504-bb80-97d95418f7eb",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ВЕЧНО МОЛОДОЙ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:02:15.866Z",
+    "type": "pending_track",
+    "trackId": "15854304-a8be-41c8-a76b-094bff6e545c"
+  },
+  {
+    "id": "50ae7e13-608f-49c3-927f-d951a6c7bd0d",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ЛУЧШИЕ ГОДЫ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:02:33.118Z",
+    "type": "pending_track",
+    "trackId": "1800fc18-1091-432a-a9fb-08253ad9fe92"
+  },
+  {
+    "id": "232a0418-1a7f-408d-8d21-aeeca1a28575",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ВЫПЕЙ ЗА МЕНЯ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:02:50.821Z",
+    "type": "pending_track",
+    "trackId": "d54bde24-2c45-4fe0-9ff1-88c60f323d88"
+  },
+  {
+    "id": "6395b23b-a1f0-4dc3-9218-c50d2c156af9",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"VOGUE WATER\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:03:03.159Z",
+    "type": "pending_track",
+    "trackId": "92b2a205-f8b5-44dc-b5e7-e5bc7e51605d"
+  },
+  {
+    "id": "85c70efd-44fc-4fe1-972c-6793bb258f96",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Я ЛЮБЛЮ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:03:15.775Z",
+    "type": "pending_track",
+    "trackId": "5a99d400-6b19-42ab-94a1-3579e33b3d0b"
+  },
+  {
+    "id": "2ee2fe70-c933-4440-a853-c0abc31e173f",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"DJ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:03:29.683Z",
+    "type": "pending_track",
+    "trackId": "995f0eb3-3b35-47e6-9a94-a8812929f6bf"
+  },
+  {
+    "id": "df301463-2719-4537-ac4e-63e1c0b10881",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ЦАРИЦУ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:03:39.866Z",
+    "type": "pending_track",
+    "trackId": "b2c64518-e2f5-4e2e-bce0-f5849bbcceb8"
+  },
+  {
+    "id": "051f1be7-d962-439f-83db-d69e39567933",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ЖАН ПОЛЬ ГОТЬЕ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:03:54.292Z",
+    "type": "pending_track",
+    "trackId": "a07a81cb-4a49-438c-b478-25dcc5bd6ab3"
+  },
+  {
+    "id": "f161fd2e-d294-4b50-83ec-dd0dee0a31c8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"НА ПЕРВОМ СВИДАНИИ\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:04:06.248Z",
+    "type": "pending_track",
+    "trackId": "dbeb61d1-1e57-4da7-8335-e439d7b4d66c"
+  },
+  {
+    "id": "28dea421-e204-48e2-8f1c-f748b18b5fb8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"DARK NIGHT\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:04:15.663Z",
+    "type": "pending_track",
+    "trackId": "e97865cc-57f8-4339-9ba0-3e9ed649032d"
+  },
+  {
+    "id": "938e6180-c27d-4efd-bac4-480914a13335",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"АМР АУТРО\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:04:26.320Z",
+    "type": "pending_track",
+    "trackId": "46dbcb2c-a9d5-42ef-b3b4-5f1ec0700dc8"
+  },
+  {
+    "id": "8861d3b2-8871-4cbb-b7b9-533e86c1c2f9",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"SEX IN THE CLUB\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:05:41.150Z",
+    "type": "pending_track",
+    "trackId": "e1bda242-cc3d-4a76-a12b-1eeaa128e712"
+  },
+  {
+    "id": "51d74d77-1e7d-496a-a887-efdbe712e134",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ТАХО\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:05:50.222Z",
+    "type": "pending_track",
+    "trackId": "3fadb53a-1f21-460c-a4f9-0a96227b33b5"
+  },
+  {
+    "id": "843ed810-b60b-4c2c-a7cd-4347ab1fc8f0",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Blestkii Freestyle Prod. by maiikiwassup\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:07:54.775Z",
+    "type": "pending_track",
+    "trackId": "c9df5b63-9d0d-4ee8-b937-f087b4aaa81f"
+  },
+  {
+    "id": "60b08455-941e-45ad-bb53-1e055f5646df",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Kanye Freestyle Prod. by nelly2k\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:08:13.017Z",
+    "type": "pending_track",
+    "trackId": "6af87428-fbd3-4ee2-bdf4-9bb71b3aae5d"
+  },
+  {
+    "id": "b4dcdb81-9f91-480f-a861-405c9decdbfa",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Wex Freestyle Prod. by Heronwater, Lawzy\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:08:32.116Z",
+    "type": "pending_track",
+    "trackId": "0ab5cb14-a76e-4496-a964-80798f747699"
+  },
+  {
+    "id": "dafc9f84-62bd-4767-9381-a409f97514ce",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"RIP Plug Freestyle Prod. by nelly2k\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:08:51.239Z",
+    "type": "pending_track",
+    "trackId": "05da31cd-769f-43ad-bc3d-f27c78c3ed73"
+  },
+  {
+    "id": "79e17dbe-f444-4b73-ba5a-186e1aa3ef94",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Гана\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:26.865Z",
+    "type": "approved",
+    "trackId": "73834834-9e5b-4c7a-a786-b45b8a31c560"
+  },
+  {
+    "id": "80275832-76b1-44c8-8564-5fc10efdf055",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Забудь\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:27.507Z",
+    "type": "approved",
+    "trackId": "b86ce1fd-98a5-45e5-a4a9-26ec583878b4"
+  },
+  {
+    "id": "d6ef5fbd-3527-452c-88fd-1713c1b7cdf6",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Хайперпоп\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:27.994Z",
+    "type": "approved",
+    "trackId": "518247d9-f982-49aa-a23d-a3ead3b74e51"
+  },
+  {
+    "id": "6549778a-bad4-4c27-b401-67ce3d2fcc4b",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"2к16\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:28.445Z",
+    "type": "approved",
+    "trackId": "10abf7ae-76ec-4dc1-9316-3acd6b282c8d"
+  },
+  {
+    "id": "7af00a37-8afc-434d-8e1e-7e9d01b49554",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Куни\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:28.894Z",
+    "type": "approved",
+    "trackId": "d717f903-1788-4e14-8b39-6cabbc46d2e4"
+  },
+  {
+    "id": "f4c9095e-1da6-4067-9caf-988c8d098380",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Чёрная экономика\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:29.322Z",
+    "type": "approved",
+    "trackId": "98a7c1de-1062-4c13-afc4-aed0036940e4"
+  },
+  {
+    "id": "9e1ecf39-54ba-4ab5-81d2-a5cf0c557e89",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Божественный план\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:29.768Z",
+    "type": "approved",
+    "trackId": "c3b2c5d5-f05e-4452-9913-b889a5145e5c"
+  },
+  {
+    "id": "bd36be46-1bf6-4152-bcf0-e48e7b47dc5d",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Эклер\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:30.209Z",
+    "type": "approved",
+    "trackId": "7dfd8cee-4101-416f-9e33-f6c41fc298a7"
+  },
+  {
+    "id": "8e29c159-957b-46c9-9cea-e053e410e54e",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Нагреваю\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:30.599Z",
+    "type": "approved",
+    "trackId": "779f7924-132b-440e-8ae4-22c8681df16a"
+  },
+  {
+    "id": "3bfc16bb-51ca-4307-9c65-b78a3ae54880",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"В миноре\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:31.007Z",
+    "type": "approved",
+    "trackId": "098e7616-e8e7-4383-bb65-cb48150548ee"
+  },
+  {
+    "id": "a24da008-469a-42af-9e09-1e372c55f184",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Наряд\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:31.402Z",
+    "type": "approved",
+    "trackId": "c6521402-cfa1-4f6f-a2ea-0e62e21d536d"
+  },
+  {
+    "id": "83ce7968-ac2e-4c52-805c-6da4aacbc0ae",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"PROJECT X\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:31.788Z",
+    "type": "approved",
+    "trackId": "7ebdfb47-1b24-413a-baef-c7876e17c931"
+  },
+  {
+    "id": "0a233227-a9d6-484d-8085-d4454abb9318",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"На ужин\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:32.203Z",
+    "type": "approved",
+    "trackId": "78c3d6d9-c8e8-4c04-8225-00aa181c9986"
+  },
+  {
+    "id": "1e981dda-0334-4b94-968b-466ff6654063",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Промо feat. DooMee\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:32.586Z",
+    "type": "approved",
+    "trackId": "73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45"
+  },
+  {
+    "id": "f6bd80fe-a4fc-4ad2-a3a8-99c52bacf6bf",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Симп\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:33.010Z",
+    "type": "approved",
+    "trackId": "d171264c-5bc5-4665-9831-4a56e52ef0f0"
+  },
+  {
+    "id": "760933ca-5b23-44af-ad83-591c57300092",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Одаривает\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:33.421Z",
+    "type": "approved",
+    "trackId": "0166f77f-cae2-487b-9554-6dfa8de25eeb"
+  },
+  {
+    "id": "99d78c61-5fb8-4223-aece-27d6246b9454",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Со сцены\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:33.802Z",
+    "type": "approved",
+    "trackId": "35b26294-dc52-4c43-be4b-5d8183d47b8b"
+  },
+  {
+    "id": "ee55f07a-8a51-49e6-a045-27bf083032bf",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Пробки\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:34.131Z",
+    "type": "approved",
+    "trackId": "20e36dce-2058-464f-8fb4-eafb75ec0443"
+  },
+  {
+    "id": "506c4346-e017-4e7c-b1f2-3e8480d795c2",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Дай мне посмотреть feat. BUSHIDO ZHO\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:34.523Z",
+    "type": "approved",
+    "trackId": "67b93727-5524-4a67-b5ac-2e3bf78fa2a6"
+  },
+  {
+    "id": "39097759-d306-49f3-ab71-9a166784987b",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Дэнс дэнс feat. BUSHIDO ZHO\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:34.850Z",
+    "type": "approved",
+    "trackId": "3940f83a-7507-40c6-98dc-b2760e226678"
+  },
+  {
+    "id": "567fc583-15a5-4822-85ec-8c9b3659bea1",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Не вернуть\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:35.263Z",
+    "type": "approved",
+    "trackId": "676191ef-a1a4-42c1-aec5-7c50036f3246"
+  },
+  {
+    "id": "3d605247-b1e5-4f47-a0dc-e9554d0adcf4",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"2033\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:35.636Z",
+    "type": "approved",
+    "trackId": "9e861a98-510a-4335-be6b-0d6a1de6d947"
+  },
+  {
+    "id": "4c857d81-c6f1-4efe-bf09-c7be107ea1f2",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Зависим\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:35.951Z",
+    "type": "approved",
+    "trackId": "baea6c82-173e-4aaf-84f2-235ef99f7e21"
+  },
+  {
+    "id": "46364032-4f7d-4f54-ba52-addf0b88e648",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Мяу\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:36.318Z",
+    "type": "approved",
+    "trackId": "42c37de1-1ec2-46e1-9260-af3bda872431"
+  },
+  {
+    "id": "5829a797-1d28-4e44-be4c-35458e08f2c3",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Любить буду\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:36.628Z",
+    "type": "approved",
+    "trackId": "43fca8eb-2121-4cfe-a171-791e12fd4417"
+  },
+  {
+    "id": "bb5695de-300d-4a48-86ce-16ced31b0f70",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"2 часа ночи\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:37.024Z",
+    "type": "approved",
+    "trackId": "df53e343-8fba-4782-a920-786cd3d9d6b6"
+  },
+  {
+    "id": "f0d60439-7113-4a6c-8f7a-61df058b267e",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Соло feat. BUSHIDO ZHO\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:37.430Z",
+    "type": "approved",
+    "trackId": "9e670850-a881-4002-a8cc-0792cf17318b"
+  },
+  {
+    "id": "8e14cafb-567f-4c6a-94ee-0b6e6f812c1a",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Много\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:37.837Z",
+    "type": "approved",
+    "trackId": "5d1bdb89-dff3-4b85-82cf-cca2375532f9"
+  },
+  {
+    "id": "57c771cc-cd72-4a88-bc62-de2ca06d6047",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Один шаг\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:38.251Z",
+    "type": "approved",
+    "trackId": "110cd0a5-d743-4b81-92ae-b7a29a5dac3b"
+  },
+  {
+    "id": "a4e69a8f-f2c0-4f7f-ba2f-8e435c73976c",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Ща нормально\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:38.618Z",
+    "type": "approved",
+    "trackId": "607d43c0-f788-4823-9002-99122559e08b"
+  },
+  {
+    "id": "1684805f-53ca-4b7d-a6ae-8f8bb14db661",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Сегодня\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:39.021Z",
+    "type": "approved",
+    "trackId": "436ab255-8a29-442a-9511-73013794fae4"
+  },
+  {
+    "id": "24a98b90-6d2a-4094-8f3d-adf595e7ff40",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Пугали\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:39.362Z",
+    "type": "approved",
+    "trackId": "37a0e452-b0f8-4762-8014-15020da59396"
+  },
+  {
+    "id": "fbe7e043-62d5-4618-a81f-8d6003196f26",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Не везёт\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:39.768Z",
+    "type": "approved",
+    "trackId": "1ea54233-0714-4103-8eae-35998a15a257"
+  },
+  {
+    "id": "c2b4960d-d718-4978-acd6-c852ac6369cb",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Рок стар\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:40.144Z",
+    "type": "approved",
+    "trackId": "5c03484a-caab-46de-a1fa-d0a2ebb81576"
+  },
+  {
+    "id": "222282b2-b2c0-43ff-8627-7cab7307f01e",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Всё дизайнер\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:40.493Z",
+    "type": "approved",
+    "trackId": "84dca71b-10e6-42c5-9ff3-d802306c2d69"
+  },
+  {
+    "id": "53c26f0d-cce7-48e9-8352-cae05a83bfb6",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Say Whats Real Freestyle\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:40.838Z",
+    "type": "approved",
+    "trackId": "ba7c74ac-87c8-4582-894c-53d39c0599c6"
+  },
+  {
+    "id": "c6511b33-c672-48aa-8444-9092ed7bd14c",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Не нужна\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:41.187Z",
+    "type": "approved",
+    "trackId": "93e4c8cb-a8c8-482f-878a-47734a71fdab"
+  },
+  {
+    "id": "2f5c312e-b42c-4f22-8356-8588aac5df27",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Чёрный лебедь\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:41.528Z",
+    "type": "approved",
+    "trackId": "ed810b19-186d-4a05-aba9-35472a9af44a"
+  },
+  {
+    "id": "92b09e24-a30f-4614-90a8-8150e9f1998d",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Не помню\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:41.885Z",
+    "type": "approved",
+    "trackId": "fddef744-22bb-48e7-b16c-b48676a5e2e9"
+  },
+  {
+    "id": "991c1371-2341-4512-a5ed-2c60428432a0",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Сияешь 934 8777\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:42.255Z",
+    "type": "approved",
+    "trackId": "06b49c08-e5eb-4050-85a7-3572e6fb0267"
+  },
+  {
+    "id": "a8b654a8-1b63-4fa3-a1ec-d1d5db8ed834",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Во плоти\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:42.603Z",
+    "type": "approved",
+    "trackId": "7e0a3667-9249-4598-a151-e446a3d62d5c"
+  },
+  {
+    "id": "7adc4530-e5ee-4686-a404-fd831020fe6c",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Блики\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:42.923Z",
+    "type": "approved",
+    "trackId": "0777d4d5-b3de-463e-ba90-e5b6bd8e0841"
+  },
+  {
+    "id": "ad3d5e76-1f9b-4a32-aff7-35410024c1e0",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Против ветра\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:43.300Z",
+    "type": "approved",
+    "trackId": "788e093f-5ff2-48b3-b523-3a0760d0efc8"
+  },
+  {
+    "id": "38d8cc68-3e30-4878-983f-9164478bb692",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Тайны\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:43.735Z",
+    "type": "approved",
+    "trackId": "0061b036-08b1-444d-960b-307146819712"
+  },
+  {
+    "id": "89d004e4-700f-4d15-9dea-3c6fbab35fc2",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Не тот парень\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:44.107Z",
+    "type": "approved",
+    "trackId": "f65affb3-0c14-4188-adc3-c3d487223a6b"
+  },
+  {
+    "id": "51db4da4-23f9-42d1-bada-8f41429b3778",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"До замка\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:44.440Z",
+    "type": "approved",
+    "trackId": "e98e7726-3b39-4bfa-922f-9b5d044dd7cd"
+  },
+  {
+    "id": "0c5174cc-63f8-486c-90e5-9d48daaa0e12",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Сдержал слово\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:44.777Z",
+    "type": "approved",
+    "trackId": "a2e52158-19c4-4210-8c85-20d6dbd8f096"
+  },
+  {
+    "id": "22299f17-e868-4e8c-a4d0-794338ff2c5d",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Хай хилс feat. DooMee\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:45.152Z",
+    "type": "approved",
+    "trackId": "816a5a81-b8ae-4090-b50e-0b56ae06b402"
+  },
+  {
+    "id": "49c58fda-9d9d-4957-a521-5b4413014a27",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Dreamin Freestyle\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:45.554Z",
+    "type": "approved",
+    "trackId": "79f3740a-c0a0-4d05-b3b4-0d61511968c7"
+  },
+  {
+    "id": "ad6c19e5-0831-4451-a1e3-b5e4ec6147da",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Сваровски\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:45.913Z",
+    "type": "approved",
+    "trackId": "eed00f45-feb3-43cb-9195-6f1f84eb568d"
+  },
+  {
+    "id": "742b39ba-b96e-409e-89d7-86beed888a49",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Замер\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:46.252Z",
+    "type": "approved",
+    "trackId": "70b9e2b4-5fac-4709-84a5-95a970b10d02"
+  },
+  {
+    "id": "f950bea3-5fe4-4aae-b236-f303fb3c2289",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Центр\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:46.584Z",
+    "type": "approved",
+    "trackId": "61891163-6836-4f7f-b981-8c77fc616ce0"
+  },
+  {
+    "id": "f0121af8-5a5f-42f7-b6e2-04d649caf3ea",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"WANT SOME MORE\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:46.913Z",
+    "type": "approved",
+    "trackId": "f5292595-ddc0-4883-bcbb-061d8463bd94"
+  },
+  {
+    "id": "03ba4165-1a2a-40d1-865d-50dd8d5dddac",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"I LOVE MY OPPS\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:47.239Z",
+    "type": "approved",
+    "trackId": "246245cf-172d-442b-8cbf-22258de4b801"
+  },
+  {
+    "id": "e9e8fa9e-c78b-4986-9701-8a44d5ea9192",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"CASPIAN LOVE\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:47.601Z",
+    "type": "approved",
+    "trackId": "d9b8de8a-e619-4fc4-a353-536de3d53b7e"
+  },
+  {
+    "id": "94539b4b-e31a-446a-8733-d93003656e75",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"FANTASY\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:47.922Z",
+    "type": "approved",
+    "trackId": "ad603ed3-20ea-4185-9918-a1e4b3dcdf5f"
+  },
+  {
+    "id": "01dc5951-c556-4247-a6b7-a8d3ce0b24ff",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"INTERLUDE BARS\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:48.271Z",
+    "type": "approved",
+    "trackId": "ed5cae6d-6d37-443e-9a18-b53077d1164c"
+  },
+  {
+    "id": "2d192495-6555-43e0-9405-66d6a8c05971",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ВЕЧНО МОЛОДОЙ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:48.606Z",
+    "type": "approved",
+    "trackId": "15854304-a8be-41c8-a76b-094bff6e545c"
+  },
+  {
+    "id": "1a7e9247-3768-49c6-b952-3dc91f7e4763",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ЛУЧШИЕ ГОДЫ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:48.963Z",
+    "type": "approved",
+    "trackId": "1800fc18-1091-432a-a9fb-08253ad9fe92"
+  },
+  {
+    "id": "3ee37912-ae6c-4dfc-91e2-3c79e6716663",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ВЫПЕЙ ЗА МЕНЯ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:49.362Z",
+    "type": "approved",
+    "trackId": "d54bde24-2c45-4fe0-9ff1-88c60f323d88"
+  },
+  {
+    "id": "a5ebbf7c-2bcd-4f64-8cb6-185c026e32a0",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"VOGUE WATER\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:49.676Z",
+    "type": "approved",
+    "trackId": "92b2a205-f8b5-44dc-b5e7-e5bc7e51605d"
+  },
+  {
+    "id": "bb9cc035-8a86-43fb-974c-cacb4c7e097e",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Я ЛЮБЛЮ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:50.027Z",
+    "type": "approved",
+    "trackId": "5a99d400-6b19-42ab-94a1-3579e33b3d0b"
+  },
+  {
+    "id": "5cd74398-c692-42d4-bcf6-67d78bd5f42d",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"DJ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:50.352Z",
+    "type": "approved",
+    "trackId": "995f0eb3-3b35-47e6-9a94-a8812929f6bf"
+  },
+  {
+    "id": "ed3e7ba6-f4d8-450a-80dc-8ba92ccd1ac1",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ЦАРИЦУ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:50.683Z",
+    "type": "approved",
+    "trackId": "b2c64518-e2f5-4e2e-bce0-f5849bbcceb8"
+  },
+  {
+    "id": "d2a7ce3a-0849-414b-9983-d0b189626f02",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ЖАН ПОЛЬ ГОТЬЕ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:51.588Z",
+    "type": "approved",
+    "trackId": "a07a81cb-4a49-438c-b478-25dcc5bd6ab3"
+  },
+  {
+    "id": "2b39d06a-0026-4f7b-9887-61ba090d5513",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"НА ПЕРВОМ СВИДАНИИ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:52.121Z",
+    "type": "approved",
+    "trackId": "dbeb61d1-1e57-4da7-8335-e439d7b4d66c"
+  },
+  {
+    "id": "74bac743-947a-4c52-a090-a97246ffb90d",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"DARK NIGHT\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:52.601Z",
+    "type": "approved",
+    "trackId": "e97865cc-57f8-4339-9ba0-3e9ed649032d"
+  },
+  {
+    "id": "77fe903d-a10e-439b-876c-76962fa614d0",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"АМР АУТРО\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:53.181Z",
+    "type": "approved",
+    "trackId": "46dbcb2c-a9d5-42ef-b3b4-5f1ec0700dc8"
+  },
+  {
+    "id": "c894eb81-da57-4206-a7a4-c920dde886d1",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"SEX IN THE CLUB\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:53.529Z",
+    "type": "approved",
+    "trackId": "e1bda242-cc3d-4a76-a12b-1eeaa128e712"
+  },
+  {
+    "id": "27a59492-45aa-4e4c-86cd-ae550bc85a0a",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"ТАХО\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:53.942Z",
+    "type": "approved",
+    "trackId": "3fadb53a-1f21-460c-a4f9-0a96227b33b5"
+  },
+  {
+    "id": "32b12a0d-46a6-4d45-abb7-1bc75966edcf",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Blestkii Freestyle Prod. by maiikiwassup\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:54.459Z",
+    "type": "approved",
+    "trackId": "c9df5b63-9d0d-4ee8-b937-f087b4aaa81f"
+  },
+  {
+    "id": "1afeef32-6b67-4045-a611-8860fa89859e",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Kanye Freestyle Prod. by nelly2k\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:55.042Z",
+    "type": "approved",
+    "trackId": "6af87428-fbd3-4ee2-bdf4-9bb71b3aae5d"
+  },
+  {
+    "id": "3f489ae2-6879-4cd5-9425-a413241c1f99",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Wex Freestyle Prod. by Heronwater, Lawzy\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:55.526Z",
+    "type": "approved",
+    "trackId": "0ab5cb14-a76e-4496-a964-80798f747699"
+  },
+  {
+    "id": "be9f13e7-5c82-4566-b0d8-5587cca42808",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"RIP Plug Freestyle Prod. by nelly2k\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:09:56.039Z",
+    "type": "approved",
+    "trackId": "05da31cd-769f-43ad-bc3d-f27c78c3ed73"
+  },
+  {
+    "id": "22230677-8dd7-4c50-8a43-06c95958c72b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Водка 2\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:14:52.841Z",
+    "type": "pending_track",
+    "trackId": "0ec24874-b388-45d6-a831-5ae53ba97f85"
+  },
+  {
+    "id": "3d7a3964-1e85-4491-87ca-1c45d8384109",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Биография\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:15:04.439Z",
+    "type": "pending_track",
+    "trackId": "0f77f49e-cb10-4033-a666-fd5afad5d2b2"
+  },
+  {
+    "id": "3c9100a0-b4d0-47b9-b17c-122e610d3840",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"1 Класс Классика feat. Baby Melo\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:15:29.089Z",
+    "type": "pending_track",
+    "trackId": "df9e57b5-5158-443f-9f34-44f884e49168"
+  },
+  {
+    "id": "0ff4559e-f6ac-4986-b6d5-a5d76151afe6",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Дружба\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:15:44.977Z",
+    "type": "pending_track",
+    "trackId": "6f48f105-7989-4912-90c5-3550d6cace65"
+  },
+  {
+    "id": "b0bc7c4f-f129-4415-bdd7-49707d4492d0",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Монк feat. OG Buda\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:16:04.030Z",
+    "type": "pending_track",
+    "trackId": "08f3063a-c715-4100-a3db-d3b952bce168"
+  },
+  {
+    "id": "4fee3f66-641b-439a-b946-5c9c8600ded9",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Детская 19\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:16:19.040Z",
+    "type": "pending_track",
+    "trackId": "f8ae26c5-292d-4016-a9fa-ebd5268b1a32"
+  },
+  {
+    "id": "4e9f4eba-e3bf-4d23-9c88-c4f77595af36",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Три года назад\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:16:34.492Z",
+    "type": "pending_track",
+    "trackId": "1f1a3662-267c-4aa0-82f6-faf3d468597e"
+  },
+  {
+    "id": "e542d542-eaa1-4b0e-b311-754c0055816e",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Два пива feat. молодой калуга\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:16:55.705Z",
+    "type": "pending_track",
+    "trackId": "f86f5918-20f6-4880-b3b0-96e9fa8ccb78"
+  },
+  {
+    "id": "5d9b01d9-f755-442f-9349-effccdf2379e",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Медленные деньги\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:17:20.584Z",
+    "type": "pending_track",
+    "trackId": "2e2b8f8e-6678-4bdb-a048-be71b554cd4e"
+  },
+  {
+    "id": "8eedf2ec-22c2-4e98-8a8a-92c6ca4faa8c",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Дубчик\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:17:34.218Z",
+    "type": "pending_track",
+    "trackId": "0eb3700e-3eef-408a-b980-bcfd94dbd9b7"
+  },
+  {
+    "id": "a85be463-ceb6-478c-940e-ae3a0ee52a1a",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"473 feat. Swozzy boy\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:17:52.911Z",
+    "type": "pending_track",
+    "trackId": "250156da-9f57-46c1-9c3c-dfc3a7c0e5aa"
+  },
+  {
+    "id": "66389b3c-323f-4e8a-af22-2a77da9a2a75",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Г.А.Р.И.К.\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:18:10.416Z",
+    "type": "pending_track",
+    "trackId": "88bac474-475f-4a38-a812-0dcaf0de97b6"
+  },
+  {
+    "id": "72982d11-5193-4f67-9987-297c5ac8c99d",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"На сука\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:18:25.609Z",
+    "type": "pending_track",
+    "trackId": "09a1f861-5a21-459c-a903-12c2e7570477"
+  },
+  {
+    "id": "22a0795f-f6bc-4303-adfb-87b801ac3235",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Тнт feat. Polyana Slatt Savage\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:18:41.617Z",
+    "type": "pending_track",
+    "trackId": "81da931a-67dd-48c0-88dd-74dc61482fff"
+  },
+  {
+    "id": "97a0189a-6a04-4803-9554-f890f22ad9ca",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Интро feat. Slatt Savage\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:20:33.040Z",
+    "type": "pending_track",
+    "trackId": "ea49f4a1-1a01-4f00-ba98-5bcc3b025a66"
+  },
+  {
+    "id": "f3aa1bc7-9ae3-40b2-81c9-4e044f3b5792",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Травма feat. CODE80\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:20:45.873Z",
+    "type": "pending_track",
+    "trackId": "5fdaf988-b966-4638-aab5-98ef5e8c2bf1"
+  },
+  {
+    "id": "cf274844-9697-48b9-8583-798027cf7aeb",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Prescription Gang\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:20:57.940Z",
+    "type": "pending_track",
+    "trackId": "3c6070f8-452b-414e-a543-76e0af988ffc"
+  },
+  {
+    "id": "d3f045f9-c139-4480-b96a-9c99dd7fd2e1",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Dogs Out\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:21:08.944Z",
+    "type": "pending_track",
+    "trackId": "960a199a-582b-4790-8380-b69441ba61c0"
+  },
+  {
+    "id": "316213b4-f8e8-4118-bb8a-784513e69564",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Зачем\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:21:19.223Z",
+    "type": "pending_track",
+    "trackId": "d1be1f33-fc19-4480-8c6e-120678a4d8aa"
+  },
+  {
+    "id": "202628ac-20b3-4a29-b5f1-4137d5d98892",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Дан Балан\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:21:29.470Z",
+    "type": "pending_track",
+    "trackId": "6b83f444-20a7-4a67-b8f1-835c6f90648c"
+  },
+  {
+    "id": "308ce47d-73d2-4871-9232-3a22e46fe0c2",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Ядик\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:21:40.260Z",
+    "type": "pending_track",
+    "trackId": "43aa855c-d889-4352-aafe-435bfeec80db"
+  },
+  {
+    "id": "fa89aa1e-b8bd-495f-a260-d01708dee9df",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Престиж\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:23:56.496Z",
+    "type": "pending_track",
+    "trackId": "df1d02ee-329d-4dd4-8759-6d0eb5bf7f57"
+  },
+  {
+    "id": "c9177108-6101-46c2-bd65-813943bf6782",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Орешник Флоу\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:24:10.840Z",
+    "type": "pending_track",
+    "trackId": "b337707b-2fe0-4dee-b05b-33c22d0859b7"
+  },
+  {
+    "id": "752a124b-73b6-422c-ae99-3fc216eeca02",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Джентельмен\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:24:23.593Z",
+    "type": "pending_track",
+    "trackId": "1bb45279-7973-4224-b949-3988cf63a74d"
+  },
+  {
+    "id": "306cd907-fbce-44ba-b9e3-b5223514be81",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Время слез\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:24:36.402Z",
+    "type": "pending_track",
+    "trackId": "dc446d66-3392-4774-b071-957e2e3db734"
+  },
+  {
+    "id": "334a0140-413d-4353-831f-403f6757dcac",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Магнум Опус\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:24:49.866Z",
+    "type": "pending_track",
+    "trackId": "a5aa2c88-69a8-41c2-a623-537d6b7bd800"
+  },
+  {
+    "id": "04134d3e-cb20-41a6-bb39-2c73235fe1bb",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"СМДХ\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:25:03.592Z",
+    "type": "pending_track",
+    "trackId": "2c0c35bb-b9df-485b-bd54-c56f8a9f3525"
+  },
+  {
+    "id": "018da85f-f290-414c-b723-7acfc036941b",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Метарэп\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:26:09.592Z",
+    "type": "pending_track",
+    "trackId": "95473ef1-4b11-4be2-8f32-dae7352392d6"
+  },
+  {
+    "id": "d69e70ec-9653-4669-8c1a-4c6a7b502c69",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"ЦВВ\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:26:23.081Z",
+    "type": "pending_track",
+    "trackId": "be97b807-792a-43ca-b807-a418b6c23e9a"
+  },
+  {
+    "id": "69afb715-71d2-491c-a6a8-1add65227911",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Переведи деньги\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:26:45.983Z",
+    "type": "pending_track",
+    "trackId": "73aef58a-da3c-4378-8055-6476154d259f"
+  },
+  {
+    "id": "9f8ef485-a05d-44f9-a913-7d73b76f1be2",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Меихана флоу feat. Heronwater\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:27:36.137Z",
+    "type": "pending_track",
+    "trackId": "ff5c32ef-3c46-4b1d-8d50-67cf4d052d91"
+  },
+  {
+    "id": "9e2cf346-2284-4b37-9c7d-bfd87c9e451e",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Мид Гарик feat. Джон Гарик prod. Skeezy Beats\" by dzhongarik, @ilymeedy — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:28:23.591Z",
+    "type": "pending_track",
+    "trackId": "0eb8c6a7-6583-47b3-9493-489c5800ba70"
+  },
+  {
+    "id": "3bdcf875-819a-48a6-96db-7fef4472f420",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"TOASTER HOODMONEY CYPHER\" by dzhongarik, Slatt Savage, Hunty Hump, молодой калуга, Wormganger, Swozy Boy — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:03.023Z",
+    "type": "pending_track",
+    "trackId": "84af2ac7-8a48-4264-9a48-5b713f1b3061"
+  },
+  {
+    "id": "776955d0-5c99-47e6-88b7-82cd465b54a7",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Водка 2\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:45.572Z",
+    "type": "approved",
+    "trackId": "0ec24874-b388-45d6-a831-5ae53ba97f85"
+  },
+  {
+    "id": "8a018396-e6d4-49a2-8d6f-8790effb0f04",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Биография\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:46.053Z",
+    "type": "approved",
+    "trackId": "0f77f49e-cb10-4033-a666-fd5afad5d2b2"
+  },
+  {
+    "id": "adeb55d4-ebac-43c3-9b9f-3e5ef175e102",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"1 Класс Классика feat. Baby Melo\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:46.474Z",
+    "type": "approved",
+    "trackId": "df9e57b5-5158-443f-9f34-44f884e49168"
+  },
+  {
+    "id": "4bb8e809-4d1d-4505-96f7-aa6fbe21a136",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Дружба\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:46.860Z",
+    "type": "approved",
+    "trackId": "6f48f105-7989-4912-90c5-3550d6cace65"
+  },
+  {
+    "id": "4572a2bc-2e56-421e-ad06-b4aa9dff72b8",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Монк feat. OG Buda\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:47.223Z",
+    "type": "approved",
+    "trackId": "08f3063a-c715-4100-a3db-d3b952bce168"
+  },
+  {
+    "id": "df2f1278-a15b-45ab-8933-e7c7d7b12cee",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Детская 19\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:47.588Z",
+    "type": "approved",
+    "trackId": "f8ae26c5-292d-4016-a9fa-ebd5268b1a32"
+  },
+  {
+    "id": "04a05bdc-e21b-41d2-ae15-f15043209c2f",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Три года назад\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:47.927Z",
+    "type": "approved",
+    "trackId": "1f1a3662-267c-4aa0-82f6-faf3d468597e"
+  },
+  {
+    "id": "adf71f7d-3de9-4dc0-90e6-5747897e86ac",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Два пива feat. молодой калуга\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:48.277Z",
+    "type": "approved",
+    "trackId": "f86f5918-20f6-4880-b3b0-96e9fa8ccb78"
+  },
+  {
+    "id": "10790ab7-70c7-4b8a-9818-ace37fc1c8ca",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Медленные деньги\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:48.620Z",
+    "type": "approved",
+    "trackId": "2e2b8f8e-6678-4bdb-a048-be71b554cd4e"
+  },
+  {
+    "id": "1a9d3554-ea5c-4c13-9236-87cb6fb14c82",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Дубчик\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:48.965Z",
+    "type": "approved",
+    "trackId": "0eb3700e-3eef-408a-b980-bcfd94dbd9b7"
+  },
+  {
+    "id": "4d9528e3-5e84-4c1b-898d-0909282316b4",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"473 feat. Swozzy boy\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:49.313Z",
+    "type": "approved",
+    "trackId": "250156da-9f57-46c1-9c3c-dfc3a7c0e5aa"
+  },
+  {
+    "id": "d94954f6-d41f-43ec-9a95-f1f1c6412cee",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Г.А.Р.И.К.\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:49.673Z",
+    "type": "approved",
+    "trackId": "88bac474-475f-4a38-a812-0dcaf0de97b6"
+  },
+  {
+    "id": "fbedc692-ed08-4d04-918e-4830e64f15f5",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"На сука\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:50.019Z",
+    "type": "approved",
+    "trackId": "09a1f861-5a21-459c-a903-12c2e7570477"
+  },
+  {
+    "id": "1ca82eaf-490f-4bb7-86f1-da8b905b087b",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Тнт feat. Polyana Slatt Savage\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:50.351Z",
+    "type": "approved",
+    "trackId": "81da931a-67dd-48c0-88dd-74dc61482fff"
+  },
+  {
+    "id": "ffc275bb-592f-49e6-8f5c-39d7becec6d6",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Интро feat. Slatt Savage\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:50.671Z",
+    "type": "approved",
+    "trackId": "ea49f4a1-1a01-4f00-ba98-5bcc3b025a66"
+  },
+  {
+    "id": "51c0bf8f-87d6-40cf-9af1-3863932aeded",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Травма feat. CODE80\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:50.983Z",
+    "type": "approved",
+    "trackId": "5fdaf988-b966-4638-aab5-98ef5e8c2bf1"
+  },
+  {
+    "id": "3e0c2ed1-7817-461e-92f5-08bc7961bb4a",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Prescription Gang\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:51.320Z",
+    "type": "approved",
+    "trackId": "3c6070f8-452b-414e-a543-76e0af988ffc"
+  },
+  {
+    "id": "1a537343-959c-4f73-b702-02dc4d0f07bf",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Dogs Out\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:51.647Z",
+    "type": "approved",
+    "trackId": "960a199a-582b-4790-8380-b69441ba61c0"
+  },
+  {
+    "id": "c6827e9b-90cc-4c16-abcf-6d95aed6721b",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Зачем\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:51.936Z",
+    "type": "approved",
+    "trackId": "d1be1f33-fc19-4480-8c6e-120678a4d8aa"
+  },
+  {
+    "id": "32a665b5-557a-49d2-8d72-90df461308e1",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Дан Балан\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:52.245Z",
+    "type": "approved",
+    "trackId": "6b83f444-20a7-4a67-b8f1-835c6f90648c"
+  },
+  {
+    "id": "e88b40d1-e235-43a4-833c-ea3142d0e226",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Ядик\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:52.552Z",
+    "type": "approved",
+    "trackId": "43aa855c-d889-4352-aafe-435bfeec80db"
+  },
+  {
+    "id": "75df5e96-9f44-497a-a615-1912245353c9",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Престиж\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:52.847Z",
+    "type": "approved",
+    "trackId": "df1d02ee-329d-4dd4-8759-6d0eb5bf7f57"
+  },
+  {
+    "id": "cb17b3ef-b290-48a1-8617-7a2f25afc7e6",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Орешник Флоу\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:53.146Z",
+    "type": "approved",
+    "trackId": "b337707b-2fe0-4dee-b05b-33c22d0859b7"
+  },
+  {
+    "id": "134e80e6-647b-44f7-a76b-e584455e33a0",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Джентельмен\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:53.440Z",
+    "type": "approved",
+    "trackId": "1bb45279-7973-4224-b949-3988cf63a74d"
+  },
+  {
+    "id": "aed7550f-e832-4cfd-a10c-6e5b15d8d595",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Время слез\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:53.745Z",
+    "type": "approved",
+    "trackId": "dc446d66-3392-4774-b071-957e2e3db734"
+  },
+  {
+    "id": "79d02c1d-9cc9-442c-b5b0-e621eb270f7b",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Магнум Опус\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:54.049Z",
+    "type": "approved",
+    "trackId": "a5aa2c88-69a8-41c2-a623-537d6b7bd800"
+  },
+  {
+    "id": "b154d539-f1f9-4b4c-9372-df2f86748a10",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"СМДХ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:54.347Z",
+    "type": "approved",
+    "trackId": "2c0c35bb-b9df-485b-bd54-c56f8a9f3525"
+  },
+  {
+    "id": "e11ec3fe-c6b9-45c1-852a-4418dda7ea50",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Метарэп\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:54.653Z",
+    "type": "approved",
+    "trackId": "95473ef1-4b11-4be2-8f32-dae7352392d6"
+  },
+  {
+    "id": "d4918fef-1e61-4660-bec6-f18ce120659b",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"ЦВВ\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:54.982Z",
+    "type": "approved",
+    "trackId": "be97b807-792a-43ca-b807-a418b6c23e9a"
+  },
+  {
+    "id": "99561dea-aff7-4c20-8584-9649fa76a2ae",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Переведи деньги\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:55.297Z",
+    "type": "approved",
+    "trackId": "73aef58a-da3c-4378-8055-6476154d259f"
+  },
+  {
+    "id": "d925a1ec-d601-466d-9e8a-10ef4916a982",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Меихана флоу feat. Heronwater\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:55.632Z",
+    "type": "approved",
+    "trackId": "ff5c32ef-3c46-4b1d-8d50-67cf4d052d91"
+  },
+  {
+    "id": "d13435ef-0475-41cc-bdba-f7c64e8dd6b7",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Мид Гарик feat. Джон Гарик prod. Skeezy Beats\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:55.995Z",
+    "type": "approved",
+    "trackId": "0eb8c6a7-6583-47b3-9493-489c5800ba70"
+  },
+  {
+    "id": "e79bb307-31de-40c5-9ee5-f3b40e1454aa",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"TOASTER HOODMONEY CYPHER\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T18:30:56.326Z",
+    "type": "approved",
+    "trackId": "84af2ac7-8a48-4264-9a48-5b713f1b3061"
+  },
+  {
+    "id": "6bfcb809-9c4f-4a11-adad-9102ff66c632",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "🌟 You've been granted Artist Pro status!",
+    "read": true,
+    "createdAt": "2026-03-18T18:31:02.079Z",
+    "type": "artist_pro"
+  },
+  {
+    "id": "de51bff7-784f-4518-a63f-2882487efd04",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "🌟 You've been granted Artist Pro status!",
+    "read": true,
+    "createdAt": "2026-03-18T18:31:04.929Z",
+    "type": "artist_pro"
+  },
+  {
+    "id": "5ee3104c-0301-4d4c-9392-6fda8deb5ca6",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Мейхана флоу\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-18T21:46:03.251Z",
+    "type": "pending_track",
+    "trackId": "8bd694be-2c44-4100-8c75-98383bb9ade7"
+  },
+  {
+    "id": "bc35acab-c6db-467c-9c83-bbf9cf38df15",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Мейхана флоу\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-18T21:46:10.360Z",
+    "type": "approved",
+    "trackId": "8bd694be-2c44-4100-8c75-98383bb9ade7"
+  },
+  {
+    "id": "ccb5c12e-904f-44dc-ba11-859fe2863fab",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"4 DAYS AFTER HB\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:04:51.612Z",
+    "type": "pending_album",
+    "albumId": "90e37a20-09a0-4977-a4c1-5170ed2686fe"
+  },
+  {
+    "id": "eabf743e-142f-4b85-9f8d-f8c7b42c5419",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"NO COMMERCIAL LYRICS\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:05:29.966Z",
+    "type": "pending_album",
+    "albumId": "4f30c48e-393c-408b-9a2b-2210c81ff722"
+  },
+  {
+    "id": "e7072413-e9d6-4d09-b0d9-43cb039914e2",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"Дай мне посмотреть EP\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:05:57.771Z",
+    "type": "pending_album",
+    "albumId": "d67b90bb-10e8-41ec-9c44-ab5cd158730e"
+  },
+  {
+    "id": "aba0c768-025e-4f50-b28b-356c15574feb",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"DREAMS MONEY CAN BUT\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:06:23.861Z",
+    "type": "pending_album",
+    "albumId": "a39b89e2-90fc-4d6e-a9c2-319b4f144a73"
+  },
+  {
+    "id": "c632e895-b3f2-497d-a2ae-ba6c7fa01afa",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"4 MONTH NO SMOKE\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:07:01.561Z",
+    "type": "pending_album",
+    "albumId": "bb5dcd76-6cd6-4630-844b-d3164f848073"
+  },
+  {
+    "id": "710826d6-a465-45ac-9eb2-e8ec180ebfa6",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"ODYSSEY\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:07:36.748Z",
+    "type": "pending_album",
+    "albumId": "27726037-a40f-4376-accc-bab530679d14"
+  },
+  {
+    "id": "2c508f6a-0736-4004-ba1a-2029eff16840",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"1000 BARS\" by Heroinwater",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:03.419Z",
+    "type": "pending_album",
+    "albumId": "ff8150d2-3b1b-49a4-a7a0-ae9d1a4f0305"
+  },
+  {
+    "id": "631799ba-b4b8-4037-876a-ec9f16904f2c",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your album \"Престиж\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:29.109Z",
+    "type": "approved_album",
+    "albumId": "a0135256-9b43-4b25-a510-55ce7cf03ff2"
+  },
+  {
+    "id": "e3670581-fb40-4bd8-9134-8142cbda5bdb",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"2 DAYS NO LEAN EP\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:30.050Z",
+    "type": "approved_album",
+    "albumId": "36a9b87e-c974-4160-a775-9ca1ee540335"
+  },
+  {
+    "id": "2b56fb70-cabe-44a7-aa45-26a822c991fc",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"4 DAYS AFTER HB\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:30.853Z",
+    "type": "approved_album",
+    "albumId": "90e37a20-09a0-4977-a4c1-5170ed2686fe"
+  },
+  {
+    "id": "3207a2cd-3f70-4449-aeb1-a8040e6b01cd",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"NO COMMERCIAL LYRICS\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:31.490Z",
+    "type": "approved_album",
+    "albumId": "4f30c48e-393c-408b-9a2b-2210c81ff722"
+  },
+  {
+    "id": "4b69cf20-8385-4e19-a3ec-1386050be526",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"Дай мне посмотреть EP\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:34.792Z",
+    "type": "approved_album",
+    "albumId": "d67b90bb-10e8-41ec-9c44-ab5cd158730e"
+  },
+  {
+    "id": "cbf663ec-61db-4f9c-b0a2-cf9b79ed037b",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"DREAMS MONEY CAN BUT\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:42.060Z",
+    "type": "approved_album",
+    "albumId": "a39b89e2-90fc-4d6e-a9c2-319b4f144a73"
+  },
+  {
+    "id": "48f731ec-6d57-4dbf-bf4d-d325c9079a47",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"4 MONTH NO SMOKE\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:43.308Z",
+    "type": "approved_album",
+    "albumId": "bb5dcd76-6cd6-4630-844b-d3164f848073"
+  },
+  {
+    "id": "a5c75096-f783-4732-b184-d1f1407cab18",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"ODYSSEY\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:44.256Z",
+    "type": "approved_album",
+    "albumId": "27726037-a40f-4376-accc-bab530679d14"
+  },
+  {
+    "id": "0d6ca1b7-8543-4830-baa2-efb127a4c24f",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your album \"1000 BARS\" was approved ✓",
+    "read": true,
+    "createdAt": "2026-03-20T16:08:45.496Z",
+    "type": "approved_album",
+    "albumId": "ff8150d2-3b1b-49a4-a7a0-ae9d1a4f0305"
+  },
+  {
+    "id": "cea3cd9d-7289-4037-9b51-6e6d1c076f91",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Heroinwater анонсировал релиз «Губы» — 23 марта",
+    "read": true,
+    "createdAt": "2026-03-21T21:37:28.674Z",
+    "type": "drop",
+    "dropId": "73543def-474d-4ce5-8b1a-63bd89fab9a4"
+  },
+  {
+    "id": "43f0e5b8-817d-4466-8e47-2b583b258214",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Heroinwater анонсировал релиз «d» — 23 марта",
+    "read": true,
+    "createdAt": "2026-03-21T21:49:17.653Z",
+    "type": "drop",
+    "dropId": "601d4a3c-8dfb-45d7-bba0-ded823d82d44"
+  },
+  {
+    "id": "f0c85078-ac9b-40c9-9ab8-0f8c6ff175a8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Губы пухлые\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-21T21:58:21.101Z",
+    "type": "pending_track",
+    "trackId": "d6de560f-4ea2-4737-a854-433e17b79c42"
+  },
+  {
+    "id": "be663c4f-68e8-4a17-8bfa-fafe67f4e334",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Heroinwater анонсировал релиз «Губы пухлые» — 23 марта",
+    "read": true,
+    "createdAt": "2026-03-21T21:58:21.315Z",
+    "type": "drop",
+    "dropId": "a9d05725-7197-45f4-9871-d1e190478306"
+  },
+  {
+    "id": "4ecc6286-1a5c-4665-b6af-052bcbd4cd83",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Губы пухлые\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-21T21:58:32.599Z",
+    "type": "approved",
+    "trackId": "d6de560f-4ea2-4737-a854-433e17b79c42"
+  },
+  {
+    "id": "d49b7692-2dd5-4dea-9d2b-0b28908034e7",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Губы пухлые\" by Heroinwater — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-21T22:13:47.801Z",
+    "type": "pending_track",
+    "trackId": "ab910009-c4a0-4e7c-ae95-942c3f15a1b6"
+  },
+  {
+    "id": "f3c24017-fd45-47ab-8f50-7fa3ca692551",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Heroinwater анонсировал релиз «Губы пухлые» — 22 марта",
+    "read": true,
+    "createdAt": "2026-03-21T22:13:48.027Z",
+    "type": "drop",
+    "dropId": "be1fce26-870f-4c6a-827f-dfbb00b2ca4c"
+  },
+  {
+    "id": "414a76c4-a9ca-454d-9ea6-1bf8c32f688f",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "message": "Your track \"Губы пухлые\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-21T22:14:02.115Z",
+    "type": "approved",
+    "trackId": "ab910009-c4a0-4e7c-ae95-942c3f15a1b6"
+  },
+  {
+    "id": "c179b18b-90d4-460d-88be-7ae6efe2e6a2",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Дроп на модерации: \"Губы пухлые\" от Heroinwater — дата релиза 21.03.2026",
+    "read": true,
+    "createdAt": "2026-03-21T22:21:27.544Z",
+    "type": "drop_pending_track",
+    "trackId": "2dd2bee7-dedb-4f4b-b03b-7b3defaad188"
+  },
+  {
+    "id": "b15de4e3-8b50-4341-95e2-7baa07535ee4",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Heroinwater анонсировал релиз «Губы пухлые» — 21 марта",
+    "read": true,
+    "createdAt": "2026-03-21T22:21:27.722Z",
+    "type": "drop",
+    "dropId": "f2cb0668-7dee-4f5e-9b6b-b4c3a380c2ee"
+  },
+  {
+    "id": "d613a84f-9410-42df-ac8a-ca65132340bc",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Heroinwater анонсировал релиз «Губы пухлые» — 21 марта",
+    "read": false,
+    "createdAt": "2026-03-21T22:21:27.724Z",
+    "type": "drop",
+    "dropId": "f2cb0668-7dee-4f5e-9b6b-b4c3a380c2ee"
+  },
+  {
+    "id": "15244ed2-15e0-4b32-9f64-b3a678900de8",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"Ядик\" by dzhongarik",
+    "read": true,
+    "createdAt": "2026-03-21T22:32:24.184Z",
+    "type": "pending_album",
+    "albumId": "44f3a335-5913-4441-a043-fc7120b9cce3"
+  },
+  {
+    "id": "e89d9c2e-dcd3-46d0-b6ef-d60a6cfa5d1f",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New album submitted: \"1 Класс\" by dzhongarik",
+    "read": true,
+    "createdAt": "2026-03-21T22:33:11.324Z",
+    "type": "pending_album",
+    "albumId": "01dbee44-64b5-4de7-883c-fdf531e40255"
+  },
+  {
+    "id": "02e256c5-ea1f-4537-bb37-f9162b934af7",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your album \"Ядик\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-21T22:35:04.215Z",
+    "type": "approved_album",
+    "albumId": "44f3a335-5913-4441-a043-fc7120b9cce3"
+  },
+  {
+    "id": "3ef8bd4f-d456-4773-a5e9-5053c9799940",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your album \"1 Класс\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-21T22:35:06.037Z",
+    "type": "approved_album",
+    "albumId": "01dbee44-64b5-4de7-883c-fdf531e40255"
+  },
+  {
+    "id": "2dcfc8bf-dd62-4bb6-bb02-fb8635b9bba4",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "New track submitted: \"Мейхана Флоу\" by dzhongarik — awaiting review",
+    "read": true,
+    "createdAt": "2026-03-21T22:35:38.919Z",
+    "type": "pending_track",
+    "trackId": "60bd61b4-da19-4662-96fd-82a350c4d2dd"
+  },
+  {
+    "id": "fde93f65-494a-4d21-816c-a042ce909866",
+    "userId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "message": "Your track \"Мейхана Флоу\" was approved ✓",
+    "read": false,
+    "createdAt": "2026-03-21T22:35:48.237Z",
+    "type": "approved",
+    "trackId": "60bd61b4-da19-4662-96fd-82a350c4d2dd"
+  },
+  {
+    "id": "4e28d29a-5f25-4807-8c66-b72c40c6c5ae",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Дроп на модерации: \"Водка 3\" от dzhongarik — дата релиза 22.03.2026",
+    "read": true,
+    "createdAt": "2026-03-22T15:05:26.036Z",
+    "type": "drop_pending_track",
+    "trackId": "29bebe7a-6fdd-4d60-99c0-798c7430f36b"
+  },
+  {
+    "id": "9bbf0762-278c-4354-9b2d-0b9859d8e026",
+    "userId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "message": "Дроп на модерации: \"Калужский Гарик\" от dzhongarik — дата релиза 22.03.2026",
+    "read": true,
+    "createdAt": "2026-03-22T15:40:12.265Z",
+    "type": "drop_pending_track",
+    "trackId": "00c9bcbc-b2a6-4cb4-a585-9b144aa61ef9"
+  }
+]

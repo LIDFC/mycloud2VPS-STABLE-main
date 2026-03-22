@@ -1,0 +1,137 @@
+.card {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Stacked cover effect */
+.coverWrap {
+  position: relative;
+  aspect-ratio: 1;
+  margin-bottom: 10px;
+}
+
+.stackBack2, .stackBack1 {
+  position: absolute;
+  border-radius: 8px;
+  background: #1c1c1c;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.stackBack2 {
+  inset: 6px 0 -6px;
+  transform: rotate(-4deg);
+  z-index: 0;
+}
+.stackBack1 {
+  inset: 3px 0 -3px;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.cover {
+  position: relative;
+  z-index: 2;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  border-radius: 8px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover .cover { filter: brightness(0.6); transform: rotate(0deg) scale(1.02); }
+.card:hover .stackBack1 { transform: rotate(-3deg) translateY(-1px); }
+.card:hover .stackBack2 { transform: rotate(-5deg) translateY(-2px); }
+.card:hover .overlay { opacity: 1; }
+
+/* Info */
+.info {}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.title {
+  font-family: "Syne", sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: #fff; margin: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.artist {
+  font-size: 12px; color: #888;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: color 0.15s;
+}
+.artist:hover { color: #ff5500; }
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.genre {
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 0.4px; text-transform: uppercase;
+  color: #ff5500; background: rgba(255,85,0,0.1);
+  border: 1px solid rgba(255,85,0,0.2);
+  border-radius: 4px; padding: 1px 5px;
+}
+.trackCount {
+  font-size: 11px; color: #555;
+}
+
+.likeBtn {
+  flex-shrink: 0;
+  display: flex; align-items: center; gap: 3px;
+  background: none; border: none; cursor: pointer;
+  color: #555; font-size: 11px; padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+.likeBtn:hover { color: #e05; }
+.liked { color: #e05 !important; }
+
+
+.statusBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #f2d08c;
+  background: rgba(0,0,0,0.68);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.status_pending {
+  color: #f2d08c;
+}
+.status_rejected {
+  color: #ff9c9c;
+}

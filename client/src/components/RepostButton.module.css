@@ -1,0 +1,9 @@
+.btn {
+  display: flex; align-items: center; gap: 4px;
+  background: none; border: none; cursor: pointer;
+  color: #555; font-size: 11px;
+  padding: 3px 5px; border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+.btn:hover { color: #4CAF50; background: rgba(76,175,80,0.08); }
+.active { color: #4CAF50 !important; }

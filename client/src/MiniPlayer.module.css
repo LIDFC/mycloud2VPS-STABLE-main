@@ -1,0 +1,145 @@
+.seekBar {
+  position: fixed;
+  bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  right: 0;
+  z-index: 201;
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  cursor: pointer;
+  touch-action: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.seekBarVisible { opacity: 1; }
+.seekGhost, .seekFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 0 3px 3px 0;
+}
+.seekGhost { background: rgba(255,255,255,0.15); }
+.seekFill { background: #ff5500; }
+.seekThumb {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.seekTooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: rgba(20,20,20,0.95);
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.bar {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  left: 0;
+  right: 0;
+  z-index: 200;
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr) minmax(130px, 1fr);
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  background: #111;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.6);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.visible { transform: translateY(0); }
+.left, .right { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.coverBtn { width: 42px; height: 42px; border: none; background: none; padding: 0; border-radius: 6px; overflow: hidden; }
+.cover { width: 100%; height: 100%; object-fit: cover; display: block; }
+.meta { display: flex; flex-direction: column; min-width: 0; }
+.titleBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.artist {
+  font-size: 11px;
+  color: #6d6d6d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+.centre { display: flex; justify-content: center; min-width: 0; }
+.controls { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: center; }
+.iconBtn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: #6f6f6f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBtn:hover, .shuffleOn, .repeatOn { color: #ff5500; background: rgba(255,255,255,0.07); }
+.liked { color: #e03 !important; }
+.playBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #ff5500;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeDisplay { font-size: 10px; color: #555; white-space: nowrap; margin-left: 6px; }
+.volWrap { width: 90px; height: 28px; display: flex; align-items: center; cursor: pointer; touch-action: none; }
+.volTrack { width: 100%; height: 4px; background: rgba(255,255,255,0.08); border-radius: 999px; }
+.volFill { height: 100%; background: #ff5500; border-radius: inherit; position: relative; }
+.volThumb { position: absolute; right: -6px; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+.repeatWrap { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+.repeatOne {
+  position: absolute;
+  right: -3px;
+  bottom: -2px;
+  font-size: 8px;
+  font-weight: 700;
+  color: currentColor;
+}
+@media (max-width: 860px) {
+  .seekBar {
+    bottom: calc(var(--navbar-h, 80px) + env(safe-area-inset-bottom, 0px));
+  }
+  .bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 14px;
+    gap: 10px;
+    bottom: calc(var(--navbar-h, 80px) + env(safe-area-inset-bottom, 0px));
+    z-index: 200;
+  }
+  .centre { grid-column: 1 / -1; justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .bar { grid-template-columns: 1fr; }
+  .right { display: none; }
+  .artist { max-width: 150px; }
+  .controls { justify-content: space-between; width: 100%; }
+}

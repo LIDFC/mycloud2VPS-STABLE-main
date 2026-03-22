@@ -1,0 +1,155 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Author row */
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 2px;
+}
+.authorLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.authorName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.12s;
+}
+.authorLink:hover .authorName { color: #ff5500; }
+.proBadge {
+  font-size: 9px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff8c00, #ff5500);
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.action {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Compact track row */
+.trackRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: background 0.12s, border-color 0.12s;
+  cursor: default;
+}
+.trackRow:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+}
+.trackRowActive {
+  border-color: rgba(255,85,0,0.25);
+  background: rgba(255,85,0,0.05);
+}
+
+.trackCoverWrap {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.trackCover {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+.trackPlayBtn {
+  position: absolute;
+  inset: 0;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.trackCoverWrap:hover .trackPlayBtn { opacity: 1; }
+.trackRowActive .trackPlayBtn { opacity: 1; }
+
+.trackMeta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.trackTitle {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trackArtist {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trackGenre {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
+/* EQ animation for active track */
+.trackEq {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.trackEq span {
+  display: block;
+  width: 3px;
+  background: #ff5500;
+  border-radius: 2px;
+  animation: eq 0.9s ease-in-out infinite;
+}
+.trackEq span:nth-child(2) { animation-delay: 0.15s; animation-duration: 1s; }
+.trackEq span:nth-child(3) { animation-delay: 0.3s; animation-duration: 0.75s; }
+@keyframes eq { 0%,100%{height:3px} 50%{height:12px} }

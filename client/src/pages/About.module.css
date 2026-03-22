@@ -1,0 +1,76 @@
+.hero {
+  padding: 32px 0 28px;
+  max-width: 860px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #ff5500;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(34px, 6vw, 62px);
+  line-height: 0.98;
+  color: #fff;
+}
+
+.lead {
+  margin: 0;
+  max-width: 760px;
+  color: #a6a6a6;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.card,
+.manifestoInner {
+  background: linear-gradient(180deg, rgba(255,85,0,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.card h2,
+.manifestoInner h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.card p,
+.manifestoInner p {
+  margin: 0;
+  color: #a4a4a4;
+  line-height: 1.7;
+}
+
+.manifesto {
+  margin-bottom: 36px;
+}
+
+.manifestoInner {
+  max-width: 920px;
+}
+
+.manifestoInner p + p {
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

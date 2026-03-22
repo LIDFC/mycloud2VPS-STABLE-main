@@ -1,0 +1,97 @@
+.hero {
+  position: relative;
+  padding: 40px 0 36px;
+  overflow: hidden;
+}
+
+.heroGlow {
+  position: absolute;
+  top: -40px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 200px;
+  background: radial-gradient(ellipse, rgba(255,85,0,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.radioIcon {
+  width: 68px; height: 68px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,85,0,0.2), rgba(255,85,0,0.05));
+  border: 1px solid rgba(255,85,0,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 800; color: #fff;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  max-width: 440px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.bigBtn {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.dot { color: var(--text-muted); }
+
+.nowPlayingLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.pulse {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.queueTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}

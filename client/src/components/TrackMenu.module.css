@@ -1,0 +1,73 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.triggerBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.triggerBtn:hover,
+.triggerActive {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.menu {
+  position: fixed;
+  z-index: 9999;
+  min-width: 210px;
+  background: #1e1e1e;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+  animation: menuIn 0.12s ease;
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-family: inherit;
+  border-radius: 8px;
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+  cursor: pointer;
+}
+.item:hover {
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+.itemActive {
+  color: #e03 !important;
+}
+.itemActive svg {
+  color: #e03;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+  margin: 4px 6px;
+}

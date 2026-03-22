@@ -1,0 +1,43 @@
+.genreSection {
+  margin-bottom: 44px;
+}
+
+.genreHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.genreTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genreTitle {
+  font-family: "Syne", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.topBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 10px;
+  background: rgba(255, 85, 0, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(255, 85, 0, 0.25);
+  letter-spacing: 0.2px;
+}
+
+.genreCount {
+  font-size: 12px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}

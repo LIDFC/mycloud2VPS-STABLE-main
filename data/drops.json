@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b66d9b90-d7e5-4f69-b266-c51ff637fe1f",
+    "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "title": "Калужский Гарик",
+    "description": "",
+    "coverFile": "b5f2d29d-cb2d-4163-8c23-4a70e7c513b5.png",
+    "releaseAt": "2026-03-22T15:41:00.000Z",
+    "linkedTrackId": "00c9bcbc-b2a6-4cb4-a585-9b144aa61ef9",
+    "createdAt": "2026-03-22T15:40:12.525Z"
+  },
+  {
+    "id": "49df2816-5153-49ee-b722-749745b59284",
+    "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+    "title": "Водка 3",
+    "description": "",
+    "coverFile": "7568d6a1-0844-4654-b8bc-4e9cc0940e17.png",
+    "releaseAt": "2026-03-22T15:09:00.000Z",
+    "linkedTrackId": "29bebe7a-6fdd-4d60-99c0-798c7430f36b",
+    "createdAt": "2026-03-22T15:05:27.359Z"
+  },
+  {
+    "id": "f2cb0668-7dee-4f5e-9b6b-b4c3a380c2ee",
+    "artistId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "title": "Губы пухлые",
+    "description": "",
+    "coverFile": "27a4a3ef-2dcb-4327-99b5-efa5a5293d6e.png",
+    "releaseAt": "2026-03-21T22:23:00.000Z",
+    "linkedTrackId": "2dd2bee7-dedb-4f4b-b03b-7b3defaad188",
+    "createdAt": "2026-03-21T22:21:27.719Z"
+  }
+]
