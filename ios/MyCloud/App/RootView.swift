@@ -13,37 +13,15 @@ struct RootView: View {
                 AuthView(viewModel: AuthViewModel(session: container.session))
                     .transition(.opacity)
             case .signedIn:
-                SignedInView()
+                MainTabView()
                     .transition(.opacity)
             }
         }
         .animation(.smooth, value: container.session.state)
         .task { await container.session.restore() }
-    }
-}
-
-/// Phase 2 placeholder for the main tabs (Phase 3): the live-backend
-/// check plus account settings.
-private struct SignedInView: View {
-    @Environment(AppContainer.self) private var container
-    @State private var showsSettings = false
-
-    var body: some View {
-        NavigationStack {
-            ServerStatusView(viewModel: ServerStatusViewModel(api: container.api))
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            showsSettings = true
-                        } label: {
-                            Image(systemName: "person.crop.circle")
-                        }
-                        .accessibilityLabel("Настройки")
-                    }
-                }
-        }
-        .sheet(isPresented: $showsSettings) {
-            SettingsView()
+        .onChange(of: container.session.currentUser?.id) {
+            // Never show one account's library to another.
+            container.library.reset()
         }
     }
 }

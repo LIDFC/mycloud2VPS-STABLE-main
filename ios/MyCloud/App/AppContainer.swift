@@ -10,6 +10,7 @@ final class AppContainer {
     let tokenStore: TokenStore
     let api: APIClient
     let session: SessionStore
+    let library: LibraryStore
 
     init(
         config: AppConfig = .current,
@@ -41,6 +42,7 @@ final class AppContainer {
         self.tokenStore = tokenStore
         self.api = api
         self.session = session
+        self.library = LibraryStore(api: api)
     }
 }
 

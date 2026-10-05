@@ -41,7 +41,9 @@ MyCloud/
 ├── Core/
 │   ├── Config/     AppConfig — адрес API из Info.plist
 │   ├── Networking/ APIClient (URLSession + async/await), Endpoint, API (все эндпоинты), APIError
-│   ├── Auth/       KeychainStore, TokenStore (JWT только в Keychain)
+│   ├── Auth/       KeychainStore, TokenStore (JWT только в Keychain), SessionStore
+│   ├── Library/    LibraryStore — лайки и плейлисты, общие для всех экранов
+│   ├── Images/     ImagePipeline — кеш обложек (диск + память) с даунсэмплингом
 │   └── Loadable    состояние загрузки экрана
 ├── Models/         Codable-модели под реальные ответы сервера
 ├── Features/       экраны: View + @Observable ViewModel
@@ -63,8 +65,8 @@ MyCloudTests/       XCTest + Fixtures/ — реальные ответы сер�
 | Фаза | Статус |
 |---|---|
 | 1. Проект, архитектура, API client | ✅ |
-| 2. Авторизация (вход и регистрация) | |
-| 3. Home / Library / Search / Album / Artist | |
+| 2. Авторизация (вход и регистрация) | ✅ |
+| 3. Home / Library / Search / Album / Artist | ✅ |
 | 4. Плеер (AVPlayer, очередь) | |
 | 5. Now Playing + фоновое воспроизведение | |
 | 6. Плейлисты и лайки | |
