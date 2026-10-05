@@ -4,6 +4,9 @@ struct PlaylistDetailView: View {
     let playlistID: String
     @Environment(AppContainer.self) private var container
     @Environment(\.play) private var play
+    @Environment(\.dismiss) private var dismiss
+    @State private var editing: Playlist?
+    @State private var confirmsDelete = false
 
     private var library: LibraryStore { container.library }
 
@@ -22,6 +25,40 @@ struct PlaylistDetailView: View {
         }
         .navigationTitle(library.playlist(id: playlistID)?.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if let playlist = library.playlist(id: playlistID) {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Button {
+                            editing = playlist
+                        } label: {
+                            Label("Изменить", systemImage: "pencil")
+                        }
+                        Button(role: .destructive) {
+                            confirmsDelete = true
+                        } label: {
+                            Label("Удалить плейлист", systemImage: "trash")
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                    .accessibilityLabel("Действия с плейлистом")
+                }
+            }
+        }
+        .sheet(item: $editing) { playlist in
+            PlaylistEditorSheet(mode: .edit(playlist))
+        }
+        .confirmationDialog("Удалить плейлист?", isPresented: $confirmsDelete, titleVisibility: .visible) {
+            Button("Удалить", role: .destructive) {
+                guard let playlist = library.playlist(id: playlistID) else { return }
+                Task {
+                    if await library.deletePlaylist(playlist) { dismiss() }
+                }
+            }
+        } message: {
+            Text("Треки останутся в MyCloud, удалится только сам плейлист")
+        }
         .task {
             if library.playlists.value == nil { await library.reloadPlaylists() }
         }
@@ -63,6 +100,13 @@ struct PlaylistDetailView: View {
                     }
                     .buttonStyle(.plain)
                     .contextMenu { TrackContextMenu(track: track) }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            Task { await library.remove(track, from: playlist) }
+                        } label: {
+                            Label("Убрать", systemImage: "minus.circle")
+                        }
+                    }
                 }
             } footer: {
                 if !playlist.tracks.isEmpty {

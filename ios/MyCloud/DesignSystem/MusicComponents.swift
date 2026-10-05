@@ -43,24 +43,6 @@ struct TrackRow: View {
     }
 }
 
-/// Context menu shared by every track list.
-struct TrackContextMenu: View {
-    let track: Track
-
-    var body: some View {
-        if let username = track.artistUsername {
-            NavigationLink(value: Route.artist(username: username)) {
-                Label("Перейти к исполнителю", systemImage: "person.crop.circle")
-            }
-        }
-        if let albumID = track.albumId {
-            NavigationLink(value: Route.album(id: albumID)) {
-                Label("Перейти к альбому", systemImage: "square.stack")
-            }
-        }
-    }
-}
-
 // MARK: - Tiles
 
 struct AlbumTile: View {

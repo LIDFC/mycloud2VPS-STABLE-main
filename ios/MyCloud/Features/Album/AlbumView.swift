@@ -39,6 +39,13 @@ struct AlbumView: View {
         }
         .navigationTitle(viewModel.state.value?.title ?? "")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if let album = viewModel.state.value {
+                ToolbarItem(placement: .topBarTrailing) {
+                    AlbumLikeButton(album: album)
+                }
+            }
+        }
         .task {
             if viewModel.state.value == nil { await viewModel.load() }
         }

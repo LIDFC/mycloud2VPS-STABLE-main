@@ -9,11 +9,23 @@ import Observation
 @MainActor
 @Observable
 final class LibraryStore {
-    private(set) var likedTracks: Loadable<[Track]> = .idle
-    private(set) var likedAlbums: Loadable<[Album]> = .idle
-    private(set) var playlists: Loadable<[Playlist]> = .idle
+    // Mutated only by LibraryStore and its extensions (LibraryStore+Actions).
+    var likedTracks: Loadable<[Track]> = .idle
+    var likedAlbums: Loadable<[Album]> = .idle
+    var playlists: Loadable<[Playlist]> = .idle
 
-    private let api: APIClient
+    /// One-line feedback for a toast ("Добавлено в …", errors of background actions).
+    var message: String?
+
+    /// Optimistic like state by id (what the user asked for).
+    var trackLikes: [String: Bool] = [:]
+    var albumLikes: [String: Bool] = [:]
+    /// Last like state the server confirmed in this session.
+    @ObservationIgnored var confirmedTrackLikes: [String: Bool] = [:]
+    @ObservationIgnored var confirmedAlbumLikes: [String: Bool] = [:]
+    @ObservationIgnored var likesInFlight: Set<String> = []
+
+    let api: APIClient
 
     init(api: APIClient) {
         self.api = api
@@ -30,6 +42,21 @@ final class LibraryStore {
         async let lists = Self.result { try await api.send(API.Playlists.list()) }
         let (tracksResult, albumsResult, listsResult) = await (tracks, albums, lists)
 
+        // The catalogue is the server truth for every track's like state; record
+        // it so screens holding older copies of a track still show the right
+        // heart. Items with a like request in flight keep the user's wish.
+        if case .success(let all) = tracksResult {
+            for track in all where !likesInFlight.contains(track.id) {
+                trackLikes[track.id] = track.likedByMe
+                confirmedTrackLikes[track.id] = track.likedByMe
+            }
+        }
+        if case .success(let all) = albumsResult {
+            for album in all where !likesInFlight.contains("album:" + album.id) {
+                albumLikes[album.id] = album.likedByMe
+                confirmedAlbumLikes[album.id] = album.likedByMe
+            }
+        }
         apply(tracksResult.map { $0.filter(\.likedByMe) }, to: \.likedTracks)
         apply(albumsResult.map { $0.filter(\.likedByMe) }, to: \.likedAlbums)
         apply(listsResult, to: \.playlists)
@@ -53,6 +80,11 @@ final class LibraryStore {
         likedTracks = .idle
         likedAlbums = .idle
         playlists = .idle
+        message = nil
+        trackLikes = [:]
+        albumLikes = [:]
+        confirmedTrackLikes = [:]
+        confirmedAlbumLikes = [:]
     }
 
     private func apply<T>(_ result: Result<T, Error>, to keyPath: ReferenceWritableKeyPath<LibraryStore, Loadable<T>>) {

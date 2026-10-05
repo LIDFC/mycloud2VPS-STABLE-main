@@ -10,6 +10,7 @@ struct MainTabView: View {
     @Environment(AppContainer.self) private var container
     @State private var selection: Tab = .home
     @State private var showsNowPlaying = false
+    @State private var trackForPlaylist: Track?
 
     var body: some View {
         TabView(selection: $selection) {
@@ -26,11 +27,22 @@ struct MainTabView: View {
         .environment(\.play, PlayAction { [player = container.player] tracks, index, shuffled in
             player.play(tracks, startAt: index, shuffled: shuffled)
         })
+        .environment(\.addToPlaylist, AddToPlaylistAction { track in trackForPlaylist = track })
+        .sheet(item: $trackForPlaylist) { track in
+            AddToPlaylistSheet(track: track)
+        }
+        .toast(Bindable(container.library).message)
         .animation(.snappy, value: container.player.currentTrack?.id)
         .sheet(isPresented: $showsNowPlaying) {
             NowPlayingView()
                 .presentationDragIndicator(.visible)
                 .presentationCornerRadius(28)
+                // Sheets get their own environment copy: pass the actions on.
+                .environment(\.addToPlaylist, AddToPlaylistAction { track in
+                    showsNowPlaying = false
+                    trackForPlaylist = track
+                })
+                .toast(Bindable(container.library).message)
         }
     }
 

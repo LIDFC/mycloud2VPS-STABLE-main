@@ -4,6 +4,7 @@ import SwiftUI
 struct NowPlayingView: View {
     @Environment(AppContainer.self) private var container
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.addToPlaylist) private var addToPlaylist
     @State private var showsQueue = false
     @State private var scrubTime: Double?
 
@@ -110,6 +111,22 @@ struct NowPlayingView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentTransition(.opacity)
+
+                LikeButton(track: track, font: .title2)
+
+                Menu {
+                    Button {
+                        addToPlaylist(track)
+                    } label: {
+                        Label("Добавить в плейлист…", systemImage: "text.badge.plus")
+                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .accessibilityLabel("Ещё")
             }
 
             if let error = player.errorMessage {

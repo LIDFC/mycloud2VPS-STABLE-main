@@ -14,6 +14,18 @@ struct Playlist: Codable, Identifiable, Hashable, Sendable {
         case id, ownerId, name, description, coverUrl, tracks, createdAt, updatedAt
     }
 
+    init(id: String, ownerId: String, name: String, description: String?, coverUrl: String?,
+         tracks: [Track], createdAt: Date?, updatedAt: Date?) {
+        self.id = id
+        self.ownerId = ownerId
+        self.name = name
+        self.description = description
+        self.coverUrl = coverUrl
+        self.tracks = tracks
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+    }
+
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         id = try c.decode(String.self, forKey: .id)

@@ -6,6 +6,7 @@ enum Route: Hashable {
     case artist(username: String)
     case tracks(TrackListRoute)
     case playlist(id: String)
+    case likedTracks
 }
 
 /// A ready-made list of tracks (daily mix, a genre, liked tracks).
@@ -37,6 +38,8 @@ private struct RouteView: View {
             TrackListView(title: list.title, subtitle: list.subtitle, tracks: list.tracks)
         case .playlist(let id):
             PlaylistDetailView(playlistID: id)
+        case .likedTracks:
+            LikedTracksView()
         }
     }
 }

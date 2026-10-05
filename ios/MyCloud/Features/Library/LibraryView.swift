@@ -3,6 +3,7 @@ import SwiftUI
 struct LibraryView: View {
     @Environment(AppContainer.self) private var container
     @State private var showsSettings = false
+    @State private var showsNewPlaylist = false
 
     private var library: LibraryStore { container.library }
 
@@ -20,6 +21,7 @@ struct LibraryView: View {
                 }
             }
             .sheet(isPresented: $showsSettings) { SettingsView() }
+            .sheet(isPresented: $showsNewPlaylist) { PlaylistEditorSheet(mode: .create(initialTrack: nil)) }
             .task {
                 if !library.hasLoaded { await library.load() }
             }
@@ -34,11 +36,7 @@ struct LibraryView: View {
         } else {
             List {
                 Section {
-                    NavigationLink(value: Route.tracks(TrackListRoute(
-                        title: String(localized: "Любимые треки"),
-                        subtitle: library.likedTracks.value.map { Format.trackCount($0.count) },
-                        tracks: library.likedTracks.value ?? []
-                    ))) {
+                    NavigationLink(value: Route.likedTracks) {
                         LibraryRow(title: "Любимые треки", systemImage: "heart.fill",
                                    detail: library.likedTracks.value.map { "\($0.count)" })
                     }
@@ -50,7 +48,12 @@ struct LibraryView: View {
                     }
                 }
 
-                Section("Плейлисты") {
+                Section {
+                    Button {
+                        showsNewPlaylist = true
+                    } label: {
+                        Label("Новый плейлист", systemImage: "plus")
+                    }
                     switch library.playlists {
                     case .loaded(let playlists) where playlists.isEmpty:
                         Text("У вас пока нет плейлистов")
@@ -67,6 +70,8 @@ struct LibraryView: View {
                     case .idle, .loading:
                         ProgressView()
                     }
+                } header: {
+                    Text("Плейлисты")
                 }
             }
             .refreshable { await library.load() }
@@ -164,5 +169,21 @@ struct LikedAlbumsView: View {
             }
         }
         .navigationTitle("Альбомы")
+    }
+}
+
+/// Live list: unliking a track removes it right away.
+struct LikedTracksView: View {
+    @Environment(AppContainer.self) private var container
+
+    var body: some View {
+        let tracks = container.library.likedTracks.value ?? []
+        TrackListView(
+            title: String(localized: "Любимые треки"),
+            subtitle: tracks.isEmpty ? nil : Format.trackCount(tracks.count),
+            tracks: tracks,
+            emptyTitle: "Нажмите ♡, чтобы сохранить трек сюда"
+        )
+        .refreshable { await container.library.load() }
     }
 }
