@@ -34,6 +34,24 @@ sudo ufw status 2>/dev/null; docker compose version
 `sudo ufw allow 8443/tcp && sudo ufw allow 80/tcp`.
 Если у хостера есть свой firewall / security group — открыть там те же порты.
 
+### Если `docker compose` не установлен
+
+**Не обновлять `docker-ce` / `containerd` / `docker.io`**: обновление перезапускает
+Docker daemon, а вместе с ним все контейнеры (telemt, synapse и т.д.).
+Самый безопасный способ — положить бинарник плагина, daemon при этом не трогается:
+
+```bash
+mkdir -p /usr/local/lib/docker/cli-plugins
+curl -fsSL "https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-linux-$(uname -m)" \
+  -o /usr/local/lib/docker/cli-plugins/docker-compose
+chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+docker compose version
+```
+
+(Альтернатива через apt — только после симуляции, что ставится один пакет:
+`apt-get install -s docker-compose-plugin` или `apt-get install -s docker-compose-v2`;
+если в списке есть `docker-ce`, `containerd` или `docker.io` — не ставить.)
+
 > Порты, опубликованные Docker, обходят ufw. Поэтому backend публикуется
 > только на `127.0.0.1:3000` — снаружи он недоступен.
 
