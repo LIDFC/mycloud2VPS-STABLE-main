@@ -20,8 +20,9 @@ struct RootView: View {
         .animation(.smooth, value: container.session.state)
         .task { await container.session.restore() }
         .onChange(of: container.session.currentUser?.id) {
-            // Never show one account's library to another.
+            // Never show one account's library or queue to another.
             container.library.reset()
+            container.player.stop()
         }
     }
 }

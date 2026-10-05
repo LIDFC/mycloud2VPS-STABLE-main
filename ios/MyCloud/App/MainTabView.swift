@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// The signed-in app: three tabs, each with its own navigation stack.
+/// The signed-in app: three tabs, each with its own navigation stack, and the
+/// mini player pinned above the tab bar.
 struct MainTabView: View {
     enum Tab: Hashable {
         case home, search, library
@@ -8,29 +9,43 @@ struct MainTabView: View {
 
     @Environment(AppContainer.self) private var container
     @State private var selection: Tab = .home
+    @State private var showsNowPlaying = false
 
     var body: some View {
         TabView(selection: $selection) {
-            NavigationStack {
+            tab(.home, title: "Главная", systemImage: "house.fill") {
                 HomeView(viewModel: HomeViewModel(api: container.api))
-                    .appDestinations()
             }
-            .tabItem { Label("Главная", systemImage: "house.fill") }
-            .tag(Tab.home)
-
-            NavigationStack {
+            tab(.search, title: "Поиск", systemImage: "magnifyingglass") {
                 SearchView(viewModel: SearchViewModel(api: container.api))
-                    .appDestinations()
             }
-            .tabItem { Label("Поиск", systemImage: "magnifyingglass") }
-            .tag(Tab.search)
-
-            NavigationStack {
+            tab(.library, title: "Медиатека", systemImage: "square.stack.fill") {
                 LibraryView()
-                    .appDestinations()
             }
-            .tabItem { Label("Медиатека", systemImage: "square.stack.fill") }
-            .tag(Tab.library)
         }
+        .environment(\.play, PlayAction { [player = container.player] tracks, index, shuffled in
+            player.play(tracks, startAt: index, shuffled: shuffled)
+        })
+        .animation(.snappy, value: container.player.currentTrack?.id)
+        .sheet(isPresented: $showsNowPlaying) {
+            NowPlayingView()
+                .presentationDragIndicator(.visible)
+                .presentationCornerRadius(28)
+        }
+    }
+
+    private func tab<Content: View>(
+        _ tab: Tab, title: LocalizedStringKey, systemImage: String, @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationStack {
+            content()
+                .appDestinations()
+        }
+        // Inside each stack so pushed screens also leave room for the mini player.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            MiniPlayerView { showsNowPlaying = true }
+        }
+        .tabItem { Label(title, systemImage: systemImage) }
+        .tag(tab)
     }
 }

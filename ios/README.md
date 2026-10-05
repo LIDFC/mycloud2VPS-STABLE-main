@@ -46,6 +46,7 @@ MyCloud/
 │   ├── Images/     ImagePipeline — кеш обложек (диск + память) с даунсэмплингом
 │   └── Loadable    состояние загрузки экрана
 ├── Models/         Codable-модели под реальные ответы сервера
+├── Player/         PlaybackController (AVPlayer), PlayQueue, AudioSession, NowPlayingCenter
 ├── Features/       экраны: View + @Observable ViewModel
 ├── DesignSystem/   общие компоненты (Loading / Error / Empty states)
 └── Resources/      Assets
@@ -67,8 +68,8 @@ MyCloudTests/       XCTest + Fixtures/ — реальные ответы сер�
 | 1. Проект, архитектура, API client | ✅ |
 | 2. Авторизация (вход и регистрация) | ✅ |
 | 3. Home / Library / Search / Album / Artist | ✅ |
-| 4. Плеер (AVPlayer, очередь) | |
-| 5. Now Playing + фоновое воспроизведение | |
+| 4. Плеер (AVPlayer, очередь) | ✅ |
+| 5. Now Playing + фоновое воспроизведение | ✅ |
 | 6. Плейлисты и лайки | |
 | 7. Кеширование и офлайн | |
 | 8. Полировка и тесты | |

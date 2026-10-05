@@ -11,6 +11,8 @@ final class AppContainer {
     let api: APIClient
     let session: SessionStore
     let library: LibraryStore
+    let player: PlaybackController
+    let nowPlaying: NowPlayingCenter
 
     init(
         config: AppConfig = .current,
@@ -43,6 +45,9 @@ final class AppContainer {
         self.api = api
         self.session = session
         self.library = LibraryStore(api: api)
+        let player = PlaybackController(api: api)
+        self.player = player
+        self.nowPlaying = NowPlayingCenter(player: player, api: api)
     }
 }
 
