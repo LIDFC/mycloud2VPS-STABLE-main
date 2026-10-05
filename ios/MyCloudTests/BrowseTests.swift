@@ -166,3 +166,20 @@ final class BrowseViewModelTests: XCTestCase {
         XCTAssertFalse(library.hasLoaded)
     }
 }
+
+final class ListenRecorderTests: XCTestCase {
+    func testLiveRecorderPostsListen() async throws {
+        let sent = expectation(description: "listen request")
+        StubURLProtocol.respond { request in
+            if request.url?.path == "/api/tracks/listen", request.httpMethod == "POST" {
+                sent.fulfill()
+            }
+            return .init(status: 200, body: .json(#"{"ok":true,"playsCount":1}"#))
+        }
+        let api = APIClient(baseURL: URL(string: "https://music.dirty.baby:8443")!,
+                            session: StubURLProtocol.makeSession(),
+                            tokenProvider: { "t" }, unauthorizedHandler: { _ in })
+        ListenRecorder.live(api: api).record("abc")
+        await fulfillment(of: [sent], timeout: 5)
+    }
+}

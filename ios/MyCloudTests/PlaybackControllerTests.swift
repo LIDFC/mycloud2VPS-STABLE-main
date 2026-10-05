@@ -10,18 +10,30 @@ private final class FakeAudioSession: AudioSessionControlling {
     func deactivate() { deactivations += 1 }
 }
 
+/// Thread-safe list of track IDs reported as listened.
+private final class ListenLog: @unchecked Sendable {
+    private let lock = NSLock()
+    private var ids: [String] = []
+    func append(_ id: String) { lock.withLock { ids.append(id) } }
+    var all: [String] { lock.withLock { ids } }
+}
+
 @MainActor
 final class PlaybackControllerTests: XCTestCase {
     private var audio: FakeAudioSession!
+    private var listens: ListenLog!
     private var player: PlaybackController!
 
     override func setUp() async throws {
         audio = FakeAudioSession()
-        let api = APIClient(baseURL: URL(string: "https://music.dirty.baby:8443")!,
+        listens = ListenLog()
+        // Media URLs point at an unroutable host: unit tests must never hit the real server.
+        let api = APIClient(baseURL: URL(string: "https://mycloud.invalid")!,
                             session: StubURLProtocol.makeSession(),
                             tokenProvider: { "t" }, unauthorizedHandler: { _ in })
-        StubURLProtocol.respond { _ in .init(status: 200, body: .json(#"{"ok":true,"playsCount":1}"#)) }
-        player = PlaybackController(api: api, audioSession: audio)
+        let log = listens!
+        player = PlaybackController(api: api, audioSession: audio,
+                                    listens: ListenRecorder { log.append($0) })
     }
 
     override func tearDown() async throws {
@@ -43,14 +55,12 @@ final class PlaybackControllerTests: XCTestCase {
         XCTAssertEqual(audio.activations, 1)
     }
 
-    func testRecordsListenOnStart() async throws {
-        player.play(try tracks(1), startAt: 0, shuffled: false)
-        // recordListen is fire-and-forget on a background task.
-        for _ in 0..<50 where !StubURLProtocol.requests.contains(where: { $0.url?.path == "/api/tracks/listen" }) {
-            try await Task.sleep(for: .milliseconds(20))
-        }
-        let request = try XCTUnwrap(StubURLProtocol.requests.first { $0.url?.path == "/api/tracks/listen" })
-        XCTAssertEqual(request.httpMethod, "POST")
+    func testRecordsListenOncePerStartedTrack() throws {
+        player.play(try tracks(3), startAt: 0, shuffled: false)
+        player.next()
+        player.togglePlayPause()  // pause/resume must not count another play
+        player.togglePlayPause()
+        XCTAssertEqual(listens.all, ["t0", "t1"])
     }
 
     func testNextAndPrevious() throws {

@@ -51,7 +51,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             > xcodebuild.log 2>&1
           STATUS=$?
-          grep -E "error:|warning:|Test Case .* failed|Executed|\*\* (BUILD|TEST)" xcodebuild.log | sort -u | tail -200
+          grep -iE "error:|warning:|test case .* failed|failing tests|executed|\*\* (build|test)" xcodebuild.log | grep -v "not stripping binary" | sort -u | tail -200
           exit $STATUS
 
       - name: Upload results

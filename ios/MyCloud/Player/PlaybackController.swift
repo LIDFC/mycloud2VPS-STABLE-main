@@ -28,6 +28,7 @@ final class PlaybackController {
     @ObservationIgnored private let player = AVPlayer()
     @ObservationIgnored private let api: APIClient
     @ObservationIgnored private let audioSession: AudioSessionControlling
+    @ObservationIgnored private let listens: ListenRecorder
     @ObservationIgnored private var timeObserver: Any?
     @ObservationIgnored private var itemObservations: [NSKeyValueObservation] = []
     @ObservationIgnored private var playerObservation: NSKeyValueObservation?
@@ -39,9 +40,14 @@ final class PlaybackController {
     /// "Previous" restarts the track instead when we're past this point.
     static let restartThreshold: Double = 3
 
-    init(api: APIClient, audioSession: AudioSessionControlling = SystemAudioSession()) {
+    init(
+        api: APIClient,
+        audioSession: AudioSessionControlling = SystemAudioSession(),
+        listens: ListenRecorder? = nil
+    ) {
         self.api = api
         self.audioSession = audioSession
+        self.listens = listens ?? .live(api: api)
         player.automaticallyWaitsToMinimizeStalling = true
         observePlayer()
         audioSession.onEvent = { [weak self] event in self?.handle(event) }
@@ -83,7 +89,7 @@ final class PlaybackController {
         guard currentTrack != nil else { return }
         if player.currentItem == nil || player.currentItem?.status == .failed {
             // Reload a failed item (e.g. network dropped) at the same position.
-            startCurrent(autoplay: true, at: currentTime)
+            startCurrent(autoplay: true, at: currentTime, isRetry: true)
             return
         }
         wantsToPlay = true
@@ -212,7 +218,9 @@ final class PlaybackController {
 
     // MARK: - Loading items
 
-    private func startCurrent(autoplay: Bool, at startTime: Double = 0) {
+    /// - Parameter isRetry: reloading the same track after a failure, which
+    ///   must not count as another play.
+    private func startCurrent(autoplay: Bool, at startTime: Double = 0, isRetry: Bool = false) {
         guard let track = queue.current else {
             stop()
             return
@@ -239,18 +247,9 @@ final class PlaybackController {
             wantsToPlay = true
             audioSession.activate()
             player.play()
-            recordListen(track)
+            if !isRetry { listens.record(track.id) }
         }
         onStateChange?()
-    }
-
-    /// Counts a play on the server (play counter + genre recommendations),
-    /// like the web client does when a track starts.
-    private func recordListen(_ track: Track) {
-        let api = self.api
-        Task.detached(priority: .utility) {
-            _ = try? await api.send(API.Library.recordListen(trackId: track.id))
-        }
     }
 
     // MARK: - Observation
