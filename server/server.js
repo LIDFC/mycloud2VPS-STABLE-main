@@ -16,6 +16,11 @@ const makeTracksRouter     = require("./routes/tracks");
 const app        = express();
 const PORT       = process.env.PORT || 3001;
 const JWT_SECRET = process.env.JWT_SECRET || "mycloud-dev-secret-change-in-prod";
+// The fallback secret is public (it's in the repo): anyone could forge tokens with it
+if (process.env.NODE_ENV === "production" && !process.env.JWT_SECRET) {
+  console.error("FATAL: JWT_SECRET is not set. Refusing to start in production with the public dev secret.");
+  process.exit(1);
+}
 
 const DATA_DIR      = path.join(__dirname, "data");
 const UPLOADS_DIR   = path.join(__dirname, "uploads");
