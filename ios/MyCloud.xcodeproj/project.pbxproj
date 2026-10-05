@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F67BACAC45907D291634D9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C1A067576D3FAE6D55825A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463D08B558705B411D60892A;
+			remoteInfo = MyCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29FED192A5C099279041B159 /* MyCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEF34FF1A4259A725A057D1 /* MyCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C5CAE655D9D5E5F3B454D5 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		D63DE20156DFB6962660B83B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		395A393F01C49DD569F361DD /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3A59C64705D5320913BE3C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FF4F9E45F0AD467B5179EBB /* MyCloud */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyCloud;
+			sourceTree = "<group>";
+		};
+		6F562DA7092D712F0912CA18 /* MyCloudTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyCloudTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC2EDF57D5E30C73FDBB2EA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85453676B52F039022D047CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		729678193C611E995C7D5EC6 = {
+			isa = PBXGroup;
+			children = (
+				DC70DC1D2312684BB6928396 /* Config */,
+				1FF4F9E45F0AD467B5179EBB /* MyCloud */,
+				6F562DA7092D712F0912CA18 /* MyCloudTests */,
+				78D30BB43268144A84411550 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC70DC1D2312684BB6928396 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				54C5CAE655D9D5E5F3B454D5 /* Base.xcconfig */,
+				D63DE20156DFB6962660B83B /* Debug.xcconfig */,
+				395A393F01C49DD569F361DD /* Release.xcconfig */,
+				3A59C64705D5320913BE3C8F /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		78D30BB43268144A84411550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29FED192A5C099279041B159 /* MyCloud.app */,
+				DDEF34FF1A4259A725A057D1 /* MyCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		463D08B558705B411D60892A /* MyCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89BA4F69F63ED886E903C3CD /* Build configuration list for PBXNativeTarget "MyCloud" */;
+			buildPhases = (
+				092E9EBD53A5117EFFF1700B /* Sources */,
+				CC2EDF57D5E30C73FDBB2EA0 /* Frameworks */,
+				54E37BD5C54C78050DABC8E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FF4F9E45F0AD467B5179EBB /* MyCloud */,
+			);
+			name = MyCloud;
+			packageProductDependencies = (
+			);
+			productName = MyCloud;
+			productReference = 29FED192A5C099279041B159 /* MyCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97CDE39DF86BCA528575ADE8 /* MyCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A8514812C782F8E98449AB4 /* Build configuration list for PBXNativeTarget "MyCloudTests" */;
+			buildPhases = (
+				CD5D34641CAD23B9A07C7AE0 /* Sources */,
+				85453676B52F039022D047CA /* Frameworks */,
+				16821696FA83751A60D5F448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65DE8818392A9B19C66AE696 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6F562DA7092D712F0912CA18 /* MyCloudTests */,
+			);
+			name = MyCloudTests;
+			packageProductDependencies = (
+			);
+			productName = MyCloudTests;
+			productReference = DDEF34FF1A4259A725A057D1 /* MyCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C1A067576D3FAE6D55825A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					463D08B558705B411D60892A = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					97CDE39DF86BCA528575ADE8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 463D08B558705B411D60892A;
+					};
+				};
+			};
+			buildConfigurationList = 70630D07DFDA6DB524E2A1B4 /* Build configuration list for PBXProject "MyCloud" */;
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ru,
+				en,
+				Base,
+			);
+			mainGroup = 729678193C611E995C7D5EC6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 78D30BB43268144A84411550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				463D08B558705B411D60892A /* MyCloud */,
+				97CDE39DF86BCA528575ADE8 /* MyCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54E37BD5C54C78050DABC8E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16821696FA83751A60D5F448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		092E9EBD53A5117EFFF1700B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5D34641CAD23B9A07C7AE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65DE8818392A9B19C66AE696 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463D08B558705B411D60892A /* MyCloud */;
+			targetProxy = F67BACAC45907D291634D9AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D8103CB5A4775B7FB89F9DDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63DE20156DFB6962660B83B /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8BF8A50DD711D2849845258E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 395A393F01C49DD569F361DD /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		78094DF345A5FDE4D1AC2F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyCloud;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		620B96AF6530591E37DD811D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyCloud;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		8449F899FDC4661D224F2EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCloud.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyCloud";
+			};
+			name = Debug;
+		};
+		64393B14C77DDA678DEE7D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCloud.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyCloud";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70630D07DFDA6DB524E2A1B4 /* Build configuration list for PBXProject "MyCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8103CB5A4775B7FB89F9DDA /* Debug */,
+				8BF8A50DD711D2849845258E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89BA4F69F63ED886E903C3CD /* Build configuration list for PBXNativeTarget "MyCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78094DF345A5FDE4D1AC2F91 /* Debug */,
+				620B96AF6530591E37DD811D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A8514812C782F8E98449AB4 /* Build configuration list for PBXNativeTarget "MyCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8449F899FDC4661D224F2EA6 /* Debug */,
+				64393B14C77DDA678DEE7D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C1A067576D3FAE6D55825A3 /* Project object */;
+}

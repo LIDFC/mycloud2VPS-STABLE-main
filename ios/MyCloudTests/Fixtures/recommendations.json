@@ -1,0 +1,87 @@
+{
+ "groups": [
+  {
+   "genre": "Rap",
+   "tracks": [
+    {
+     "id": "0f77f49e-cb10-4033-a666-fd5afad5d2b2",
+     "title": "Биография",
+     "artist": "dzhongarik",
+     "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+     "albumId": "01dbee44-64b5-4de7-883c-fdf531e40255",
+     "artistUsername": "dzhongarik",
+     "duration": 98.3,
+     "genre": "Rap",
+     "description": null,
+     "featuring": [],
+     "artistLine": "dzhongarik",
+     "status": "published",
+     "audioUrl": "/api/stream/0f77f49e-cb10-4033-a666-fd5afad5d2b2",
+     "coverUrl": "/uploads/covers/7938d027-fb0d-4ac6-8d65-587a46b45366.png",
+     "waveformUrl": "/api/waveform/0f77f49e-cb10-4033-a666-fd5afad5d2b2",
+     "likesCount": 0,
+     "repostCount": 0,
+     "playsCount": 11,
+     "playsFormatted": "11",
+     "likedByMe": false,
+     "repostedByMe": false,
+     "createdAt": "2026-03-18T18:15:04.437Z"
+    },
+    {
+     "id": "436ab255-8a29-442a-9511-73013794fae4",
+     "title": "Сегодня",
+     "artist": "Heroinwater",
+     "artistId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+     "albumId": "a39b89e2-90fc-4d6e-a9c2-319b4f144a73",
+     "artistUsername": "Heroinwater",
+     "duration": 167,
+     "genre": "Rap",
+     "description": null,
+     "featuring": [],
+     "artistLine": "Heroinwater",
+     "status": "published",
+     "audioUrl": "/api/stream/436ab255-8a29-442a-9511-73013794fae4",
+     "coverUrl": "/uploads/covers/3f20e42a-4ef4-4717-9e8e-a30257d09bee.png",
+     "waveformUrl": "/api/waveform/436ab255-8a29-442a-9511-73013794fae4",
+     "likesCount": 1,
+     "repostCount": 0,
+     "playsCount": 8,
+     "playsFormatted": "8",
+     "likedByMe": false,
+     "repostedByMe": false,
+     "createdAt": "2026-03-18T17:47:57.115Z"
+    }
+   ]
+  },
+  {
+   "genre": "Rock",
+   "tracks": [
+    {
+     "id": "79a127b5-8a38-4698-8288-98eb5cd10f00",
+     "title": "Мама я люблю",
+     "artist": "Anacondaz",
+     "artistId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+     "albumId": null,
+     "artistUsername": "Iwouldtipfate",
+     "duration": 225.1,
+     "genre": "Rock",
+     "description": "Он любит маму",
+     "featuring": [],
+     "artistLine": "Anacondaz",
+     "status": "published",
+     "audioUrl": "/api/stream/79a127b5-8a38-4698-8288-98eb5cd10f00",
+     "coverUrl": "/uploads/covers/4ec136f4-85fe-4250-98ad-499397ab32a6.jpg",
+     "waveformUrl": "/api/waveform/79a127b5-8a38-4698-8288-98eb5cd10f00",
+     "likesCount": 1,
+     "repostCount": 0,
+     "playsCount": 11,
+     "playsFormatted": "11",
+     "likedByMe": true,
+     "repostedByMe": false,
+     "createdAt": "2026-03-17T19:52:22.370Z"
+    }
+   ]
+  }
+ ],
+ "topGenres": []
+}

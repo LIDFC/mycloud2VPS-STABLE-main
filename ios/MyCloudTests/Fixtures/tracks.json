@@ -1,0 +1,57 @@
+[
+ {
+  "id": "79a127b5-8a38-4698-8288-98eb5cd10f00",
+  "title": "Мама я люблю",
+  "artist": "Anacondaz",
+  "artistId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+  "albumId": null,
+  "artistUsername": "Iwouldtipfate",
+  "duration": 225.1,
+  "genre": "Rock",
+  "description": "Он любит маму",
+  "featuring": [],
+  "artistLine": "Anacondaz",
+  "status": "published",
+  "audioUrl": "/api/stream/79a127b5-8a38-4698-8288-98eb5cd10f00",
+  "coverUrl": "/uploads/covers/4ec136f4-85fe-4250-98ad-499397ab32a6.jpg",
+  "waveformUrl": "/api/waveform/79a127b5-8a38-4698-8288-98eb5cd10f00",
+  "likesCount": 0,
+  "repostCount": 0,
+  "playsCount": 11,
+  "playsFormatted": "11",
+  "likedByMe": false,
+  "repostedByMe": false,
+  "createdAt": "2026-03-17T19:52:22.370Z"
+ },
+ {
+  "id": "60bd61b4-da19-4662-96fd-82a350c4d2dd",
+  "title": "Мейхана Флоу",
+  "artist": "dzhongarik",
+  "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+  "albumId": null,
+  "artistUsername": "dzhongarik",
+  "duration": 131.7,
+  "genre": "Rap",
+  "description": null,
+  "featuring": [
+   {
+    "type": "user",
+    "userId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+    "username": "Heroinwater",
+    "display": "Heroinwater"
+   }
+  ],
+  "artistLine": "dzhongarik feat. Heroinwater",
+  "status": "published",
+  "audioUrl": "/api/stream/60bd61b4-da19-4662-96fd-82a350c4d2dd",
+  "coverUrl": "/uploads/covers/9b4afcb1-21a0-4ca6-a43b-108e54e44f67.jpg",
+  "waveformUrl": "/api/waveform/60bd61b4-da19-4662-96fd-82a350c4d2dd",
+  "likesCount": 0,
+  "repostCount": 0,
+  "playsCount": 7,
+  "playsFormatted": "7",
+  "likedByMe": false,
+  "repostedByMe": false,
+  "createdAt": "2026-03-21T22:35:38.914Z"
+ }
+]

@@ -1,0 +1,9 @@
+{
+ "token": "test-token",
+ "user": {
+  "id": "552dbec5-b53e-429d-853e-1fca8f4d1be0",
+  "username": "fixture_user",
+  "role": "user",
+  "accountType": "listener"
+ }
+}

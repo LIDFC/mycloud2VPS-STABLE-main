@@ -1,0 +1,53 @@
+{
+ "tracks": [
+  {
+   "id": "0166f77f-cae2-487b-9554-6dfa8de25eeb",
+   "title": "Одаривает",
+   "artist": "Heroinwater",
+   "artistId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+   "albumId": "4f30c48e-393c-408b-9a2b-2210c81ff722",
+   "artistUsername": "Heroinwater",
+   "duration": 133.3,
+   "genre": "Rap",
+   "description": null,
+   "featuring": [],
+   "artistLine": "Heroinwater",
+   "status": "published",
+   "audioUrl": "/api/stream/0166f77f-cae2-487b-9554-6dfa8de25eeb",
+   "coverUrl": "/uploads/covers/eae83fcd-2adf-47d7-aa85-e6f3ece0f3f9.png",
+   "waveformUrl": "/api/waveform/0166f77f-cae2-487b-9554-6dfa8de25eeb",
+   "likesCount": 0,
+   "repostCount": 0,
+   "playsCount": 10,
+   "playsFormatted": "10",
+   "likedByMe": false,
+   "repostedByMe": false,
+   "createdAt": "2026-03-18T17:40:23.847Z"
+  },
+  {
+   "id": "73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45",
+   "title": "Промо feat. DooMee",
+   "artist": "Heroinwater",
+   "artistId": "6b3bfa8a-3be1-4644-b45f-fc1676db7df5",
+   "albumId": "4f30c48e-393c-408b-9a2b-2210c81ff722",
+   "artistUsername": "Heroinwater",
+   "duration": 182.2,
+   "genre": "Rap",
+   "description": null,
+   "featuring": [],
+   "artistLine": "Heroinwater",
+   "status": "published",
+   "audioUrl": "/api/stream/73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45",
+   "coverUrl": "/uploads/covers/e664385f-a955-49ce-a9e9-84f61cfcec71.png",
+   "waveformUrl": "/api/waveform/73d5c18b-0e46-4f65-b6ca-1cfe04c6bb45",
+   "likesCount": 0,
+   "repostCount": 0,
+   "playsCount": 11,
+   "playsFormatted": "11",
+   "likedByMe": false,
+   "repostedByMe": false,
+   "createdAt": "2026-03-18T17:39:56.407Z"
+  }
+ ],
+ "date": "2026-10-05"
+}
