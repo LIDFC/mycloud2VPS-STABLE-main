@@ -1,0 +1,41 @@
+{
+ "success": true,
+ "playlist": {
+  "id": "70172fb9-f2cb-475c-9946-5ec29668d0c0",
+  "ownerId": "552dbec5-b53e-429d-853e-1fca8f4d1be0",
+  "name": "Fixture",
+  "description": "d",
+  "coverFile": null,
+  "trackIds": [
+   "79a127b5-8a38-4698-8288-98eb5cd10f00"
+  ],
+  "createdAt": "2026-10-05T22:16:23.010Z",
+  "updatedAt": "2026-10-05T22:16:23.041Z",
+  "tracks": [
+   {
+    "id": "79a127b5-8a38-4698-8288-98eb5cd10f00",
+    "title": "Мама я люблю",
+    "artist": "Anacondaz",
+    "artistId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+    "albumId": null,
+    "artistUsername": "Iwouldtipfate",
+    "duration": 225.1,
+    "genre": "Rock",
+    "description": "Он любит маму",
+    "featuring": [],
+    "artistLine": "Anacondaz",
+    "status": "published",
+    "audioUrl": "/api/stream/79a127b5-8a38-4698-8288-98eb5cd10f00",
+    "coverUrl": "/uploads/covers/4ec136f4-85fe-4250-98ad-499397ab32a6.jpg",
+    "waveformUrl": "/api/waveform/79a127b5-8a38-4698-8288-98eb5cd10f00",
+    "likesCount": 1,
+    "repostCount": 0,
+    "playsCount": 11,
+    "playsFormatted": "11",
+    "likedByMe": true,
+    "repostedByMe": false,
+    "createdAt": "2026-03-17T19:52:22.370Z"
+   }
+  ]
+ }
+}

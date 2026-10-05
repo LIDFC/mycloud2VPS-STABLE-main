@@ -1,0 +1,90 @@
+{
+ "tracks": [
+  {
+   "id": "79a127b5-8a38-4698-8288-98eb5cd10f00",
+   "title": "Мама я люблю",
+   "artist": "Anacondaz",
+   "artistId": "5f540de6-f7bc-49e2-9ea7-c60c8b32bf8a",
+   "albumId": null,
+   "artistUsername": "Iwouldtipfate",
+   "duration": 225.1,
+   "genre": "Rock",
+   "description": "Он любит маму",
+   "featuring": [],
+   "artistLine": "Anacondaz",
+   "status": "published",
+   "audioUrl": "/api/stream/79a127b5-8a38-4698-8288-98eb5cd10f00",
+   "coverUrl": "/uploads/covers/4ec136f4-85fe-4250-98ad-499397ab32a6.jpg",
+   "waveformUrl": "/api/waveform/79a127b5-8a38-4698-8288-98eb5cd10f00",
+   "likesCount": 1,
+   "repostCount": 0,
+   "playsCount": 11,
+   "playsFormatted": "11",
+   "likedByMe": true,
+   "repostedByMe": false,
+   "createdAt": "2026-03-17T19:52:22.370Z"
+  },
+  {
+   "id": "40b6bcd0-5390-4b35-ad41-c4d180adacd9",
+   "title": "Лайфстайл",
+   "artist": "dzhongarik",
+   "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+   "albumId": "a0135256-9b43-4b25-a510-55ce7cf03ff2",
+   "artistUsername": "dzhongarik",
+   "duration": 134.1,
+   "genre": "Rap",
+   "description": null,
+   "featuring": [],
+   "artistLine": "dzhongarik",
+   "status": "published",
+   "audioUrl": "/api/stream/40b6bcd0-5390-4b35-ad41-c4d180adacd9",
+   "coverUrl": "/uploads/covers/0c94418b-ff76-4410-a9d9-24277201bfd5.png",
+   "waveformUrl": "/api/waveform/40b6bcd0-5390-4b35-ad41-c4d180adacd9",
+   "likesCount": 0,
+   "repostCount": 0,
+   "playsCount": 16,
+   "playsFormatted": "16",
+   "likedByMe": false,
+   "repostedByMe": false,
+   "createdAt": "2026-03-17T20:08:21.652Z"
+  }
+ ],
+ "artists": [
+  {
+   "id": "e3456161-a70d-4e44-84d0-0dd937d7649a",
+   "username": "testartist",
+   "accountType": "artist",
+   "bio": "",
+   "avatarUrl": null,
+   "followersCount": 1,
+   "isFollowedByMe": false,
+   "trackCount": 0
+  },
+  {
+   "id": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+   "username": "dzhongarik",
+   "accountType": "artist_pro",
+   "bio": "",
+   "avatarUrl": "/uploads/avatars/9fb91434-abb6-43a3-8b37-f679a878efaf.png",
+   "followersCount": 1,
+   "isFollowedByMe": false,
+   "trackCount": 39
+  }
+ ],
+ "albums": [
+  {
+   "id": "a0135256-9b43-4b25-a510-55ce7cf03ff2",
+   "title": "Престиж",
+   "description": null,
+   "genre": null,
+   "artistId": "f06bb489-9c08-4554-952c-fe1a6948b84e",
+   "artist": "dzhongarik",
+   "coverFile": "93f76c9e-ddc9-429d-8d1d-55aea221544d.png",
+   "status": "published",
+   "likedBy": [],
+   "createdAt": "2026-03-17T20:00:02.954Z",
+   "coverUrl": "/uploads/covers/93f76c9e-ddc9-429d-8d1d-55aea221544d.png",
+   "likesCount": 0
+  }
+ ]
+}

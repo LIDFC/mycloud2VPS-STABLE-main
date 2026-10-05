@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyLists/1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Read by AppConfig. Set API_BASE_URL in Config/*.xcconfig. -->
+	<key>MCAPIBaseURL</key>
+	<string>$(API_BASE_URL)</string>
+	<!-- Keeps music playing when the app is in the background or the phone is locked. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+</dict>
+</plist>

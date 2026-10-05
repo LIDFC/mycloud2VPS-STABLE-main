@@ -16,6 +16,11 @@ const makeTracksRouter     = require("./routes/tracks");
 const app        = express();
 const PORT       = process.env.PORT || 3001;
 const JWT_SECRET = process.env.JWT_SECRET || "mycloud-dev-secret-change-in-prod";
+// The fallback secret is public (it's in the repo): anyone could forge tokens with it
+if (process.env.NODE_ENV === "production" && !process.env.JWT_SECRET) {
+  console.error("FATAL: JWT_SECRET is not set. Refusing to start in production with the public dev secret.");
+  process.exit(1);
+}
 
 const DATA_DIR      = path.join(__dirname, "data");
 const UPLOADS_DIR   = path.join(__dirname, "uploads");
@@ -128,9 +133,35 @@ function getFeaturingText(featuring = []) {
     .map((entry) => entry?.display || entry?.username || entry?.value)
     .filter(Boolean);
 }
+// id → username, re-read only when users.json changes on disk
+let usernameCache = { mtimeMs: -1, map: new Map() };
+function getUsernameById(id) {
+  if (!id) return null;
+  let mtimeMs = 0;
+  try { mtimeMs = fs.statSync(USERS_FILE).mtimeMs; } catch {}
+  if (mtimeMs !== usernameCache.mtimeMs) {
+    usernameCache = { mtimeMs, map: new Map(readJSON(USERS_FILE).map((u) => [u.id, u.username])) };
+  }
+  return usernameCache.map.get(id) || null;
+}
+// waveformFile → duration in seconds; waveform files never change once written
+const durationCache = new Map();
+function getTrackDuration(t) {
+  if (!t.waveformFile) return null;
+  if (!durationCache.has(t.waveformFile)) {
+    try {
+      const { duration } = JSON.parse(fs.readFileSync(path.join(WAVEFORMS_DIR, t.waveformFile), "utf8"));
+      if (!(duration > 0)) return null;
+      durationCache.set(t.waveformFile, Math.round(duration * 10) / 10);
+    } catch { return null; }
+  }
+  return durationCache.get(t.waveformFile);
+}
 function mapTrack(t, userId) {
   return {
     id: t.id, title: t.title, artist: t.artist, artistId: t.artistId||null, albumId: t.albumId||null,
+    artistUsername: getUsernameById(t.artistId),
+    duration: getTrackDuration(t),
     genre: t.genre||null, description: t.description||null,
     featuring: t.featuring || [],
     artistLine: [t.artist, ...getFeaturingText(t.featuring || [])].filter(Boolean).join(" feat. ") || t.artist,
@@ -177,7 +208,7 @@ app.use(cors({
   origin: (origin, cb) => {
     // Allow requests with no origin (mobile apps, curl, same-origin)
     if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
-    cb(new Error("Not allowed by CORS"));
+    cb(Object.assign(new Error("Not allowed by CORS"), { status: 403 }));
   },
   credentials: true,
 }));
@@ -1357,14 +1388,29 @@ app.delete('/api/drops/:id', auth, (req, res) => {
   res.json({ ok: true });
 });
 
+// Unknown API routes → JSON 404 (instead of the SPA index.html below)
+app.use("/api", (req, res) => res.status(404).json({ error: "Not found" }));
+
 if (fs.existsSync(distDir)) {
   app.use(express.static(distDir));
   app.get("*", (req, res) => res.sendFile(path.join(distDir, "index.html")));
 }
 
-app.listen(PORT, ()=>{
-  console.log("\n🎵  MyCloud running on http://localhost:"+PORT);
+// Errors (malformed JSON, multer limits, CORS) → JSON instead of an HTML page
+app.use((err, req, res, next) => {
+  if (res.headersSent) return next(err);
+  const status = err.status || err.statusCode || (err instanceof multer.MulterError ? 400 : 500);
+  if (status >= 500) console.error(err);
+  res.status(status).json({ error: status >= 500 ? "Internal server error" : err.message });
+});
+
+// HOST lets the server bind to loopback only (e.g. HOST=127.0.0.1 behind nginx)
+const HOST = process.env.HOST;
+const onListen = ()=>{
+  console.log("\n🎵  MyCloud running on http://"+(HOST||"localhost")+":"+PORT);
   console.log("   /api/stream/:id  — HTTP Range streaming");
   console.log("   /api/waveform/:id — pre-generated waveform JSON");
   console.log("   /api/tracks       — track catalogue\n");
-});
+};
+if (HOST) app.listen(PORT, HOST, onListen);
+else app.listen(PORT, onListen);

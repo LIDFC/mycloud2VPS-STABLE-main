@@ -1,0 +1,16 @@
+// Shared build settings for all configurations.
+
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SDKROOT = iphoneos
+TARGETED_DEVICE_FAMILY = 1
+SWIFT_VERSION = 5.0
+SWIFT_STRICT_CONCURRENCY = complete
+SWIFT_EMIT_LOC_STRINGS = YES
+ALWAYS_SEARCH_USER_PATHS = NO
+ENABLE_USER_SCRIPT_SANDBOXING = YES
+ENABLE_STRICT_OBJC_MSGSEND = YES
+LOCALIZATION_PREFERS_STRING_CATALOGS = YES
+
+// MyCloud backend. `//` starts a comment in xcconfig, hence the $() trick.
+// Port 8443: TCP/443 on the server belongs to the Telegram proxy.
+API_BASE_URL = https:/$()/music.dirty.baby:8443
