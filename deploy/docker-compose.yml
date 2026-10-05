@@ -1,10 +1,12 @@
-# MyCloud for music.dirty.baby — HTTPS on :8443 (443 belongs to amnezia-telemt).
+# MyCloud for music.dirty.baby.
+#   https://music.dirty.baby       via the SNI router on :443 (sni-router/)
+#   https://music.dirty.baby:8443  direct
 #
 #   cd deploy && cp .env.example .env   # fill JWT_SECRET
 #   docker compose up -d --build
 #
-# Exposes only TCP 8443 publicly. The Node backend is published on loopback
-# (127.0.0.1:3000) for local checks; nginx reaches it over the compose network.
+# Publicly exposes only TCP 8443. On loopback: 127.0.0.1:3000 (Node, for local
+# checks) and 127.0.0.1:8444 (TLS + PROXY protocol, target of the SNI router).
 
 name: mycloud
 
@@ -17,7 +19,7 @@ services:
       - NODE_ENV=production
       - PORT=3000
       - JWT_SECRET=${JWT_SECRET:?set JWT_SECRET in deploy/.env}
-      - CORS_ORIGIN=${CORS_ORIGIN:-https://music.dirty.baby:8443}
+      - CORS_ORIGIN=${CORS_ORIGIN:-https://music.dirty.baby,https://music.dirty.baby:8443}
     ports:
       - "127.0.0.1:3000:3000"
     volumes:
@@ -37,8 +39,10 @@ services:
     restart: unless-stopped
     ports:
       - "8443:8443"
+      - "127.0.0.1:8444:8444"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./mycloud-locations.conf:/etc/nginx/snippets/mycloud-locations.conf:ro
       - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       mycloud:
