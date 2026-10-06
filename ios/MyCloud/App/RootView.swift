@@ -30,11 +30,7 @@ struct RootView: View {
 private struct LaunchView: View {
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: "waveform")
-                .font(.system(size: 40, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(width: 88, height: 88)
-                .background(.tint, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+            AppMark()
             ProgressView()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

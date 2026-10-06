@@ -14,6 +14,7 @@ struct MyCloudApp: App {
         WindowGroup {
             RootView()
                 .environment(container)
+                .preferredColorScheme(Self.forcedColorScheme)
         }
     }
 
@@ -30,7 +31,22 @@ struct MyCloudApp: App {
             tokenStorage: InMemorySecretStorage(),
             userCache: UserCache(defaults: UserDefaults(suiteName: defaultsSuite) ?? .standard),
             responseCache: ResponseCache(directory: sandbox.appendingPathComponent("Responses")),
-            downloadsDirectory: sandbox.appendingPathComponent("Downloads")
+            downloadsDirectory: sandbox.appendingPathComponent("Downloads"),
+            // Automated runs against the real server must not inflate play counts.
+            listens: .disabled
         )
+    }
+
+    /// `-ui-appearance dark|light` (UI tests / screenshots only).
+    private static var forcedColorScheme: ColorScheme? {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard arguments.contains("-ui-testing"),
+              let index = arguments.firstIndex(of: "-ui-appearance"), index + 1 < arguments.count
+        else { return nil }
+        switch arguments[index + 1] {
+        case "dark": return .dark
+        case "light": return .light
+        default: return nil
+        }
     }
 }

@@ -199,7 +199,7 @@ struct OfflineBanner: View {
             .foregroundStyle(.secondary)
             .padding(.horizontal, 14)
             .padding(.vertical, 8)
-            .background(.regularMaterial, in: Capsule())
+            .glassBackground(in: Capsule())
             .padding(.bottom, 6)
             .transition(.move(edge: .bottom).combined(with: .opacity))
     }

@@ -34,6 +34,9 @@ struct NowPlayingView: View {
             }
         }
         .animation(.snappy, value: showsQueue)
+        .task(id: player.currentTrack?.id) {
+            if let track = player.currentTrack { await container.waveforms.load(for: track) }
+        }
         .onChange(of: player.currentTrack == nil) { _, isEmpty in
             if isEmpty { dismiss() }
         }
@@ -82,6 +85,7 @@ struct NowPlayingView: View {
                     .background(showsQueue ? AnyShapeStyle(.tint.opacity(0.2)) : AnyShapeStyle(.clear), in: Circle())
             }
             .accessibilityLabel(showsQueue ? "Скрыть очередь" : "Показать очередь")
+            .accessibilityIdentifier("nowPlaying.queue")
         }
         .foregroundStyle(.primary)
         .padding(.top, 8)
@@ -147,28 +151,50 @@ struct NowPlayingView: View {
     private var scrubber: some View {
         let duration = max(player.duration, 0)
         let shown = scrubTime ?? player.currentTime
+        let samples = player.currentTrack.flatMap { container.waveforms.samples(for: $0) } ?? []
         return VStack(spacing: 6) {
-            Slider(
-                value: Binding(
-                    get: { min(shown, max(duration, 0.01)) },
-                    set: { newValue in
-                        scrubTime = newValue
-                        player.scrub(to: newValue)
-                    }
-                ),
-                in: 0...max(duration, 0.01),
-                onEditingChanged: { editing in
-                    if editing {
-                        player.beginScrubbing()
-                    } else {
-                        player.endScrubbing(at: scrubTime ?? player.currentTime)
-                        scrubTime = nil
-                    }
+            Group {
+                if !samples.isEmpty, duration > 0 {
+                    WaveformScrubber(
+                        samples: samples,
+                        progress: duration > 0 ? shown / duration : 0,
+                        duration: duration,
+                        onScrubStart: { player.beginScrubbing() },
+                        onScrub: { seconds in
+                            scrubTime = seconds
+                            player.scrub(to: seconds)
+                        },
+                        onCommit: { seconds in
+                            player.endScrubbing(at: seconds)
+                            scrubTime = nil
+                        }
+                    )
+                    .transition(.opacity)
+                } else {
+                    Slider(
+                        value: Binding(
+                            get: { min(shown, max(duration, 0.01)) },
+                            set: { newValue in
+                                scrubTime = newValue
+                                player.scrub(to: newValue)
+                            }
+                        ),
+                        in: 0...max(duration, 0.01),
+                        onEditingChanged: { editing in
+                            if editing {
+                                player.beginScrubbing()
+                            } else {
+                                player.endScrubbing(at: scrubTime ?? player.currentTime)
+                                scrubTime = nil
+                            }
+                        }
+                    )
+                    .disabled(duration <= 0)
+                    .accessibilityLabel("Позиция")
+                    .accessibilityValue(Format.duration(shown) ?? "")
                 }
-            )
-            .disabled(duration <= 0)
-            .accessibilityLabel("Позиция")
-            .accessibilityValue(Format.duration(shown) ?? "")
+            }
+            .animation(.easeOut(duration: 0.25), value: samples.isEmpty)
 
             HStack {
                 Text(Format.duration(shown) ?? "0:00")

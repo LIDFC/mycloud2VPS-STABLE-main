@@ -16,6 +16,7 @@ final class AppContainer {
     let downloads: DownloadStore
     let responseCache: ResponseCache
     let network: NetworkMonitor
+    let waveforms: WaveformStore
 
     init(
         config: AppConfig = .current,
@@ -23,7 +24,8 @@ final class AppContainer {
         userCache: UserCache = UserCache(),
         urlSession: URLSession = APIClient.makeSession(),
         responseCache: ResponseCache = .makeDefault(),
-        downloadsDirectory: URL = DownloadStore.defaultDirectory
+        downloadsDirectory: URL = DownloadStore.defaultDirectory,
+        listens: ListenRecorder? = nil
     ) {
         let storage = tokenStorage ?? KeychainSecretStorage(
             keychain: KeychainStore(service: "baby.dirty.mycloud.auth"),
@@ -53,9 +55,10 @@ final class AppContainer {
         self.library = LibraryStore(api: api)
         self.responseCache = responseCache
         self.network = NetworkMonitor()
+        self.waveforms = WaveformStore(api: api)
         let downloads = DownloadStore(api: api, directory: downloadsDirectory)
         self.downloads = downloads
-        let player = PlaybackController(api: api, localFileURL: { downloads.localURL(for: $0) })
+        let player = PlaybackController(api: api, listens: listens, localFileURL: { downloads.localURL(for: $0) })
         self.player = player
         self.nowPlaying = NowPlayingCenter(player: player, api: api)
         session.prepareForUser = { [weak self] userID in await self?.activateStorage(for: userID) }

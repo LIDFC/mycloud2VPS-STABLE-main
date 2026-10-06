@@ -197,3 +197,43 @@ final class ListenRecorderTests: XCTestCase {
                        "Seen requests: \(StubURLProtocol.requests.map { "\($0.httpMethod ?? "") \($0.url?.absoluteString ?? "")" })")
     }
 }
+
+@MainActor
+final class WaveformTests: XCTestCase {
+    func testBucketsKeepPeaksAndClamp() async {
+        XCTAssertEqual(Waveform.buckets([0.1, 0.9, 0.2, 0.3], count: 2), [0.9, 0.3])
+        XCTAssertEqual(Waveform.buckets([0.5, 2, -1, .nan], count: 4), [0.5, 1, 0, 0])
+        XCTAssertEqual(Waveform.buckets([0.4], count: 3), [0.4, 0.4, 0.4])
+        XCTAssertTrue(Waveform.buckets([], count: 10).isEmpty)
+        XCTAssertTrue(Waveform.buckets([0.1], count: 0).isEmpty)
+    }
+
+    func testDecodesRealWaveform() async throws {
+        let waveform = try Fixture.decode(Waveform.self, from: "waveform")
+        XCTAssertEqual(waveform.samples.count, 200)
+        XCTAssertEqual(Waveform.buckets(waveform.samples, count: 70).count, 70)
+    }
+
+    func testStoreKeepsOnlyRealWaveforms() async throws {
+        let api = APIClient(baseURL: URL(string: "https://music.dirty.baby:8443")!,
+                            session: StubURLProtocol.makeSession(),
+                            tokenProvider: { nil }, unauthorizedHandler: { _ in })
+        let store = WaveformStore(api: api)
+        let track = try JSONDecoder().decode(Track.self, from: .json(
+            #"{"id":"t1","title":"T","artist":"A","waveformUrl":"/api/waveform/t1"}"#))
+
+        StubURLProtocol.respond { _ in .init(status: 200, body: .json(#"{"samples":[],"duration":0}"#)) }
+        await store.load(for: track)
+        XCTAssertNil(store.samples(for: track), "Still generating: must be retried later")
+
+        let real = try Fixture.data("waveform")
+        StubURLProtocol.respond { _ in .init(status: 200, body: real) }
+        await store.load(for: track)
+        XCTAssertEqual(store.samples(for: track)?.count, 200)
+        XCTAssertNil(StubURLProtocol.requests.last?.value(forHTTPHeaderField: "Authorization"))
+
+        let noWaveform = try JSONDecoder().decode(Track.self, from: .json(#"{"id":"t2","title":"T","artist":"A"}"#))
+        await store.load(for: noWaveform)
+        XCTAssertNil(store.samples(for: noWaveform))
+    }
+}

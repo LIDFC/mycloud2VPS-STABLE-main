@@ -12,6 +12,7 @@ struct AlbumView: View {
                     header(album, tracks: tracks)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 16, trailing: 20))
+                        .listRowBackground(ArtworkTintBackground(path: album.coverUrl))
                 }
 
                 Section {
@@ -26,6 +27,7 @@ struct AlbumView: View {
                             TrackRow(track: track, number: index + 1)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("trackRow")
                         .contextMenu { TrackContextMenu(track: track) }
                     }
                 } footer: {
@@ -69,6 +71,7 @@ struct AlbumView: View {
                         .foregroundStyle(.tint)
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("album.artistLink")
                 if let meta = metaLine(album) {
                     Text(meta)
                         .font(.footnote)

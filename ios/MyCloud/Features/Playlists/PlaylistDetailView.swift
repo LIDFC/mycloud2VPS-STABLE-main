@@ -88,6 +88,7 @@ struct PlaylistDetailView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .listRowSeparator(.hidden)
+                .listRowBackground(ArtworkTintBackground(path: playlist.coverUrl ?? playlist.tracks.first?.coverUrl))
             }
 
             Section {
