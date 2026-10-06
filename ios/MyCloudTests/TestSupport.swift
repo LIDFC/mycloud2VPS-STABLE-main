@@ -37,6 +37,7 @@ final class StubURLProtocol: URLProtocol {
         let status: Int
         let body: Data
         var error: URLError?
+        var headers: [String: String] = ["Content-Type": "application/json"]
     }
 
     private static let lock = NSLock()
@@ -76,7 +77,7 @@ final class StubURLProtocol: URLProtocol {
             return
         }
         let response = HTTPURLResponse(url: url, statusCode: stub.status, httpVersion: "HTTP/1.1",
-                                       headerFields: ["Content-Type": "application/json"])!
+                                       headerFields: stub.headers)!
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
         client?.urlProtocol(self, didLoad: stub.body)
         client?.urlProtocolDidFinishLoading(self)

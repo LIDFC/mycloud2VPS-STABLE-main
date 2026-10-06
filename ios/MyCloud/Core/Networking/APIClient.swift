@@ -15,15 +15,18 @@ final class APIClient: Sendable {
     private let session: URLSession
     private let tokenProvider: @Sendable () async -> String?
     private let unauthorizedHandler: @Sendable (_ rejectedToken: String) async -> Void
+    let responseCache: ResponseCache?
 
     init(
         baseURL: URL,
         session: URLSession = APIClient.makeSession(),
+        responseCache: ResponseCache? = nil,
         tokenProvider: @escaping @Sendable () async -> String?,
         unauthorizedHandler: @escaping @Sendable (_ rejectedToken: String) async -> Void
     ) {
         self.baseURL = baseURL
         self.session = session
+        self.responseCache = responseCache
         self.tokenProvider = tokenProvider
         self.unauthorizedHandler = unauthorizedHandler
     }
@@ -72,10 +75,35 @@ final class APIClient: Sendable {
             throw Self.mapStatus(http.statusCode, message: message)
         }
 
+        let value: Response
         do {
-            return try Self.makeDecoder().decode(Response.self, from: data)
+            value = try Self.makeDecoder().decode(Response.self, from: data)
         } catch {
             throw APIError.decoding(details: String(describing: error))
+        }
+        if endpoint.isCacheable, let responseCache {
+            await responseCache.store(data, for: endpoint.cacheKey)
+        }
+        return value
+    }
+
+    // MARK: - Cache
+
+    /// The last successful response for a cacheable endpoint, if any.
+    func cached<Response>(_ endpoint: Endpoint<Response>) async -> Response? {
+        guard endpoint.isCacheable, let data = await responseCache?.data(for: endpoint.cacheKey) else { return nil }
+        return try? Self.makeDecoder().decode(Response.self, from: data)
+    }
+
+    /// Network first; when the network (not the request) fails, falls back to
+    /// the last cached response so screens keep working offline.
+    /// - Returns: the value and whether it came from the cache.
+    func sendOrCached<Response>(_ endpoint: Endpoint<Response>) async throws -> (value: Response, isCached: Bool) {
+        do {
+            return (try await send(endpoint), false)
+        } catch let error as APIError where error.allowsCacheFallback {
+            if let cached = await cached(endpoint) { return (cached, true) }
+            throw error
         }
     }
 
@@ -151,7 +179,7 @@ final class APIClient: Sendable {
     }
 
     static func mapTransportError(_ error: Error) -> Error {
-        if error is CancellationError { return error }
+        if error is CancellationError || error is APIError { return error }
         guard let urlError = error as? URLError else {
             return APIError.transport(code: URLError.unknown.rawValue)
         }

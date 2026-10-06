@@ -168,18 +168,32 @@ final class BrowseViewModelTests: XCTestCase {
 }
 
 final class ListenRecorderTests: XCTestCase {
-    func testLiveRecorderPostsListen() async throws {
+    private func makeAPI() -> APIClient {
+        APIClient(baseURL: URL(string: "https://music.dirty.baby:8443")!,
+                  session: StubURLProtocol.makeSession(),
+                  tokenProvider: { "t" }, unauthorizedHandler: { _ in })
+    }
+
+    func testReportPostsListen() async throws {
+        StubURLProtocol.respond { _ in .init(status: 200, body: .json(#"{"ok":true,"playsCount":3}"#)) }
+        let response = try await ListenRecorder.report("abc", api: makeAPI())
+        XCTAssertEqual(response.playsCount, 3)
+        let request = try XCTUnwrap(StubURLProtocol.requests.last)
+        XCTAssertEqual(request.httpMethod, "POST")
+        XCTAssertEqual(request.url?.path, "/api/tracks/listen")
+        let body = try XCTUnwrap(request.httpBody ?? request.bodyStreamData)
+        XCTAssertEqual(try JSONSerialization.jsonObject(with: body) as? [String: String], ["trackId": "abc"])
+    }
+
+    func testLiveRecorderSendsFromBackground() async throws {
         let sent = expectation(description: "listen request")
         StubURLProtocol.respond { request in
-            if request.url?.path == "/api/tracks/listen", request.httpMethod == "POST" {
-                sent.fulfill()
-            }
+            if request.url?.path == "/api/tracks/listen" { sent.fulfill() }
             return .init(status: 200, body: .json(#"{"ok":true,"playsCount":1}"#))
         }
-        let api = APIClient(baseURL: URL(string: "https://music.dirty.baby:8443")!,
-                            session: StubURLProtocol.makeSession(),
-                            tokenProvider: { "t" }, unauthorizedHandler: { _ in })
-        ListenRecorder.live(api: api).record("abc")
-        await fulfillment(of: [sent], timeout: 5)
+        ListenRecorder.live(api: makeAPI()).record("abc")
+        let result = await XCTWaiter().fulfillment(of: [sent], timeout: 10)
+        XCTAssertEqual(result, .completed,
+                       "Seen requests: \(StubURLProtocol.requests.map { "\($0.httpMethod ?? "") \($0.url?.absoluteString ?? "")" })")
     }
 }

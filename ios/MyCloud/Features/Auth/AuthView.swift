@@ -71,6 +71,7 @@ struct AuthView: View {
                 .focused($focusedField, equals: .username)
                 .onSubmit { focusedField = .password }
                 .authFieldStyle()
+                .accessibilityIdentifier("auth.username")
 
             Divider().padding(.leading, 16)
 
@@ -86,6 +87,7 @@ struct AuthView: View {
                     }
                 }
                 .authFieldStyle()
+                .accessibilityIdentifier("auth.password")
 
             if viewModel.mode == .register {
                 Divider().padding(.leading, 16)
@@ -96,6 +98,7 @@ struct AuthView: View {
                     .focused($focusedField, equals: .confirmation)
                     .onSubmit(submit)
                     .authFieldStyle()
+                    .accessibilityIdentifier("auth.confirmation")
                     .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
@@ -107,12 +110,14 @@ struct AuthView: View {
     private var messages: some View {
         if let error = viewModel.errorMessage {
             Label(error, systemImage: "exclamationmark.circle.fill")
+                .accessibilityIdentifier("auth.error")
                 .font(.footnote)
                 .foregroundStyle(.red)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .transition(.opacity)
         } else if let hint = viewModel.validationMessage {
             Text(hint)
+                .accessibilityIdentifier("auth.hint")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -138,6 +143,7 @@ struct AuthView: View {
         .buttonBorderShape(.roundedRectangle(radius: 14))
         .controlSize(.large)
         .disabled(!viewModel.canSubmit)
+        .accessibilityIdentifier("auth.submit")
     }
 
     private var modeSwitch: some View {
@@ -149,6 +155,7 @@ struct AuthView: View {
                 viewModel.passwordConfirmation = ""
             }
             .fontWeight(.semibold)
+            .accessibilityIdentifier("auth.modeSwitch")
         }
         .font(.subheadline)
         .disabled(viewModel.isSubmitting)

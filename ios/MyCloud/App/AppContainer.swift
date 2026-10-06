@@ -13,12 +13,17 @@ final class AppContainer {
     let library: LibraryStore
     let player: PlaybackController
     let nowPlaying: NowPlayingCenter
+    let downloads: DownloadStore
+    let responseCache: ResponseCache
+    let network: NetworkMonitor
 
     init(
         config: AppConfig = .current,
         tokenStorage: SecretStorage? = nil,
         userCache: UserCache = UserCache(),
-        urlSession: URLSession = APIClient.makeSession()
+        urlSession: URLSession = APIClient.makeSession(),
+        responseCache: ResponseCache = .makeDefault(),
+        downloadsDirectory: URL = DownloadStore.defaultDirectory
     ) {
         let storage = tokenStorage ?? KeychainSecretStorage(
             keychain: KeychainStore(service: "baby.dirty.mycloud.auth"),
@@ -30,6 +35,7 @@ final class AppContainer {
         let api = APIClient(
             baseURL: config.apiBaseURL,
             session: urlSession,
+            responseCache: responseCache,
             tokenProvider: { await tokenStore.token },
             unauthorizedHandler: { rejected in
                 if await tokenStore.clear(ifEqualTo: rejected) {
@@ -45,9 +51,21 @@ final class AppContainer {
         self.api = api
         self.session = session
         self.library = LibraryStore(api: api)
-        let player = PlaybackController(api: api)
+        self.responseCache = responseCache
+        self.network = NetworkMonitor()
+        let downloads = DownloadStore(api: api, directory: downloadsDirectory)
+        self.downloads = downloads
+        let player = PlaybackController(api: api, localFileURL: { downloads.localURL(for: $0) })
         self.player = player
         self.nowPlaying = NowPlayingCenter(player: player, api: api)
+        session.prepareForUser = { [weak self] userID in await self?.activateStorage(for: userID) }
+    }
+
+    /// Per-account storage: cached responses and downloads survive re-signing
+    /// in as the same user, and are wiped when a different user signs in.
+    func activateStorage(for userID: String) async {
+        downloads.activate(ownerID: userID)
+        await responseCache.activate(ownerID: userID)
     }
 }
 

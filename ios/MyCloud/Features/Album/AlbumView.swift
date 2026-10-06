@@ -41,7 +41,8 @@ struct AlbumView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             if let album = viewModel.state.value {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    DownloadAllButton(tracks: album.tracks ?? [])
                     AlbumLikeButton(album: album)
                 }
             }

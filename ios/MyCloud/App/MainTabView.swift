@@ -18,7 +18,9 @@ struct MainTabView: View {
                 HomeView(viewModel: HomeViewModel(api: container.api))
             }
             tab(.search, title: "Поиск", systemImage: "magnifyingglass") {
-                SearchView(viewModel: SearchViewModel(api: container.api))
+                SearchView(viewModel: SearchViewModel(api: container.api) { [downloads = container.downloads] in
+                    downloads.downloadedTracks
+                })
             }
             tab(.library, title: "Медиатека", systemImage: "square.stack.fill") {
                 LibraryView()
@@ -55,7 +57,13 @@ struct MainTabView: View {
         }
         // Inside each stack so pushed screens also leave room for the mini player.
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            MiniPlayerView { showsNowPlaying = true }
+            VStack(spacing: 0) {
+                if !container.network.isOnline {
+                    OfflineBanner()
+                }
+                MiniPlayerView { showsNowPlaying = true }
+            }
+            .animation(.snappy, value: container.network.isOnline)
         }
         .tabItem { Label(title, systemImage: systemImage) }
         .tag(tab)

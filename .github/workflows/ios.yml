@@ -54,6 +54,21 @@ jobs:
           grep -iE "error:|warning:|test case .* failed|failing tests|executed|\*\* (build|test)" xcodebuild.log | grep -v "not stripping binary" | sort -u | tail -200
           exit $STATUS
 
+      - name: Test summary
+        if: always()
+        run: |
+          [ -d TestResults.xcresult ] || exit 0
+          xcrun xcresulttool get test-results summary --path TestResults.xcresult --compact \
+            | python3 -c '
+          import json, sys
+          s = json.load(sys.stdin)
+          print("Result: {}  total={} passed={} failed={} skipped={}".format(
+              s.get("result"), s.get("totalTestCount"), s.get("passedTests"),
+              s.get("failedTests"), s.get("skippedTests")))
+          for t in s.get("testFailures", []):
+              print("FAILED:", t.get("testIdentifierString"), "-", t.get("failureText"))
+          ' || true
+
       - name: Upload results
         if: failure()
         uses: actions/upload-artifact@v4

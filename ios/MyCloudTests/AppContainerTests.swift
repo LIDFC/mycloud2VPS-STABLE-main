@@ -14,7 +14,10 @@ final class AppContainerTests: XCTestCase {
             config: AppConfig(apiBaseURL: URL(string: "https://music.dirty.baby:8443")!),
             tokenStorage: InMemorySecretStorage("t"),
             userCache: UserCache(defaults: defaults),
-            urlSession: StubURLProtocol.makeSession()
+            urlSession: StubURLProtocol.makeSession(),
+            responseCache: ResponseCache(directory: FileManager.default.temporaryDirectory
+                .appendingPathComponent(UUID().uuidString)),
+            downloadsDirectory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         )
         let me = try Fixture.data("me")
         StubURLProtocol.respond { _ in .init(status: 200, body: me) }

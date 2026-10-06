@@ -6,6 +6,8 @@ import Observation
 final class ArtistViewModel {
     private(set) var state: Loadable<UserProfile> = .idle
     let username: String
+    /// Content shown is the last saved copy (network unavailable).
+    private(set) var isShowingCachedData = false
     private let api: APIClient
 
     init(username: String, api: APIClient) {
@@ -14,9 +16,18 @@ final class ArtistViewModel {
     }
 
     func load() async {
-        if state.value == nil { state = .loading }
+        if state.value == nil {
+            if let cached = await api.cached(API.Catalog.profile(username: username)) {
+                state = .loaded(cached)
+                isShowingCachedData = true
+            } else {
+                state = .loading
+            }
+        }
         do {
-            state = .loaded(try await api.send(API.Catalog.profile(username: username)))
+            let result = try await api.sendOrCached(API.Catalog.profile(username: username))
+            state = .loaded(result.value)
+            isShowingCachedData = result.isCached
         } catch {
             guard let apiError = APIError(error) else { return }
             if state.value == nil { state = .failed(apiError) }

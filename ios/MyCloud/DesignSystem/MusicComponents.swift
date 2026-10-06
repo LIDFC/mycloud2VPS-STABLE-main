@@ -32,6 +32,8 @@ struct TrackRow: View {
 
             Spacer(minLength: 8)
 
+            DownloadIndicator(trackID: track.id)
+
             if let duration = Format.duration(track.duration) {
                 Text(duration)
                     .font(.subheadline.monospacedDigit())

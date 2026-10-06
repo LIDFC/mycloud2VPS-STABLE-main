@@ -28,6 +28,9 @@ struct PlaylistDetailView: View {
         .toolbar {
             if let playlist = library.playlist(id: playlistID) {
                 ToolbarItem(placement: .topBarTrailing) {
+                    DownloadAllButton(tracks: playlist.tracks)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     Menu {
                         Button {
                             editing = playlist
