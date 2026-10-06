@@ -82,6 +82,7 @@ struct NowPlayingView: View {
                     .background(showsQueue ? AnyShapeStyle(.tint.opacity(0.2)) : AnyShapeStyle(.clear), in: Circle())
             }
             .accessibilityLabel(showsQueue ? "Скрыть очередь" : "Показать очередь")
+            .accessibilityIdentifier("nowPlaying.queue")
         }
         .foregroundStyle(.primary)
         .padding(.top, 8)

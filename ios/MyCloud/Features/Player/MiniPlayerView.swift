@@ -83,6 +83,8 @@ struct MiniPlayerView: View {
             .onTapGesture(perform: onOpen)
             .accessibilityAddTraits(.isButton)
             .accessibilityHint("Открыть плеер")
+            .accessibilityElement(children: .contain)
+            .accessibilityIdentifier("miniPlayer")
             .padding(.horizontal, 8)
             .padding(.bottom, 6)
             .transition(.move(edge: .bottom).combined(with: .opacity))

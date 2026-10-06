@@ -83,6 +83,7 @@ struct HomeView: View {
                             AlbumTile(album: album)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("albumTile")
                     }
                 }
                 .scrollTargetLayout()

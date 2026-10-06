@@ -26,6 +26,7 @@ struct AlbumView: View {
                             TrackRow(track: track, number: index + 1)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("trackRow")
                         .contextMenu { TrackContextMenu(track: track) }
                     }
                 } footer: {
@@ -69,6 +70,7 @@ struct AlbumView: View {
                         .foregroundStyle(.tint)
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("album.artistLink")
                 if let meta = metaLine(album) {
                     Text(meta)
                         .font(.footnote)
