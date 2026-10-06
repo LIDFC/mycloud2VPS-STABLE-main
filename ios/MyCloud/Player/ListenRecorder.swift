@@ -8,9 +8,15 @@ struct ListenRecorder: Sendable {
     static func live(api: APIClient) -> ListenRecorder {
         ListenRecorder { trackID in
             Task.detached(priority: .utility) {
-                _ = try? await api.send(API.Library.recordListen(trackId: trackID))
+                _ = try? await report(trackID, api: api)
             }
         }
+    }
+
+    /// The request itself (awaitable, for tests and diagnostics).
+    @discardableResult
+    static func report(_ trackID: String, api: APIClient) async throws -> ListenResponse {
+        try await api.send(API.Library.recordListen(trackId: trackID))
     }
 
     static let disabled = ListenRecorder { _ in }
