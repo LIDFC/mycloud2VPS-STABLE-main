@@ -14,6 +14,13 @@
 			remoteGlobalIDString = 463D08B558705B411D60892A;
 			remoteInfo = MyCloud;
 		};
+		EE84E6DB01423F756A2C91DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C1A067576D3FAE6D55825A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463D08B558705B411D60892A;
+			remoteInfo = MyCloud;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,7 @@
 		D63DE20156DFB6962660B83B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		395A393F01C49DD569F361DD /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3A59C64705D5320913BE3C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C39350295629E7C3B31C25 /* MyCloudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCloudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -34,6 +42,11 @@
 		6F562DA7092D712F0912CA18 /* MyCloudTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MyCloudTests;
+			sourceTree = "<group>";
+		};
+		A222CCFD933891A91B0C3469 /* MyCloudUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyCloudUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -53,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82D95E20F2B09368A235A2BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +82,7 @@
 				DC70DC1D2312684BB6928396 /* Config */,
 				1FF4F9E45F0AD467B5179EBB /* MyCloud */,
 				6F562DA7092D712F0912CA18 /* MyCloudTests */,
+				A222CCFD933891A91B0C3469 /* MyCloudUITests */,
 				78D30BB43268144A84411550 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +103,7 @@
 			children = (
 				29FED192A5C099279041B159 /* MyCloud.app */,
 				DDEF34FF1A4259A725A057D1 /* MyCloudTests.xctest */,
+				53C39350295629E7C3B31C25 /* MyCloudUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +156,29 @@
 			productReference = DDEF34FF1A4259A725A057D1 /* MyCloudTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7953E5FD6717AA4C6730CF8D /* MyCloudUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A728CF2E59B7FD4FBC975CBF /* Build configuration list for PBXNativeTarget "MyCloudUITests" */;
+			buildPhases = (
+				724ECCD7BF4B5B1ECDFAE449 /* Sources */,
+				82D95E20F2B09368A235A2BF /* Frameworks */,
+				65DEEA6F3D7A9524D2603175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BD2A23E5FE9D51BB4C9528 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A222CCFD933891A91B0C3469 /* MyCloudUITests */,
+			);
+			name = MyCloudUITests;
+			packageProductDependencies = (
+			);
+			productName = MyCloudUITests;
+			productReference = 53C39350295629E7C3B31C25 /* MyCloudUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,6 +193,10 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					97CDE39DF86BCA528575ADE8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 463D08B558705B411D60892A;
+					};
+					7953E5FD6717AA4C6730CF8D = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 463D08B558705B411D60892A;
 					};
@@ -170,6 +219,7 @@
 			targets = (
 				463D08B558705B411D60892A /* MyCloud */,
 				97CDE39DF86BCA528575ADE8 /* MyCloudTests */,
+				7953E5FD6717AA4C6730CF8D /* MyCloudUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +233,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		16821696FA83751A60D5F448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65DEEA6F3D7A9524D2603175 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +263,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		724ECCD7BF4B5B1ECDFAE449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,6 +277,11 @@
 			isa = PBXTargetDependency;
 			target = 463D08B558705B411D60892A /* MyCloud */;
 			targetProxy = F67BACAC45907D291634D9AC /* PBXContainerItemProxy */;
+		};
+		C9BD2A23E5FE9D51BB4C9528 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463D08B558705B411D60892A /* MyCloud */;
+			targetProxy = EE84E6DB01423F756A2C91DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -319,6 +388,36 @@
 			};
 			name = Release;
 		};
+		5B204EBB8C4DC5B5D4396D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = MyCloud;
+			};
+			name = Debug;
+		};
+		87B14C2909553EE20F9DF952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.dirty.mycloud.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = MyCloud;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +444,15 @@
 			buildConfigurations = (
 				8449F899FDC4661D224F2EA6 /* Debug */,
 				64393B14C77DDA678DEE7D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A728CF2E59B7FD4FBC975CBF /* Build configuration list for PBXNativeTarget "MyCloudUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B204EBB8C4DC5B5D4396D0D /* Debug */,
+				87B14C2909553EE20F9DF952 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

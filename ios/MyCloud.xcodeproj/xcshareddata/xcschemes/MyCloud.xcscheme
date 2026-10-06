@@ -39,6 +39,17 @@
                ReferencedContainer = "container:MyCloud.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7953E5FD6717AA4C6730CF8D"
+               BuildableName = "MyCloudUITests.xctest"
+               BlueprintName = "MyCloudUITests"
+               ReferencedContainer = "container:MyCloud.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
