@@ -69,7 +69,7 @@ final class DownloadStore {
         loadIndex()
     }
 
-    static var defaultDirectory: URL {
+    nonisolated static var defaultDirectory: URL {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
             ?? FileManager.default.temporaryDirectory
         return support.appendingPathComponent("Downloads", isDirectory: true)
