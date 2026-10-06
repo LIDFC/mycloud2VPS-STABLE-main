@@ -7,7 +7,9 @@ struct ListenRecorder: Sendable {
 
     static func live(api: APIClient) -> ListenRecorder {
         ListenRecorder { trackID in
-            Task.detached(priority: .utility) {
+            // A plain Task with the caller's priority: on iOS a detached
+            // `.utility` task was observed never to issue the request in time.
+            Task {
                 _ = try? await report(trackID, api: api)
             }
         }
