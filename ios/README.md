@@ -5,7 +5,8 @@ backend (`server/`) без собственной серверной логик�
 
 ## Запуск
 
-1. Открыть `ios/MyCloud.xcodeproj` в Xcode 16 или новее.
+1. Открыть `ios/MyCloud.xcodeproj` в Xcode 26.2 или новее (CI собирает на
+   Xcode 26). Xcode 16 тоже соберёт проект, но без Liquid Glass.
 2. Target **MyCloud** → *Signing & Capabilities* → выбрать свою команду
    (Team). Bundle ID — `baby.dirty.mycloud`, при конфликте поменять.
 3. Выбрать симулятор или iPhone и нажать Run.
@@ -17,6 +18,30 @@ cd ios
 xcodebuild test -project MyCloud.xcodeproj -scheme MyCloud \
   -destination 'platform=iOS Simulator,name=iPhone 16' CODE_SIGNING_ALLOWED=NO
 ```
+
+## iOS 26 и более старые системы
+
+- **iOS 26.1+**: мини-плеер встроен в стеклянный таб-бар
+  (`tabViewBottomAccessory`). При прокрутке таб-бар сворачивается, и мини-плеер
+  становится компактным. Тосты, баннер «нет сети» и кнопки на обложках
+  используют `glassEffect`.
+- **iOS 17–26.0**: мини-плеер остаётся своей карточкой над таб-баром,
+  вместо стекла используется обычный material.
+
+## Скриншоты в CI
+
+Job **Screenshots** (`.github/workflows/ios.yml`) снимает экраны на маленьком
+(SE) и большом (Pro Max) iPhone, в светлой и тёмной теме. Результат лежит в
+артефакте `screenshots` у каждого запуска.
+
+Без входа снимаются только экраны логина и регистрации. Для остальных экранов
+заведите на сервере отдельный тестовый аккаунт и добавьте его в
+*Settings → Secrets and variables → Actions* репозитория:
+
+- `MYCLOUD_TEST_USERNAME`
+- `MYCLOUD_TEST_PASSWORD`
+
+Под этим аккаунтом прослушивания не засчитываются.
 
 ## Адрес сервера
 

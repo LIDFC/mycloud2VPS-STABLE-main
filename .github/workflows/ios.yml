@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build-and-test:
     name: Build & unit tests
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 30
     defaults:
       run:
@@ -81,7 +81,7 @@ jobs:
 
   screenshots:
     name: Screenshots
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 45
     defaults:
       run:
@@ -111,7 +111,9 @@ jobs:
           wanted = os.environ["DEVICE"]
           devices = [d for runtime, ds in json.load(sys.stdin)["devices"].items() if "iOS" in runtime for d in ds]
           exact = [d for d in devices if d["name"] == wanted]
-          fallback = [d for d in devices if "Pro Max" in d["name"]] if "Pro Max" in wanted else []
+          # Newer runtimes rename devices: fall back to the nearest small / large iPhone.
+          hint = "Pro Max" if "Pro Max" in wanted else ("e" if "SE" in wanted else None)
+          fallback = [d for d in devices if hint and (d["name"].endswith(hint) or "SE" in d["name"] and hint == "e")]
           pick = (exact or fallback)
           print(pick[-1]["udid"] if pick else "")')
             if [ -z "$UDID" ]; then echo "::warning::No simulator for $DEVICE"; continue; fi

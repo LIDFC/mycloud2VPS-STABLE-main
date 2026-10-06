@@ -131,7 +131,7 @@ struct ToastModifier: ViewModifier {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 10)
-                    .background(.regularMaterial, in: Capsule())
+                    .glassBackground(in: Capsule())
                     .shadow(color: .black.opacity(0.12), radius: 10, y: 4)
                     .padding(.top, 8)
                     .padding(.horizontal, 24)

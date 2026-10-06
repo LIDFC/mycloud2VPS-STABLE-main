@@ -83,7 +83,7 @@ struct TrackTile: View {
                         .font(.caption.weight(.bold))
                         .foregroundStyle(.white)
                         .frame(width: 28, height: 28)
-                        .background(.ultraThinMaterial, in: Circle())
+                        .glassBackground(in: Circle(), fallback: .ultraThinMaterial)
                         .padding(6)
                 }
             VStack(alignment: .leading, spacing: 1) {

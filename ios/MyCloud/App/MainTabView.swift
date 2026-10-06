@@ -26,6 +26,9 @@ struct MainTabView: View {
                 LibraryView()
             }
         }
+        .modifier(SystemMiniPlayer(isEnabled: Self.usesTabAccessory && container.player.currentTrack != nil) {
+            showsNowPlaying = true
+        })
         .environment(\.play, PlayAction { [player = container.player] tracks, index, shuffled in
             player.play(tracks, startAt: index, shuffled: shuffled)
         })
@@ -52,6 +55,15 @@ struct MainTabView: View {
         }
     }
 
+    /// On iOS 26.1+ the mini player lives in the Liquid Glass tab bar
+    /// accessory; earlier systems get our own card above the tab bar.
+    static var usesTabAccessory: Bool {
+        #if compiler(>=6.2)
+        if #available(iOS 26.1, *) { return true }
+        #endif
+        return false
+    }
+
     private func tab<Content: View>(
         _ tab: Tab, title: LocalizedStringKey, systemImage: String, @ViewBuilder content: () -> Content
     ) -> some View {
@@ -65,11 +77,36 @@ struct MainTabView: View {
                 if !container.network.isOnline {
                     OfflineBanner()
                 }
-                MiniPlayerView { showsNowPlaying = true }
+                if !Self.usesTabAccessory {
+                    MiniPlayerView { showsNowPlaying = true }
+                }
             }
             .animation(.snappy, value: container.network.isOnline)
         }
         .tabItem { Label(title, systemImage: systemImage) }
         .tag(tab)
+    }
+}
+
+/// Puts the mini player into the system tab bar accessory and lets the tab
+/// bar minimise while scrolling. A no-op before iOS 26.1.
+private struct SystemMiniPlayer: ViewModifier {
+    let isEnabled: Bool
+    let onOpen: () -> Void
+
+    func body(content: Content) -> some View {
+        #if compiler(>=6.2)
+        if #available(iOS 26.1, *) {
+            content
+                .tabViewBottomAccessory(isEnabled: isEnabled) {
+                    MiniPlayerAccessory(onOpen: onOpen)
+                }
+                .tabBarMinimizeBehavior(.onScrollDown)
+        } else {
+            content
+        }
+        #else
+        content
+        #endif
     }
 }
