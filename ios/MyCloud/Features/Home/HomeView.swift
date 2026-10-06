@@ -39,36 +39,8 @@ struct HomeView: View {
     // MARK: - Daily mix
 
     private func dailyMix(_ daily: DailyPlaylist) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: String(localized: "Микс дня"), subtitle: String(localized: "Обновляется каждый день")) {
-                NavigationLink(value: Route.tracks(TrackListRoute(
-                    title: String(localized: "Микс дня"), subtitle: Format.trackCount(daily.tracks.count), tracks: daily.tracks
-                ))) {
-                    Text("Все")
-                }
-            }
-
-            VStack(spacing: 0) {
-                ForEach(Array(daily.tracks.prefix(4).enumerated()), id: \.element.id) { index, track in
-                    Button {
-                        play(daily.tracks, startAt: index)
-                    } label: {
-                        TrackRow(track: track)
-                            .padding(.horizontal)
-                            .padding(.vertical, 8)
-                    }
-                    .buttonStyle(.plain)
-                    .contextMenu { TrackContextMenu(track: track) }
-
-                    if index < min(3, daily.tracks.count - 1) {
-                        Divider().padding(.leading, 76)
-                    }
-                }
-            }
-
-            PlayShuffleButtons(tracks: daily.tracks)
-                .padding(.horizontal)
-        }
+        DailyMixCard(daily: daily)
+            .padding(.horizontal)
     }
 
     // MARK: - Shelves

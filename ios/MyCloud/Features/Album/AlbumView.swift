@@ -12,6 +12,7 @@ struct AlbumView: View {
                     header(album, tracks: tracks)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 16, trailing: 20))
+                        .listRowBackground(ArtworkTintBackground(path: album.coverUrl))
                 }
 
                 Section {

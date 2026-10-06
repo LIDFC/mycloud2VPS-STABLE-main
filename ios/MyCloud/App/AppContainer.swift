@@ -16,6 +16,7 @@ final class AppContainer {
     let downloads: DownloadStore
     let responseCache: ResponseCache
     let network: NetworkMonitor
+    let waveforms: WaveformStore
 
     init(
         config: AppConfig = .current,
@@ -54,6 +55,7 @@ final class AppContainer {
         self.library = LibraryStore(api: api)
         self.responseCache = responseCache
         self.network = NetworkMonitor()
+        self.waveforms = WaveformStore(api: api)
         let downloads = DownloadStore(api: api, directory: downloadsDirectory)
         self.downloads = downloads
         let player = PlaybackController(api: api, listens: listens, localFileURL: { downloads.localURL(for: $0) })

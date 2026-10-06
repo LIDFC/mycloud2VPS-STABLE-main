@@ -35,6 +35,10 @@ struct MainTabView: View {
         }
         .toast(Bindable(container.library).message)
         .animation(.snappy, value: container.player.currentTrack?.id)
+        // Prefetch the waveform so Now Playing opens with it already drawn.
+        .task(id: container.player.currentTrack?.id) {
+            if let track = container.player.currentTrack { await container.waveforms.load(for: track) }
+        }
         .sheet(isPresented: $showsNowPlaying) {
             NowPlayingView()
                 .presentationDragIndicator(.visible)
