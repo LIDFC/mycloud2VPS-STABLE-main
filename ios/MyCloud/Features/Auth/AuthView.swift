@@ -40,13 +40,8 @@ struct AuthView: View {
 
     private var header: some View {
         VStack(spacing: 16) {
-            Image(systemName: "waveform")
-                .font(.system(size: 40, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(width: 88, height: 88)
-                .background(.tint, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
-                .shadow(color: .accentColor.opacity(0.35), radius: 16, y: 8)
-                .accessibilityHidden(true)
+            AppMark()
+                .shadow(color: .black.opacity(0.25), radius: 16, y: 8)
 
             VStack(spacing: 6) {
                 Text("MyCloud")
