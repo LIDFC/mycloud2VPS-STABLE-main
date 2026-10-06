@@ -44,6 +44,7 @@ MyCloud/
 │   ├── Auth/       KeychainStore, TokenStore (JWT только в Keychain), SessionStore
 │   ├── Library/    LibraryStore — лайки и плейлисты, общие для всех экранов
 │   ├── Images/     ImagePipeline — кеш обложек (диск + память) с даунсэмплингом
+│   ├── Downloads/  DownloadStore (офлайн-треки), NetworkMonitor
 │   └── Loadable    состояние загрузки экрана
 ├── Models/         Codable-модели под реальные ответы сервера
 ├── Player/         PlaybackController (AVPlayer), PlayQueue, AudioSession, NowPlayingCenter
@@ -60,6 +61,11 @@ MyCloudTests/       XCTest + Fixtures/ — реальные ответы сер�
 - **Токен** — только в Keychain (`AfterFirstUnlockThisDeviceOnly`), пароль не
   сохраняется нигде, UserDefaults для секретов не используется.
 - Ссылки на медиа сервер отдаёт относительными — `APIClient.mediaURL(for:)`.
+- **Офлайн:** ответы каталога кешируются на диск (`ResponseCache`) — экраны
+  открываются мгновенно и работают без сети. Загруженные треки лежат в
+  Application Support (исключены из бэкапа), плеер берёт локальный файл.
+  Кеш и загрузки привязаны к аккаунту: повторный вход тем же пользователем их
+  сохраняет, вход другим — удаляет.
 
 ## Фазы
 
@@ -71,7 +77,7 @@ MyCloudTests/       XCTest + Fixtures/ — реальные ответы сер�
 | 4. Плеер (AVPlayer, очередь) | ✅ |
 | 5. Now Playing + фоновое воспроизведение | ✅ |
 | 6. Плейлисты и лайки | ✅ |
-| 7. Кеширование и офлайн | |
+| 7. Кеширование и офлайн | ✅ |
 | 8. Полировка и тесты | |
 
 CI: `.github/workflows/ios.yml` — сборка и unit-тесты на macOS при изменениях в `ios/`.

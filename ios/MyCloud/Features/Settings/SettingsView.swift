@@ -4,6 +4,8 @@ struct SettingsView: View {
     @Environment(AppContainer.self) private var container
     @Environment(\.dismiss) private var dismiss
     @State private var confirmsSignOut = false
+    @State private var cacheBytes: Int?
+    @State private var confirmsRemoveDownloads = false
 
     var body: some View {
         NavigationStack {
@@ -27,6 +29,24 @@ struct SettingsView: View {
                     }
                 }
 
+                Section {
+                    LabeledContent("Загрузки", value: Format.bytes(container.downloads.totalBytes))
+                    if !container.downloads.entries.isEmpty {
+                        Button("Удалить все загрузки", role: .destructive) {
+                            confirmsRemoveDownloads = true
+                        }
+                    }
+                    LabeledContent("Кеш", value: cacheBytes.map(Format.bytes) ?? "…")
+                    Button("Очистить кеш") {
+                        Task { await clearCache() }
+                    }
+                    .disabled(cacheBytes == 0)
+                } header: {
+                    Text("Хранилище")
+                } footer: {
+                    Text("Кеш — обложки и сохранённые страницы для работы без сети. Загруженные треки он не затрагивает.")
+                }
+
                 Section("Сервер") {
                     LabeledContent("Адрес", value: container.config.apiBaseURL.absoluteString)
                 }
@@ -48,6 +68,12 @@ struct SettingsView: View {
                     Button("Готово") { dismiss() }
                 }
             }
+            .task { await measureCache() }
+            .confirmationDialog("Удалить все загрузки?", isPresented: $confirmsRemoveDownloads, titleVisibility: .visible) {
+                Button("Удалить \(Format.bytes(container.downloads.totalBytes))", role: .destructive) {
+                    container.downloads.removeAll()
+                }
+            }
             .confirmationDialog("Выйти из аккаунта?", isPresented: $confirmsSignOut, titleVisibility: .visible) {
                 Button("Выйти", role: .destructive) {
                     Task {
@@ -57,6 +83,18 @@ struct SettingsView: View {
                 }
             }
         }
+    }
+
+    private func measureCache() async {
+        let responses = await container.responseCache.size()
+        cacheBytes = responses + ImagePipeline.shared.diskUsage
+    }
+
+    private func clearCache() async {
+        await container.responseCache.removeAll()
+        ImagePipeline.shared.clearDisk()
+        ImagePipeline.shared.clearMemory()
+        await measureCache()
     }
 
     private func accountTypeTitle(_ user: CurrentUser) -> LocalizedStringKey {

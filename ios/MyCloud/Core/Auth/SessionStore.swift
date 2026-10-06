@@ -19,6 +19,10 @@ final class SessionStore {
         return nil
     }
 
+    /// Runs before the signed-in UI appears (per-account caches/downloads), so
+    /// one account's data can never flash up for another.
+    @ObservationIgnored var prepareForUser: (@MainActor (_ userID: String) async -> Void)?
+
     private let api: APIClient
     private let tokenStore: TokenStore
     private let userCache: UserCache
@@ -42,21 +46,25 @@ final class SessionStore {
         do {
             let user = try await api.send(API.Auth.me())
             userCache.save(user)
-            state = .signedIn(user)
+            await signIn(user)
         } catch let error as APIError {
             switch error {
             case .unauthorized, .notFound:
                 await signOut()
             default:
                 if let cached = userCache.load() {
-                    state = .signedIn(cached)
+                    await signIn(cached)
                 } else {
                     // Never had a profile on this device: we can't show anything useful.
                     state = .signedOut
                 }
             }
         } catch {
-            state = userCache.load().map(State.signedIn) ?? .signedOut
+            if let cached = userCache.load() {
+                await signIn(cached)
+            } else {
+                state = .signedOut
+            }
         }
     }
 
@@ -94,6 +102,11 @@ final class SessionStore {
         // Login returns a short user; /me adds profile fields. Fall back if it fails.
         let user = (try? await api.send(API.Auth.me())) ?? CurrentUser(response.user)
         userCache.save(user)
+        await signIn(user)
+    }
+
+    private func signIn(_ user: CurrentUser) async {
+        await prepareForUser?(user.id)
         state = .signedIn(user)
     }
 }

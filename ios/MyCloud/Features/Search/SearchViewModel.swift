@@ -24,11 +24,16 @@ final class SearchViewModel {
     /// The query `state` belongs to (results never show for a stale query).
     private(set) var resultsQuery = ""
 
+    /// Results come from downloaded tracks because the network is unavailable.
+    private(set) var isOfflineResults = false
+
     private let api: APIClient
+    private let offlineTracks: @MainActor () -> [Track]
     static let debounce: Duration = .milliseconds(300)
 
-    init(api: APIClient) {
+    init(api: APIClient, offlineTracks: @escaping @MainActor () -> [Track] = { [] }) {
         self.api = api
+        self.offlineTracks = offlineTracks
     }
 
     var trimmedQuery: String {
@@ -54,10 +59,27 @@ final class SearchViewModel {
             let results = try await api.send(API.Catalog.search(text))
             guard !Task.isCancelled, text == trimmedQuery else { return }
             resultsQuery = text
+            isOfflineResults = false
             state = .loaded(results)
         } catch {
             guard let apiError = APIError(error), text == trimmedQuery else { return }
-            state = .failed(apiError)
+            let local = offlineTracks()
+            if apiError.allowsCacheFallback, !local.isEmpty {
+                // Offline: search what's on the device instead of failing.
+                resultsQuery = text
+                isOfflineResults = true
+                state = .loaded(SearchResults(tracks: Self.match(text, in: local), artists: [], albums: []))
+            } else {
+                state = .failed(apiError)
+            }
+        }
+    }
+
+    /// Same fields the server searches: title, artist line, genre.
+    static func match(_ query: String, in tracks: [Track]) -> [Track] {
+        let needle = query.lowercased()
+        return tracks.filter { track in
+            [track.title, track.artistLine, track.genre ?? ""].contains { $0.lowercased().contains(needle) }
         }
     }
 

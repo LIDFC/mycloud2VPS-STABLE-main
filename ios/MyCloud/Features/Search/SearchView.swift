@@ -41,6 +41,12 @@ struct SearchView: View {
 
     private func resultsList(_ results: SearchResults) -> some View {
         List {
+            if viewModel.isOfflineResults {
+                Label("Нет сети — поиск по загруженным трекам", systemImage: "wifi.slash")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .listRowSeparator(.hidden)
+            }
             if !results.artists.isEmpty {
                 Section("Исполнители") {
                     ForEach(limited(results.artists)) { artist in

@@ -24,6 +24,9 @@ struct Endpoint<Response: Decodable>: Sendable {
     var query: [URLQueryItem] = []
     var body: Data?
     var auth: AuthRequirement
+    /// Successful responses are kept in `ResponseCache` for instant display
+    /// and offline use. Only for idempotent GETs.
+    var isCacheable = false
 
     init(
         _ method: HTTPMethod,
@@ -37,6 +40,19 @@ struct Endpoint<Response: Decodable>: Sendable {
         self.query = query
         self.body = body
         self.auth = auth
+    }
+
+    /// Marks a GET endpoint as cacheable.
+    func cacheable() -> Endpoint {
+        var copy = self
+        copy.isCacheable = method == .get
+        return copy
+    }
+
+    /// Identifies the response in `ResponseCache`.
+    var cacheKey: String {
+        let query = query.map { "\($0.name)=\($0.value ?? "")" }.joined(separator: "&")
+        return "\(method.rawValue) \(percentEncodedPath)?\(query)"
     }
 
     /// Percent-encodes each segment separately, so a `/` or `?` inside a

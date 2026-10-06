@@ -37,9 +37,15 @@ final class LibraryStore {
 
     func load() async {
         let api = self.api
-        async let tracks = Self.result { try await api.send(API.Catalog.tracks()) }
-        async let albums = Self.result { try await api.send(API.Catalog.albums()) }
-        async let lists = Self.result { try await api.send(API.Playlists.list()) }
+        if !hasLoaded {
+            // Instant (and offline) library from the last saved responses.
+            if let cached = await api.cached(API.Catalog.tracks()) { likedTracks = .loaded(cached.filter(\.likedByMe)) }
+            if let cached = await api.cached(API.Catalog.albums()) { likedAlbums = .loaded(cached.filter(\.likedByMe)) }
+            if let cached = await api.cached(API.Playlists.list()) { playlists = .loaded(cached) }
+        }
+        async let tracks = Self.result { try await api.sendOrCached(API.Catalog.tracks()).value }
+        async let albums = Self.result { try await api.sendOrCached(API.Catalog.albums()).value }
+        async let lists = Self.result { try await api.sendOrCached(API.Playlists.list()).value }
         let (tracksResult, albumsResult, listsResult) = await (tracks, albums, lists)
 
         // The catalogue is the server truth for every track's like state; record
@@ -64,7 +70,7 @@ final class LibraryStore {
 
     func reloadPlaylists() async {
         do {
-            playlists = .loaded(try await api.send(API.Playlists.list()))
+            playlists = .loaded(try await api.sendOrCached(API.Playlists.list()).value)
         } catch {
             guard let apiError = APIError(error), playlists.value == nil else { return }
             playlists = .failed(apiError)

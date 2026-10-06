@@ -46,6 +46,10 @@ struct LibraryView: View {
                         LibraryRow(title: "Альбомы", systemImage: "square.stack.fill",
                                    detail: library.likedAlbums.value.map { "\($0.count)" })
                     }
+                    NavigationLink(value: Route.downloads) {
+                        LibraryRow(title: "Загруженные", systemImage: "arrow.down.circle.fill",
+                                   detail: container.downloads.entries.isEmpty ? nil : "\(container.downloads.entries.count)")
+                    }
                 }
 
                 Section {

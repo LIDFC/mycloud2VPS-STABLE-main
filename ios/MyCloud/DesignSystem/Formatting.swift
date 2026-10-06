@@ -32,6 +32,11 @@ enum Format {
         value.formatted(.number.notation(.compactName).locale(Locale(identifier: "ru_RU")))
     }
 
+    /// «12,3 МБ»
+    static func bytes(_ count: Int) -> String {
+        Int64(count).formatted(.byteCount(style: .file).locale(Locale(identifier: "ru_RU")))
+    }
+
     static func trackCount(_ count: Int) -> String {
         "\(count) " + RussianPlural.form(count, one: "трек", few: "трека", many: "треков")
     }

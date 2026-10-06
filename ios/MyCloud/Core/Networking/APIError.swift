@@ -23,6 +23,16 @@ enum APIError: Error, Equatable, Sendable {
     case transport(code: Int)
     case invalidRequest(details: String)
 
+    /// The network or server is unavailable, so stale cached data is better
+    /// than an error. Auth errors and 404s must never be masked by the cache.
+    var allowsCacheFallback: Bool {
+        switch self {
+        case .offline, .timeout, .serverUnreachable, .transport, .secureConnectionFailed: return true
+        case .server(let status, _): return status >= 500
+        default: return false
+        }
+    }
+
     /// Worth offering a "Retry" button.
     var isRetryable: Bool {
         switch self {

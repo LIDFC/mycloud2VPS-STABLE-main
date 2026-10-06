@@ -29,6 +29,8 @@ final class PlaybackController {
     @ObservationIgnored private let api: APIClient
     @ObservationIgnored private let audioSession: AudioSessionControlling
     @ObservationIgnored private let listens: ListenRecorder
+    /// Downloaded copy of a track, played instead of streaming when present.
+    @ObservationIgnored private let localFileURL: @MainActor (Track) -> URL?
     @ObservationIgnored private var timeObserver: Any?
     @ObservationIgnored private var itemObservations: [NSKeyValueObservation] = []
     @ObservationIgnored private var playerObservation: NSKeyValueObservation?
@@ -43,11 +45,13 @@ final class PlaybackController {
     init(
         api: APIClient,
         audioSession: AudioSessionControlling = SystemAudioSession(),
-        listens: ListenRecorder? = nil
+        listens: ListenRecorder? = nil,
+        localFileURL: @escaping @MainActor (Track) -> URL? = { _ in nil }
     ) {
         self.api = api
         self.audioSession = audioSession
         self.listens = listens ?? .live(api: api)
+        self.localFileURL = localFileURL
         player.automaticallyWaitsToMinimizeStalling = true
         observePlayer()
         audioSession.onEvent = { [weak self] event in self?.handle(event) }
@@ -229,7 +233,7 @@ final class PlaybackController {
         currentTime = startTime
         duration = track.duration ?? 0
 
-        guard let url = api.mediaURL(for: track.audioUrl) else {
+        guard let url = localFileURL(track) ?? api.mediaURL(for: track.audioUrl) else {
             errorMessage = String(localized: "Не удалось открыть трек")
             return
         }

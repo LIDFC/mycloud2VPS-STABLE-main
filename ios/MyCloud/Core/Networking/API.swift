@@ -37,23 +37,23 @@ enum API {
     enum Catalog {
         /// All published tracks (no pagination on the server).
         static func tracks() -> Endpoint<[Track]> {
-            Endpoint(.get, ["api", "tracks"], auth: .optional)
+            Endpoint(.get, ["api", "tracks"], auth: .optional).cacheable()
         }
 
         static func albums() -> Endpoint<[Album]> {
-            Endpoint(.get, ["api", "albums"], auth: .optional)
+            Endpoint(.get, ["api", "albums"], auth: .optional).cacheable()
         }
 
         static func album(id: String) -> Endpoint<Album> {
-            Endpoint(.get, ["api", "albums", id], auth: .optional)
+            Endpoint(.get, ["api", "albums", id], auth: .optional).cacheable()
         }
 
         static func recommendations() -> Endpoint<Recommendations> {
-            Endpoint(.get, ["api", "recommendations"], auth: .optional)
+            Endpoint(.get, ["api", "recommendations"], auth: .optional).cacheable()
         }
 
         static func dailyPlaylist() -> Endpoint<DailyPlaylist> {
-            Endpoint(.get, ["api", "daily-playlist"], auth: .optional)
+            Endpoint(.get, ["api", "daily-playlist"], auth: .optional).cacheable()
         }
 
         static func search(_ query: String) -> Endpoint<SearchResults> {
@@ -62,7 +62,7 @@ enum API {
 
         /// Artist / user page.
         static func profile(username: String) -> Endpoint<UserProfile> {
-            Endpoint(.get, ["api", "users", username], auth: .optional)
+            Endpoint(.get, ["api", "users", username], auth: .optional).cacheable()
         }
     }
 
@@ -101,7 +101,7 @@ enum API {
         }
 
         static func list() -> Endpoint<[Playlist]> {
-            Endpoint(.get, ["api", "playlists"], auth: .required)
+            Endpoint(.get, ["api", "playlists"], auth: .required).cacheable()
         }
 
         static func create(name: String, description: String?) -> Endpoint<PlaylistResponse> {

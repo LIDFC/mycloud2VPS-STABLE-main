@@ -99,6 +99,7 @@ struct TrackContextMenu: View {
             } label: {
                 Label("Добавить в плейлист…", systemImage: "text.badge.plus")
             }
+            TrackDownloadMenuItems(track: track)
         }
 
         Section {
